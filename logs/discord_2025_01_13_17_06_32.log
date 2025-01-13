@@ -1,0 +1,85 @@
+2025-01-13 17:06:32,705:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2025-01-13 17:06:32,706:INFO:discord.client: logging in using static token
+2025-01-13 17:06:33,255:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 36deda57c88dec593edcd904616d1068).
+2025-01-13 17:06:35,258:INFO:discord: loading api activities cog
+2025-01-13 17:06:35,260:INFO:discord: calling api activities cog 'refresh' method
+2025-01-13 17:06:35,260:INFO:discord: reading api activities from cache
+2025-01-13 17:06:35,260:INFO:discord: fetching api settings data from settings keys
+2025-01-13 17:06:35,302:INFO:discord: 	fetched data for settings key a3a263e0-5b53-4b66-8490-2f3ec8bff9bd
+2025-01-13 17:06:35,343:INFO:discord: 	fetched data for settings key e2780a78-1052-4f4b-854e-b2cce90934e1
+2025-01-13 17:06:35,381:INFO:discord: 	fetched data for settings key de7e84d0-e670-4e0e-8769-cda3197f3f92
+2025-01-13 17:06:35,423:INFO:discord: 	fetched data for settings key efc1371b-add1-4cca-9bc6-dfd9e7cb596c
+2025-01-13 17:06:35,461:INFO:discord: 	fetched data for settings key 11cbc8d1-10a3-410e-8e70-63e58e76e608
+2025-01-13 17:06:35,462:INFO:discord: fetching api activities data from settings data
+2025-01-13 17:06:35,514:INFO:discord: 	fetched data for activities key 64e92ee4-8e97-4603-9905-55bee0102144
+2025-01-13 17:06:35,568:INFO:discord: 	fetched data for activities key 6e83ead3-1a2f-4491-aa9e-d62a0090e4f9
+2025-01-13 17:06:35,641:INFO:discord: 	fetched data for activities key d4b82180-15fa-4ec4-bafa-d16e7c876501
+2025-01-13 17:06:35,692:INFO:discord: 	fetched data for activities key ec57995d-fddb-48c8-b994-4c70ca21b7dc
+2025-01-13 17:06:35,744:INFO:discord: 	fetched data for activities key 43790dd8-0260-4c90-b678-c47fdf47891e
+2025-01-13 17:06:35,812:INFO:discord: 	fetched data for activities key f6543077-277f-4990-b1b5-11e6525d0f2f
+2025-01-13 17:06:35,859:INFO:discord: 	fetched data for activities key fc0b6df2-c24d-4dc4-a698-ae00062c85e8
+2025-01-13 17:06:35,917:INFO:discord: 	fetched data for activities key 8281c3b8-0ee8-4951-aebf-ed238512867d
+2025-01-13 17:06:35,961:INFO:discord: 	fetched data for activities key ba01655a-9292-430a-b3ee-714e8cde8b30
+2025-01-13 17:06:36,011:INFO:discord: 	fetched data for activities key 807e5d75-9cac-4c92-8d31-430fd5199f3a
+2025-01-13 17:06:36,049:INFO:discord: 	fetched data for activities key c2c037fe-8ebd-4634-96e8-bf5f8861ee4f
+2025-01-13 17:06:36,094:INFO:discord: 	fetched data for activities key b40b132a-4086-4da8-9068-ebd0d9daefa7
+2025-01-13 17:06:36,163:INFO:discord: 	fetched data for activities key fc1f1e2e-8f54-4363-8c96-4644300edb2d
+2025-01-13 17:06:36,206:INFO:discord: 	fetched data for activities key 58599e92-4b37-4b44-bf6c-89b34eefa188
+2025-01-13 17:06:36,251:INFO:discord: 	fetched data for activities key ab9a71f7-43d5-4c99-96db-30d7f59c9514
+2025-01-13 17:06:36,297:INFO:discord: 	fetched data for activities key 9f2e1352-2287-48d0-a2ee-ed24de5b3683
+2025-01-13 17:06:36,340:INFO:discord: 	fetched data for activities key 0b33ae8c-6c84-467e-ac01-5185d418f35f
+2025-01-13 17:06:36,420:INFO:discord: 	fetched data for activities key cd16e5cc-0cff-45d1-acc9-77c1b929c891
+2025-01-13 17:06:36,475:INFO:discord: 	fetched data for activities key 4a58e161-f449-4cd7-bba2-66b64bed1e87
+2025-01-13 17:06:36,526:INFO:discord: 	fetched data for activities key 9216ad20-e4ba-4880-abd4-973084eb883c
+2025-01-13 17:06:36,593:INFO:discord: 	fetched data for activities key 704ef616-4170-4383-a9c0-f957182bb239
+2025-01-13 17:06:36,679:INFO:discord: 	fetched data for activities key 8d60a73e-7429-44b5-a26c-a5290f557adc
+2025-01-13 17:06:36,679:INFO:discord: comparing api activities data with last query
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key 64e92ee4-8e97-4603-9905-55bee0102144, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity 64e92ee4-8e97-4603-9905-55bee0102144
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key 6e83ead3-1a2f-4491-aa9e-d62a0090e4f9, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity 6e83ead3-1a2f-4491-aa9e-d62a0090e4f9
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key d4b82180-15fa-4ec4-bafa-d16e7c876501, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity d4b82180-15fa-4ec4-bafa-d16e7c876501
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key ec57995d-fddb-48c8-b994-4c70ca21b7dc, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity ec57995d-fddb-48c8-b994-4c70ca21b7dc
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key 43790dd8-0260-4c90-b678-c47fdf47891e, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity 43790dd8-0260-4c90-b678-c47fdf47891e
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key f6543077-277f-4990-b1b5-11e6525d0f2f, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity f6543077-277f-4990-b1b5-11e6525d0f2f
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key fc0b6df2-c24d-4dc4-a698-ae00062c85e8, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity fc0b6df2-c24d-4dc4-a698-ae00062c85e8
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key 8281c3b8-0ee8-4951-aebf-ed238512867d, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity 8281c3b8-0ee8-4951-aebf-ed238512867d
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key ba01655a-9292-430a-b3ee-714e8cde8b30, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity ba01655a-9292-430a-b3ee-714e8cde8b30
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key 807e5d75-9cac-4c92-8d31-430fd5199f3a, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity 807e5d75-9cac-4c92-8d31-430fd5199f3a
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key c2c037fe-8ebd-4634-96e8-bf5f8861ee4f, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity c2c037fe-8ebd-4634-96e8-bf5f8861ee4f
+2025-01-13 17:06:36,679:INFO:discord: detected old activity for key b40b132a-4086-4da8-9068-ebd0d9daefa7, evaluating activity for api changes
+2025-01-13 17:06:36,679:INFO:discord: 	changes not detected for activity b40b132a-4086-4da8-9068-ebd0d9daefa7
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key fc1f1e2e-8f54-4363-8c96-4644300edb2d, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes detected for activity fc1f1e2e-8f54-4363-8c96-4644300edb2d
+2025-01-13 17:06:36,680:INFO:discord: 	changed 
+	{'activities': [{'id': 'fc1f1e2e-8f54-4363-8c96-4644300edb2d', 'name': 'Complete your profildddddddddde', 'description': '', 'url': '', 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'iconImage': '', 'rewardMessage': '100 XP', 'additionalFields': {'shopIds': [], 'rewardName': '', 'description': '', 'displayRule': {'name': 'Complete your profile', 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'custom': False, 'iconImage': '', 'description': ''}, 'buttonSettings': {'enabled': False}, 'isOneTimeReward': True, 'visibilitySettings': {'type': 'all_users'}, 'form': {'type': 'form', 'style': 'single-form', 'fields': [], 'results': {'type': 'components', 'components': []}, 'editable': False}, 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'closed_at': None, 'iconImage': '', 'started_at': None, 'preventReSubmissions': False}, 'reward': {'reward_rule_id': 'fbaf1ed6-45ea-458f-a998-971b07ecccaf', 'activity_id': 'fc1f1e2e-8f54-4363-8c96-4644300edb2d', 'reward_type': 'asset', 'asset_to_reward_id': '6e23ba5d-868e-496e-bc80-ba8f75e671e0', 'amount_to_reward': '100', 'amount_to_reward_percentage': None, 'product_variant_id': None, 'discount_absolute': None, 'discount_percent': None, 'segment_id': None, 'order_number': 0, 'additional_fields': {'shopIds': [], 'rewardName': '', 'description': '', 'displayRule': {'name': 'Complete your profile', 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'custom': False, 'iconImage': '', 'description': ''}, 'buttonSettings': {'enabled': False}, 'isOneTimeReward': True, 'visibilitySettings': {'type': 'all_users'}}, 'tier_id': None, 'product_variant_ids': None, 'token_name': 'XP', 'token_id': '6e23ba5d-868e-496e-bc80-ba8f75e671e0', 'image_url': None, 'shopify_product_variant_label': None}, 'completed': False, 'limitReached': False, 'pendingReview': False, 'automaticallyApprove': True, 'retroactiveSubmission': False, 'maxFilesLimit': None, 'typeIdentifier': 'COLLECT_ZERO_PARTY_DATA', 'completionsLimit': {'type': 'fixed', 'amount': 1}, 'products': None}]}
+	to
+	{'activities': [{'id': 'fc1f1e2e-8f54-4363-8c96-4644300edb2d', 'name': 'Complete your profile', 'description': '', 'url': '', 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'iconImage': '', 'rewardMessage': '100 XP', 'additionalFields': {'shopIds': [], 'rewardName': '', 'description': '', 'displayRule': {'name': 'Complete your profile', 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'custom': False, 'iconImage': '', 'description': ''}, 'buttonSettings': {'enabled': False}, 'isOneTimeReward': True, 'visibilitySettings': {'type': 'all_users'}, 'form': {'type': 'form', 'style': 'single-form', 'fields': [], 'results': {'type': 'components', 'components': []}, 'editable': False}, 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'closed_at': None, 'iconImage': '', 'started_at': None, 'preventReSubmissions': False}, 'reward': {'reward_rule_id': 'fbaf1ed6-45ea-458f-a998-971b07ecccaf', 'activity_id': 'fc1f1e2e-8f54-4363-8c96-4644300edb2d', 'reward_type': 'asset', 'asset_to_reward_id': '6e23ba5d-868e-496e-bc80-ba8f75e671e0', 'amount_to_reward': '100', 'amount_to_reward_percentage': None, 'product_variant_id': None, 'discount_absolute': None, 'discount_percent': None, 'segment_id': None, 'order_number': 0, 'additional_fields': {'shopIds': [], 'rewardName': '', 'description': '', 'displayRule': {'name': 'Complete your profile', 'image': 'https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png', 'custom': False, 'iconImage': '', 'description': ''}, 'buttonSettings': {'enabled': False}, 'isOneTimeReward': True, 'visibilitySettings': {'type': 'all_users'}}, 'tier_id': None, 'product_variant_ids': None, 'token_name': 'XP', 'token_id': '6e23ba5d-868e-496e-bc80-ba8f75e671e0', 'image_url': None, 'shopify_product_variant_label': None}, 'completed': False, 'limitReached': False, 'pendingReview': False, 'automaticallyApprove': True, 'retroactiveSubmission': False, 'maxFilesLimit': None, 'typeIdentifier': 'COLLECT_ZERO_PARTY_DATA', 'completionsLimit': {'type': 'fixed', 'amount': 1}, 'products': None}]}
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key 58599e92-4b37-4b44-bf6c-89b34eefa188, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity 58599e92-4b37-4b44-bf6c-89b34eefa188
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key ab9a71f7-43d5-4c99-96db-30d7f59c9514, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity ab9a71f7-43d5-4c99-96db-30d7f59c9514
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key 9f2e1352-2287-48d0-a2ee-ed24de5b3683, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity 9f2e1352-2287-48d0-a2ee-ed24de5b3683
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key 0b33ae8c-6c84-467e-ac01-5185d418f35f, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity 0b33ae8c-6c84-467e-ac01-5185d418f35f
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key cd16e5cc-0cff-45d1-acc9-77c1b929c891, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity cd16e5cc-0cff-45d1-acc9-77c1b929c891
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key 4a58e161-f449-4cd7-bba2-66b64bed1e87, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity 4a58e161-f449-4cd7-bba2-66b64bed1e87
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key 9216ad20-e4ba-4880-abd4-973084eb883c, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity 9216ad20-e4ba-4880-abd4-973084eb883c
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key 704ef616-4170-4383-a9c0-f957182bb239, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity 704ef616-4170-4383-a9c0-f957182bb239
+2025-01-13 17:06:36,680:INFO:discord: detected old activity for key 8d60a73e-7429-44b5-a26c-a5290f557adc, evaluating activity for api changes
+2025-01-13 17:06:36,680:INFO:discord: 	changes not detected for activity 8d60a73e-7429-44b5-a26c-a5290f557adc
+2025-01-13 17:06:36,680:INFO:discord: writing api activities to cache
