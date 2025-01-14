@@ -1,14 +1,13 @@
 
 import asyncio
-from config.config import *
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 import logging
 import os
 from typing import Final
-from utils.api_client import APIClient
 
+from config.config import *
 from utils.activity import (
     Club9ActivityType,
     Club9ActivityData,
@@ -25,11 +24,11 @@ class Club9Bot(commands.Bot):
         intents = intents or discord.Intents.default()
         super().__init__(command_prefix=command_prefix, intents=intents)
         self.logger = logger
-        self.api_client = APIClient(self.logger)
+        self.api = Club9API(self.logger)
+
         self.activities_dict: dict = {}
         self.activities_mapping: dict[str, Club9ActivityData] = {}  # map of activity ids to Club9Activity objects generated on startup for comparison to requests during refresh comparison
-
-        self.api = Club9API(self.logger)
+        # TODO add mapping attribute dict for tracking messages in case of editing quests upon api change
 
 
     async def on_ready(self) -> None:
