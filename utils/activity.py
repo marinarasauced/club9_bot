@@ -50,7 +50,7 @@ class Club9ActivityData():
         """
         Gets the formatted activity data by flattening the activity dict.
 
-        @param d: The dictionary data to flatten.
+        @param data: The dictionary data to flatten.
         @param parent: The parent key to append to the child key names.
         @param separator: The character used to separate the parent and child in the new key names.
         @return: A flattened version of the input data.
@@ -82,6 +82,7 @@ def generate_activities(activities_list: list) -> list[Club9ActivityData]:
     @param activities: A list of activity dictionaries from the activities query results after getting 'activities'.
     @return: A list of Club9ActivityData objects.
     """
+    # TODO add detection for visibility (in case of hidden quests, no need to ping users)
     activities_data = []
     for activity_dict in activities_list:
         activity_data = Club9ActivityData(data=activity_dict)

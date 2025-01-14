@@ -80,16 +80,20 @@ class Club9Activities(commands.Cog):
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshed activities (changes detected)")
                 activities_list = activities_dict.get("activities", [])
                 activities_data = utils.activity.generate_activities(activities_list=activities_list)
+                print(activities_data)
                 for activity_data_new in activities_data:
                     if (hasattr(activity_data_new, "id") == False or activity_data_new.club9_activity_type == utils.activity.Club9ActivityType.NONE):
+                        # TODO log skip?
                         continue
                     else:
-                        activity_data_old: utils.activity.Club9ActivityData = self.club9_bot.activities_mapping[activity_data_new.id]
+                        activity_data_old: utils.activity.Club9ActivityData = self.club9_bot.activities_mapping.get(activity_data_new.id, utils.activity.Club9ActivityData(data={}))        # default value is empty activity (need comparison for new activities since key wouldn't exist in mapping)
                         if (activity_data_old.club9_activity_data == activity_data_new.club9_activity_data):
-                            # TODO CASE 1 -> detected no changes in current activity
+                            # TODO CASE 1 -> detected constant current activity
+                            print("no change")
                             pass
                         else:
-                            # TODO CASE 2 -> detected changes in current activity
+                            # TODO CASE 2 -> detected added/modified current activity
+                            print("change")
                             pass
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to refresh activities ({e})")
