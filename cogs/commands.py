@@ -20,6 +20,7 @@ class Club9Commands(commands.Cog):
         """
         self.club9_bot = bot
         self.monitoring_flag = False
+        self.runtime_start = time.time()
 
 
     @commands.command(name="monitoring_start")
@@ -77,13 +78,19 @@ class Club9Commands(commands.Cog):
         @param ctx: The context of the command.
         """
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}runtime'")
-        runtime_curr = time.time() - self.club9_bot.runtime_start
+        runtime_curr = time.time() - self.runtime_start
         days = int(runtime_curr // 86400)  # 1 day = 86400 seconds
         hours = int((runtime_curr % 86400) // 3600)  # 1 hour = 3600 seconds
         minutes = int((runtime_curr % 3600) // 60)  # 1 minute = 60 seconds
         seconds = round(runtime_curr % 60) 
         runtime_formatted = f"{days} day{'' if days == 1 else 's'} {hours:02}:{minutes:02}:{seconds:02}"
-        await ctx.send(f"Runtime: {runtime_formatted}.")
+        await ctx.send(f"""
+Runtime: {runtime_formatted}
+Num of activity cache reads: {self.club9_bot.num_activities_cache_read}
+Num of activity cache writes: {self.club9_bot.num_activities_cache_write}
+Num of new activities detected: {self.club9_bot.num_activities_new_detected}
+Num of new activity notifications: {self.club9_bot.num_activities_new_notifications}
+""")
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> returned runtime as {runtime_formatted}")
 
 

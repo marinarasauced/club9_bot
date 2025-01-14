@@ -27,7 +27,7 @@ def PATH_DISCORD_LOGS() -> str:
 
 
 
-
+PATH_DOTENV = "../.env"
 
 CLUB9_BOT_ICON_URL = "https://1000logos.net/wp-content/uploads/2017/08/Logo-Cloud-9.jpg"
 

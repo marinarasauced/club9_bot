@@ -181,5 +181,8 @@ def generate_activities(activities_list: list) -> list[Club9ActivityData]:
     activities_data = []
     for activity_dict in activities_list:
         activity_data = Club9ActivityData(data=activity_dict)
+        if (hasattr(activity_data, "additionalFields_visibilitySettings_type") == True):
+            if (activity_data.additionalFields_visibilitySettings_type != "all_users"):
+                activity_data.club9_activity_type = Club9ActivityType.NONE
         activities_data.append(activity_data)
     return activities_data

@@ -4,7 +4,6 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import logging
 import os
-import time
 from typing import Final
 
 from config.config import *
@@ -25,7 +24,10 @@ class Club9Bot(commands.Bot):
         self.activities_dict: dict = {}
         self.activities_mapping: dict = {}  # map of activity ids to Club9Activity objects generated on startup for comparison to requests during refresh comparison
         # TODO add mapping attribute dict for tracking messages in case of editing quests upon api change
-        self.runtime_start = time.time()
+        self.num_activities_cache_read = 0
+        self.num_activities_cache_write = 0
+        self.num_activities_new_detected = 0
+        self.num_activities_new_notifications = 0
 
 
     async def on_ready(self) -> None:
@@ -75,7 +77,7 @@ class Club9Bot(commands.Bot):
 def main():
     """
     """
-    load_dotenv(dotenv_path="../.env")
+    load_dotenv(dotenv_path=PATH_DOTENV)
     TOKEN: Final[str] = os.getenv("DISCORD_TOKEN")
 
     logger = logging.getLogger("discord")

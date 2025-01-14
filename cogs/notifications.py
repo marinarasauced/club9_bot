@@ -32,6 +32,7 @@ class Club9Notifications(commands.Cog):
         channel = self.club9_bot.get_channel(channel_id)
         if channel:
             message = await channel.send(content=content, embed=embed)
+            self.club9_bot.num_activities_new_notifications += 1
             return message
         return None
 
