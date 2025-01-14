@@ -7,10 +7,20 @@ class Club9ActivityType(Enum):
     """
     This class provides several enum used to differentiate activity types.
     """
-    QUEST_INTERNAL = 0      # Users complete the activity on the 'https://store.cloud9.gg/pages/club9' page.
-    QUEST_EXTERNAL = 1      # Users complete the activity external to the 'https://store.cloud9.gg/pages/club9' page.
-    CHALLENGE = 2           # Users complete the activity by completing several quests.
-    NONE = 3                # A placeholder value for quests that have not yet been loaded.
+    NONE = None                                     # A placeholder value for quests that have not yet been loaded.
+    CHALLENGE = "CHALLENGE"                         # Users complete the activity by completing several quests.
+    QUEST_EXTERNAL = "NON_INTEGRATION_CUSTOM"       # Users complete the activity external to the 'https://store.cloud9.gg/pages/club9' page.
+    QUEST_INTERNAL = "DEFAULT"                              # Users complete the activity on the 'https://store.cloud9.gg/pages/club9' page.
+
+    
+    def _missing_(cls, value):
+        """
+        Unknown values are mapped to 'QUEST_INTERNAL' as a fallback.
+        
+        @param cls:
+        @param value:
+        """
+        return cls.QUEST_INTERNAL
 
 
 class Club9ActivityData():
@@ -55,10 +65,17 @@ class Club9ActivityData():
         return dict(items)
 
 
-    def get_activity_type(self):
+    def get_activity_type(self) -> Club9ActivityType:
         """
         Gets the activity type by analyzing the activity data.
         """
+        try:
+            if (hasattr(self, "typeIdentifier") == False):
+                # TODO add logic in case the typeIdentifier attribute is missing (seems unlikely that it would ever be missing)
+                return Club9ActivityType.NONE
+            else:
+
+
 
 
     def quest_internal(self, data: dict):
