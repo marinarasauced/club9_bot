@@ -24,3 +24,13 @@ def PATH_DISCORD_LOGS() -> str:
     """
     timestamp = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
     return f"logs/discord_{timestamp}.log"
+
+
+
+
+
+
+
+API_TOKI_ACTIVITIES_URL = "https://api.buildwithtoki.com/merchant/brand/activities"
+API_TOKI_ACTIVITIES_PARAMS = None
+API_TOKI_ACTIVITIES_HEADERS = {"x-shopify-shop-domain": "cloud9gg.myshopify.com",}

@@ -1,0 +1,2505 @@
+{
+    "activities": [
+        {
+            "id": "18111518-18f3-43e8-a96d-0b3d4e66effb",
+            "name": "[VAL] Watch C9 vs NRG - VCT Americas Kickoff",
+            "description": "",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/79990613-eac4-4477-bb3e-93b4a46a2958.png",
+            "iconImage": "",
+            "rewardMessage": "XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[VAL] Watch C9 vs NRG - VCT Americas Kickoff",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/79990613-eac4-4477-bb3e-93b4a46a2958.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": ""
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/79990613-eac4-4477-bb3e-93b4a46a2958.png",
+                "closed_at": "2025-01-18T06:00:36.930Z",
+                "iconImage": "",
+                "started_at": null,
+                "externalUrl": "https://store.cloud9.gg/pages/video?slug=vct-americas-kickoff-c9-vs-nrg",
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "8d974481-f5e7-459e-9a90-3c6bfd9eef7c",
+                "activity_id": "18111518-18f3-43e8-a96d-0b3d4e66effb",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": null,
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[VAL] Watch C9 vs NRG - VCT Americas Kickoff",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/79990613-eac4-4477-bb3e-93b4a46a2958.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": ""
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "NON_INTEGRATION_CUSTOM",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "79d9ccc3-8efe-4490-b406-1b799776953f",
+            "name": "C9VAL Challenge",
+            "description": "Earn 25xp",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "C9VAL Challenge",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false,
+                "challenges_activities": [
+                    {
+                        "count": 1,
+                        "label": "Complete your profile",
+                        "value": "fc1f1e2e-8f54-4363-8c96-4644300edb2d"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[VAL] Follow C9VAL on X",
+                        "value": "cf26d04c-172a-4a37-bfbd-732603db17d8"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[VAL] Follow C9VAL on TikTok",
+                        "value": "5ec2d533-aa7e-4608-b219-026abcfbd817"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[VAL] Subscribe to C9VAL on YouTube",
+                        "value": "c8c75d77-f3a9-4fec-975c-e802271d10a0"
+                    }
+                ]
+            },
+            "reward": {
+                "reward_rule_id": "4b6d4fde-f0bd-4fbc-bde1-123ac7c9bdf8",
+                "activity_id": "79d9ccc3-8efe-4490-b406-1b799776953f",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "C9VAL Challenge",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "CHALLENGE",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "c8c75d77-f3a9-4fec-975c-e802271d10a0",
+            "name": "[VAL] Subscribe to C9VAL on YouTube",
+            "description": "Earn 25xp",
+            "url": "https://www.youtube.com/@C9VAL?sub_confirmation=1",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c6f51682-d410-4d98-86af-c71836a6985e.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[VAL] Subscribe to C9VAL on YouTube",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c6f51682-d410-4d98-86af-c71836a6985e.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c6f51682-d410-4d98-86af-c71836a6985e.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "d88fa92e-efc8-44e8-bd3b-8a4e5d2af3fc",
+                "activity_id": "c8c75d77-f3a9-4fec-975c-e802271d10a0",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[VAL] Subscribe to C9VAL on YouTube",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c6f51682-d410-4d98-86af-c71836a6985e.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "YOUTUBE_SUBSCRIBE",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "5ec2d533-aa7e-4608-b219-026abcfbd817",
+            "name": "[VAL] Follow C9VAL on TikTok",
+            "description": "Earn 25xp",
+            "url": "https://www.tiktok.com/@c9val",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a27a0639-4109-4607-af4f-189db5452b54.png",
+            "iconImage": "",
+            "custom": true,
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[VAL] Follow C9VAL on TikTok",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a27a0639-4109-4607-af4f-189db5452b54.png",
+                    "custom": true,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/0d49dd5d-cd7a-4917-a20b-3d5f38fc8bb6.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "2af6ed14-0a10-4782-a169-a745b179aa29",
+                "activity_id": "5ec2d533-aa7e-4608-b219-026abcfbd817",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[VAL] Follow C9VAL on TikTok",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a27a0639-4109-4607-af4f-189db5452b54.png",
+                        "custom": true,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TIKTOK_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "cf26d04c-172a-4a37-bfbd-732603db17d8",
+            "name": "[VAL] Follow C9VAL on X",
+            "description": "Earn 25xp",
+            "url": "https://x.com/C9VAL",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/8028ff97-2267-4fe3-ab30-d32b846f6a65.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[VAL] Follow C9VAL on X",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/8028ff97-2267-4fe3-ab30-d32b846f6a65.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/8028ff97-2267-4fe3-ab30-d32b846f6a65.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "6c517b60-e365-44de-9f7e-e3d0556d2c4d",
+                "activity_id": "cf26d04c-172a-4a37-bfbd-732603db17d8",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[VAL] Follow C9VAL on X",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/8028ff97-2267-4fe3-ab30-d32b846f6a65.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "f6543077-277f-4990-b1b5-11e6525d0f2f",
+            "name": "[VAL] Like and tell us your favorite thing about the 2025 C9 VCT Capsule!",
+            "description": "Earn 40xp",
+            "url": "https://x.com/C9VAL/status/1877475438303523053",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/da3652f3-9bfa-4dc8-a85f-a987dc9e8e5e.png",
+            "iconImage": "",
+            "rewardMessage": "40 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[VAL] Like and tell us your favorite thing about the 2025 C9 VCT Capsule!",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/da3652f3-9bfa-4dc8-a85f-a987dc9e8e5e.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 40xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/da3652f3-9bfa-4dc8-a85f-a987dc9e8e5e.png",
+                "closed_at": "2025-01-17T20:00:20.264Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": true
+            },
+            "reward": {
+                "reward_rule_id": "0bb571b6-dbeb-44b6-9e13-0d3db77179a6",
+                "activity_id": "f6543077-277f-4990-b1b5-11e6525d0f2f",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "40",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[VAL] Like and tell us your favorite thing about the 2025 C9 VCT Capsule!",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/da3652f3-9bfa-4dc8-a85f-a987dc9e8e5e.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 40xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": false,
+            "retroactiveSubmission": true,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_COMMENT_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "fc1f1e2e-8f54-4363-8c96-4644300edb2d",
+            "name": "Complete your profile",
+            "description": "",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png",
+            "iconImage": "",
+            "rewardMessage": "100 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "Complete your profile",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": ""
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "form": {
+                    "type": "form",
+                    "style": "single-form",
+                    "fields": [],
+                    "results": {
+                        "type": "components",
+                        "components": []
+                    },
+                    "editable": false
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "fbaf1ed6-45ea-458f-a998-971b07ecccaf",
+                "activity_id": "fc1f1e2e-8f54-4363-8c96-4644300edb2d",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "100",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Complete your profile",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9a5ad14e-439e-49b6-821e-0e35cf3a9f4a.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": ""
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "COLLECT_ZERO_PARTY_DATA",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "8d60a73e-7429-44b5-a26c-a5290f557adc",
+            "name": "Refer A Friend To Join Club9!",
+            "description": "Referee must complete the \"Complete your profile\" Quest. 5 Referrals Max Per Year.",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e70798a4-7568-4b6f-b1cc-0ce2e4a054cd.png",
+            "iconImage": "",
+            "rewardMessage": "10 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "Refer A Friend To Join Club9!",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e70798a4-7568-4b6f-b1cc-0ce2e4a054cd.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Referee must complete the \"Complete your profile\" Quest. 5 Referrals Max Per Year."
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "customReferralLinks": {
+                    "fafde47e-75ab-4fb9-8ef4-377d7fb5ab30": "http://c9.gg/club9"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e70798a4-7568-4b6f-b1cc-0ce2e4a054cd.png",
+                "closed_at": null,
+                "iconImage": "",
+                "activities": [
+                    {
+                        "count": 1,
+                        "label": "Complete your profile",
+                        "value": "3dc70937-9a10-4240-8a62-c91dc68309e0"
+                    }
+                ],
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "9d8edb9f-3255-4279-9b58-d046d9553c28",
+                "activity_id": "8d60a73e-7429-44b5-a26c-a5290f557adc",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "10",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Refer A Friend To Join Club9!",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e70798a4-7568-4b6f-b1cc-0ce2e4a054cd.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Referee must complete the \"Complete your profile\" Quest. 5 Referrals Max Per Year."
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    },
+                    "customReferralLinks": {
+                        "fafde47e-75ab-4fb9-8ef4-377d7fb5ab30": "http://c9.gg/club9"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "REFER_A_FRIEND_TO_COMPLETE_AN_ACTIVITY",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 5
+            },
+            "products": null
+        },
+        {
+            "id": "43790dd8-0260-4c90-b678-c47fdf47891e",
+            "name": "[C9] Like the Club9 2025 Announcement Post",
+            "description": "Earn 20xp",
+            "url": "https://x.com/Cloud9/status/1877807627591421986",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2fb3818d-514c-45d6-8818-244e75e74b04.png",
+            "iconImage": "",
+            "rewardMessage": "20 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Like the Club9 2025 Announcement Post",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2fb3818d-514c-45d6-8818-244e75e74b04.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 20xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2fb3818d-514c-45d6-8818-244e75e74b04.png",
+                "closed_at": "2025-01-17T20:00:35.132Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "3c8adec9-fe7c-4b2a-a46e-2b04fec77838",
+                "activity_id": "43790dd8-0260-4c90-b678-c47fdf47891e",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "20",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Like the Club9 2025 Announcement Post",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2fb3818d-514c-45d6-8818-244e75e74b04.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 20xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_LIKE_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "ec57995d-fddb-48c8-b994-4c70ca21b7dc",
+            "name": "[C9] Like the Cloud9 x PAGODA Announcement Post",
+            "description": "Earn 20xp",
+            "url": "https://x.com/C9LoL/status/1877445239612338632",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/ebd08c44-47c8-4cbe-b22a-c8fc061533db.png",
+            "iconImage": "",
+            "rewardMessage": "20 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Like the Cloud9 x PAGODA Announcement Post",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/ebd08c44-47c8-4cbe-b22a-c8fc061533db.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 20xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/ebd08c44-47c8-4cbe-b22a-c8fc061533db.png",
+                "closed_at": "2025-01-17T20:00:11.839Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "68695840-f723-4faf-857c-c9ceaf39eabe",
+                "activity_id": "ec57995d-fddb-48c8-b994-4c70ca21b7dc",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "20",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Like the Cloud9 x PAGODA Announcement Post",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/ebd08c44-47c8-4cbe-b22a-c8fc061533db.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 20xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_LIKE_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "4220e538-9a6f-4426-90d6-fec40d82d2bc",
+            "name": "Join Club9",
+            "description": "",
+            "url": "",
+            "image": "",
+            "iconImage": "",
+            "rewardMessage": "1 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "Join Club9",
+                    "image": "",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": ""
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "b7267177-21cc-40d9-b30d-6101d32533fd",
+                "activity_id": "4220e538-9a6f-4426-90d6-fec40d82d2bc",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "1",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Join Club9",
+                        "image": "",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": ""
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "JOIN_REWARDS_PROGRAM",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "90382a4c-4ec9-4091-b6ca-d475063e04c5",
+            "name": "C9COD Challenge",
+            "description": "Complete all the C9COD quests to earn an additional 25xp.",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/5e52c54d-3b4f-45d8-b855-335dc44e31f4.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "C9COD Challenge",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/5e52c54d-3b4f-45d8-b855-335dc44e31f4.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Complete all the C9COD quests to earn an additional 25xp."
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/5e52c54d-3b4f-45d8-b855-335dc44e31f4.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false,
+                "challenges_activities": [
+                    {
+                        "count": 1,
+                        "label": "Complete your profile",
+                        "value": "fc1f1e2e-8f54-4363-8c96-4644300edb2d"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[COD] Follow C9COD on X",
+                        "value": "d4b82180-15fa-4ec4-bafa-d16e7c876501"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[COD] Subscribe to C9COD on YouTube",
+                        "value": "9216ad20-e4ba-4880-abd4-973084eb883c"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[COD] Follow C9COD on Instagram",
+                        "value": "807e5d75-9cac-4c92-8d31-430fd5199f3a"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[COD] Follow C9COD on TikTok",
+                        "value": "8281c3b8-0ee8-4951-aebf-ed238512867d"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[COD] Like C9COD's Facebook Page",
+                        "value": "704ef616-4170-4383-a9c0-f957182bb239"
+                    }
+                ]
+            },
+            "reward": {
+                "reward_rule_id": "6c51f49d-a26d-4664-824f-62b497f1fd6d",
+                "activity_id": "90382a4c-4ec9-4091-b6ca-d475063e04c5",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "C9COD Challenge",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/5e52c54d-3b4f-45d8-b855-335dc44e31f4.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Complete all the C9COD quests to earn an additional 25xp."
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "CHALLENGE",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "476fdae4-4297-4621-8080-b05babba2097",
+            "name": "C9LOL Challenge",
+            "description": "Complete all the C9LOL quests to earn an additional 25xp.",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fd9d9c0f-ed22-4150-81b4-0b109a9429c8.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "C9LOL Challenge",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fd9d9c0f-ed22-4150-81b4-0b109a9429c8.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Complete all the C9LOL quests to earn an additional 25xp."
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fd9d9c0f-ed22-4150-81b4-0b109a9429c8.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false,
+                "challenges_activities": [
+                    {
+                        "count": 1,
+                        "label": "[LoL] Follow C9LoL on X",
+                        "value": "6e83ead3-1a2f-4491-aa9e-d62a0090e4f9"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[LoL] Subscribe to C9LoL on YouTube",
+                        "value": "ab9a71f7-43d5-4c99-96db-30d7f59c9514"
+                    },
+                    {
+                        "count": 1,
+                        "label": "Complete your profile",
+                        "value": "fc1f1e2e-8f54-4363-8c96-4644300edb2d"
+                    }
+                ]
+            },
+            "reward": {
+                "reward_rule_id": "cfe45942-7d9f-4ae9-a88b-d3c29e481a38",
+                "activity_id": "476fdae4-4297-4621-8080-b05babba2097",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "C9LOL Challenge",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fd9d9c0f-ed22-4150-81b4-0b109a9429c8.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Complete all the C9LOL quests to earn an additional 25xp."
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "CHALLENGE",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "704ef616-4170-4383-a9c0-f957182bb239",
+            "name": "[COD] Like C9COD's Facebook Page",
+            "description": "Earn 25xp",
+            "url": "https://www.facebook.com/C9COD/",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b1947b27-4a7f-42a4-8796-c63d40a649c4.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[COD] Like C9COD's Facebook Page",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b1947b27-4a7f-42a4-8796-c63d40a649c4.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b1947b27-4a7f-42a4-8796-c63d40a649c4.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "1e37b00b-2b04-4b72-95ee-72bb9dc613d1",
+                "activity_id": "704ef616-4170-4383-a9c0-f957182bb239",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[COD] Like C9COD's Facebook Page",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b1947b27-4a7f-42a4-8796-c63d40a649c4.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "FACEBOOK_LIKE_PAGE",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "9216ad20-e4ba-4880-abd4-973084eb883c",
+            "name": "[COD] Subscribe to C9COD on YouTube",
+            "description": "Earn 25xp",
+            "url": "https://www.youtube.com/@C9COD?sub_confirmation=1",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c37d5db6-b1a5-47fa-8e45-802f5e6fd942.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[COD] Subscribe to C9COD on YouTube",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c37d5db6-b1a5-47fa-8e45-802f5e6fd942.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c37d5db6-b1a5-47fa-8e45-802f5e6fd942.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "6a22636c-9e1b-4e25-b722-7c34108d53fd",
+                "activity_id": "9216ad20-e4ba-4880-abd4-973084eb883c",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[COD] Subscribe to C9COD on YouTube",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/c37d5db6-b1a5-47fa-8e45-802f5e6fd942.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "YOUTUBE_SUBSCRIBE",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "8281c3b8-0ee8-4951-aebf-ed238512867d",
+            "name": "[COD] Follow C9COD on TikTok",
+            "description": "Earn 25xp",
+            "url": "https://www.tiktok.com/@c9cod?lang=en",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/7bc4db78-596f-4b91-b156-10477e9cbcca.png",
+            "iconImage": "",
+            "custom": true,
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[COD] Follow C9COD on TikTok",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/7bc4db78-596f-4b91-b156-10477e9cbcca.png",
+                    "custom": true,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/0d49dd5d-cd7a-4917-a20b-3d5f38fc8bb6.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "ee1ab7e9-c06b-4c6f-a20b-5f7d26ad83eb",
+                "activity_id": "8281c3b8-0ee8-4951-aebf-ed238512867d",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[COD] Follow C9COD on TikTok",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/7bc4db78-596f-4b91-b156-10477e9cbcca.png",
+                        "custom": true,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TIKTOK_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "d4b82180-15fa-4ec4-bafa-d16e7c876501",
+            "name": "[COD] Follow C9COD on X",
+            "description": "Earn 25xp",
+            "url": "https://x.com/c9cod_",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/28f5afc2-9895-4c7d-acb9-add797406012.jpeg",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[COD] Follow C9COD on X",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/28f5afc2-9895-4c7d-acb9-add797406012.jpeg",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/28f5afc2-9895-4c7d-acb9-add797406012.jpeg",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "9e7673bb-955d-4112-8175-8cfcbd5aa6ba",
+                "activity_id": "d4b82180-15fa-4ec4-bafa-d16e7c876501",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[COD] Follow C9COD on X",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/28f5afc2-9895-4c7d-acb9-add797406012.jpeg",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "4a58e161-f449-4cd7-bba2-66b64bed1e87",
+            "name": "[C9] Follow the Cloud9 Twitch Account",
+            "description": "Earn 25xp",
+            "url": "https://www.twitch.tv/Cloud9",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d65f79ac-3eb4-450b-85c4-b8166a248700.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Follow the Cloud9 Twitch Account",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d65f79ac-3eb4-450b-85c4-b8166a248700.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d65f79ac-3eb4-450b-85c4-b8166a248700.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "e18eaa55-fbef-46fc-84d3-b994d1b26ffd",
+                "activity_id": "4a58e161-f449-4cd7-bba2-66b64bed1e87",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Follow the Cloud9 Twitch Account",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d65f79ac-3eb4-450b-85c4-b8166a248700.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "LINK_CLICKS",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "cd16e5cc-0cff-45d1-acc9-77c1b929c891",
+            "name": "[C9] Join the Cloud9 Subreddit ",
+            "description": "Earn 25xp",
+            "url": "https://www.reddit.com/r/Cloud9/",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/0cc05c78-43b0-4374-9137-855c4bbf1c77.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Join the Cloud9 Subreddit ",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/0cc05c78-43b0-4374-9137-855c4bbf1c77.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/0cc05c78-43b0-4374-9137-855c4bbf1c77.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "513e7d24-e235-497f-8261-643a79863fe5",
+                "activity_id": "cd16e5cc-0cff-45d1-acc9-77c1b929c891",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Join the Cloud9 Subreddit ",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/0cc05c78-43b0-4374-9137-855c4bbf1c77.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "LINK_CLICKS",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "0b33ae8c-6c84-467e-ac01-5185d418f35f",
+            "name": "[C9] Like Cloud9's Facebook Page",
+            "description": "Earn 25xp",
+            "url": "https://www.facebook.com/cloud9",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2e025733-f21d-45e9-86f8-a30fa43a2cc6.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Like Cloud9's Facebook Page",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2e025733-f21d-45e9-86f8-a30fa43a2cc6.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2e025733-f21d-45e9-86f8-a30fa43a2cc6.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "cb07661e-a54c-4df3-a4d6-b53c244c2097",
+                "activity_id": "0b33ae8c-6c84-467e-ac01-5185d418f35f",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Like Cloud9's Facebook Page",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2e025733-f21d-45e9-86f8-a30fa43a2cc6.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "FACEBOOK_LIKE_PAGE",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "9f2e1352-2287-48d0-a2ee-ed24de5b3683",
+            "name": "[C9] Join the Cloud9 Discord Server",
+            "description": "Earn 25xp\n",
+            "url": "https://discord.com/invite/cloud9",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3c50171d-e019-4660-8846-047c6adb45fa.png",
+            "iconImage": "",
+            "custom": true,
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Join the Cloud9 Discord Server",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3c50171d-e019-4660-8846-047c6adb45fa.png",
+                    "custom": true,
+                    "iconImage": "",
+                    "description": "Earn 25xp\n"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "13f3d51b-d232-436d-8f2a-f2af53795907",
+                "activity_id": "9f2e1352-2287-48d0-a2ee-ed24de5b3683",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Join the Cloud9 Discord Server",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3c50171d-e019-4660-8846-047c6adb45fa.png",
+                        "custom": true,
+                        "iconImage": "",
+                        "description": "Earn 25xp\n"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "DISCORD_JOIN_CHANNEL",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "ab9a71f7-43d5-4c99-96db-30d7f59c9514",
+            "name": "[LoL] Subscribe to C9LoL on YouTube",
+            "description": "Earn 25xp",
+            "url": "https://www.youtube.com/@C9LoL?sub_confirmation=1",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[LoL] Subscribe to C9LoL on YouTube",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "71e59f96-d67b-4bcd-a10a-698b2f5e1f2d",
+                "activity_id": "ab9a71f7-43d5-4c99-96db-30d7f59c9514",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[LoL] Subscribe to C9LoL on YouTube",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "YOUTUBE_SUBSCRIBE",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "6e83ead3-1a2f-4491-aa9e-d62a0090e4f9",
+            "name": "[LoL] Follow C9LoL on X",
+            "description": "Earn 25xp",
+            "url": "https://x.com/C9LoL",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a23dbee4-41c3-46b0-9586-16f8e0e26455.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[LoL] Follow C9LoL on X",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a23dbee4-41c3-46b0-9586-16f8e0e26455.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a23dbee4-41c3-46b0-9586-16f8e0e26455.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "a4bb8f3f-7444-4e04-a78f-cd9bf4df0d49",
+                "activity_id": "6e83ead3-1a2f-4491-aa9e-d62a0090e4f9",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[LoL] Follow C9LoL on X",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a23dbee4-41c3-46b0-9586-16f8e0e26455.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "58599e92-4b37-4b44-bf6c-89b34eefa188",
+            "name": "[C9] Subscribe to Cloud9 on YouTube",
+            "description": "Earn 25xp",
+            "url": "https://www.youtube.com/@cloud9?sub_confirmation=1",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/57e29a89-b299-49e0-ac44-2e35148fce4b.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Subscribe to Cloud9 on YouTube",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/57e29a89-b299-49e0-ac44-2e35148fce4b.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/57e29a89-b299-49e0-ac44-2e35148fce4b.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "1f5c1c39-da46-452b-8eda-f9495a56a5c0",
+                "activity_id": "58599e92-4b37-4b44-bf6c-89b34eefa188",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Subscribe to Cloud9 on YouTube",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/57e29a89-b299-49e0-ac44-2e35148fce4b.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "YOUTUBE_SUBSCRIBE",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "fc0b6df2-c24d-4dc4-a698-ae00062c85e8",
+            "name": "[C9] Follow Cloud9 on TikTok",
+            "description": "Earn 25xp",
+            "url": "https://www.tiktok.com/@cloud9",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/4a9540ea-a971-4d6f-97b8-1f427d9ae649.png",
+            "iconImage": "",
+            "custom": true,
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Follow Cloud9 on TikTok",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/4a9540ea-a971-4d6f-97b8-1f427d9ae649.png",
+                    "custom": true,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/0d49dd5d-cd7a-4917-a20b-3d5f38fc8bb6.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "19315d46-6abd-4cd4-9f03-f23e57b60a3f",
+                "activity_id": "fc0b6df2-c24d-4dc4-a698-ae00062c85e8",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Follow Cloud9 on TikTok",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/4a9540ea-a971-4d6f-97b8-1f427d9ae649.png",
+                        "custom": true,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TIKTOK_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "ba01655a-9292-430a-b3ee-714e8cde8b30",
+            "name": "[C9] Follow Cloud9 on Instagram",
+            "description": "Earn 25xp",
+            "url": "https://www.instagram.com/cloud9gg",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/de6bc343-161f-48c2-b48b-9ce0222fcd4a.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Follow Cloud9 on Instagram",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/de6bc343-161f-48c2-b48b-9ce0222fcd4a.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/de6bc343-161f-48c2-b48b-9ce0222fcd4a.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "26c59bd6-fd95-4698-8f1c-9af830156ee5",
+                "activity_id": "ba01655a-9292-430a-b3ee-714e8cde8b30",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Follow Cloud9 on Instagram",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/de6bc343-161f-48c2-b48b-9ce0222fcd4a.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "INSTAGRAM_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "64e92ee4-8e97-4603-9905-55bee0102144",
+            "name": "[C9] Follow Cloud9 on X",
+            "description": "Earn 25xp\n",
+            "url": "https://x.com/Cloud9",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3099574a-f43d-4fb5-9958-69467552a442.png",
+            "iconImage": "",
+            "custom": true,
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[C9] Follow Cloud9 on X",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3099574a-f43d-4fb5-9958-69467552a442.png",
+                    "custom": true,
+                    "iconImage": "",
+                    "description": "Earn 25xp\n"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "fdbca156-1e43-4dc2-a3e7-2db131518c61",
+                "activity_id": "64e92ee4-8e97-4603-9905-55bee0102144",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[C9] Follow Cloud9 on X",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3099574a-f43d-4fb5-9958-69467552a442.png",
+                        "custom": true,
+                        "iconImage": "",
+                        "description": "Earn 25xp\n"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "807e5d75-9cac-4c92-8d31-430fd5199f3a",
+            "name": "[COD] Follow C9COD on Instagram",
+            "description": "Earn 25xp",
+            "url": "https://www.instagram.com/c9cod/",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b44d31b3-034c-4332-8d13-c96a185ced6d.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[COD] Follow C9COD on Instagram",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b44d31b3-034c-4332-8d13-c96a185ced6d.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b44d31b3-034c-4332-8d13-c96a185ced6d.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "e4afc753-2b32-4da7-8fd4-87f7d5054793",
+                "activity_id": "807e5d75-9cac-4c92-8d31-430fd5199f3a",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[COD] Follow C9COD on Instagram",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b44d31b3-034c-4332-8d13-c96a185ced6d.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "INSTAGRAM_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "a8dd36ad-f49e-4772-a1a1-86756752fd2e",
+            "name": "Check out Club9 Rewards",
+            "description": "Check out Club9 Rewards",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2527ec69-0565-4d42-baa0-9c3decbdcd9e.gif",
+            "iconImage": "",
+            "rewardMessage": "XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "Check out Club9 Rewards",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2527ec69-0565-4d42-baa0-9c3decbdcd9e.gif",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Check out Club9 Rewards"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2527ec69-0565-4d42-baa0-9c3decbdcd9e.gif",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "externalUrl": "https://store.cloud9.gg/collections/elite-tier-rewards",
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "6f4f4818-dcdd-4faa-be7b-0d59726900e5",
+                "activity_id": "a8dd36ad-f49e-4772-a1a1-86756752fd2e",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": null,
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Check out Club9 Rewards",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/2527ec69-0565-4d42-baa0-9c3decbdcd9e.gif",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Check out Club9 Rewards"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "NON_INTEGRATION_CUSTOM",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        }
+    ]
+}
