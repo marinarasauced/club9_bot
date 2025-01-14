@@ -10,7 +10,7 @@ from config.config import (
     API_TOKI_ACTIVITIES_HEADERS,
     DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS,
 )
-from utils.activities import (
+from cogs.activities import (
     Club9ActivityType,
     Club9Activity,
 )
@@ -41,7 +41,7 @@ class Club9API():
             response.raise_for_status()
             return response.json()
         except requests.RequestException as e:
-            self.logger.log(level=logging.ERROR, msg=f"Club9API -> {e}")
+            self.logger.log(level=logging.ERROR, msg=f"Club9API -> failed to fetch data for query with url = {url}, params = {params}, headers = {headers} ({e})")
             return None
 
 

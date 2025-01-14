@@ -34,3 +34,4 @@ def PATH_DISCORD_LOGS() -> str:
 API_TOKI_ACTIVITIES_URL = "https://api.buildwithtoki.com/merchant/brand/activities"
 API_TOKI_ACTIVITIES_PARAMS = None
 API_TOKI_ACTIVITIES_HEADERS = {"x-shopify-shop-domain": "cloud9gg.myshopify.com",}
+PATH_TOKI_ACTIVITIES_CACHE = "config/activities.json"
