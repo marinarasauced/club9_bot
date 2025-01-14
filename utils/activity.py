@@ -4,7 +4,11 @@ from enum import Enum
 import random
 from typing import Any
 
-from config.config import DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS
+from config.config import (
+    DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS,
+    CLUB9_BOT_ICON_URL,
+    ENABLE_URLS_IN_NOTIFICATIONS,
+)
 
 
 class Club9ActivityType(Enum):
@@ -107,13 +111,22 @@ class Club9ActivityData():
         """
         Generates the discord embed of the discord notification for a new activity including a name, reward, image, visibility, start/stop times if applicable, etc.
         """
-        embed = discord.Embed(color=discord.Color.blue())
+        embed = discord.Embed()
         if self.club9_activity_type == Club9ActivityType.CHALLENGE:
-            pass
+            embed.color = discord.Color.blue()
+            embed.title = self.name
+            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
+            embed.description = self.description
+            embed.set_image(url=self.image)
+            embed.add_field(name="Quests", value="\n".join(activity.get("label", "") for activity in self.additionalFields_challenges_activities))
         elif self.club9_activity_type == Club9ActivityType.QUEST_EXTERNAL:
-            pass
+            return None
         elif self.club9_activity_type == Club9ActivityType.QUEST_INTERNAL:
-            pass
+            embed.color = discord.Color.blue()
+            embed.title = self.name
+            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
+            embed.description = self.description
+            embed.set_image(url=self.image)
         elif self.club9_activity_type == Club9ActivityType.NONE:
             return None
         else:

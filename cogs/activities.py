@@ -6,7 +6,6 @@ import logging
 from config.config import *
 from main import Club9Bot
 import utils.activity
-from utils.api import Club9API
 
 
 class Club9Activities(commands.Cog):
@@ -89,11 +88,11 @@ class Club9Activities(commands.Cog):
                         if (activity_data_old.club9_activity_data == activity_data_new.club9_activity_data):
                             # TODO CASE 1 -> detected constant current activity
                             print("no change")
-                            pass
                         else:
                             # TODO CASE 2 -> detected added/modified current activity
-                            print("change")
-                            pass
+                            content = activity_data_new.generate_activities_content()
+                            embed = activity_data_new.generate_activities_embed()
+                            await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activities -> failed to refresh activities ({e})")
 
