@@ -75,7 +75,7 @@ class Club9Bot(commands.Bot):
 def main():
     """
     """
-    load_dotenv()
+    load_dotenv(dotenv_path="../.env")
     TOKEN: Final[str] = os.getenv("DISCORD_TOKEN")
 
     logger = logging.getLogger("discord")

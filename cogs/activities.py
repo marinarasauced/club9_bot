@@ -73,6 +73,7 @@ class Club9Activities(commands.Cog):
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> refreshing activities")
             activities_dict: dict = self.club9_bot.api.fetch_activities()
+            is_cache_outdated: bool = False
             if (activities_dict == self.club9_bot.activities_dict):
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> refreshed activities (no changes detected)")
             else:
@@ -91,17 +92,23 @@ class Club9Activities(commands.Cog):
                             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected no change with activity {activity_data_old.id}")
                         else:
                             # case : detected change
-                            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected change with activity {activity_data_new.id}")
                             if (activity_data_new.id in keys_old):
                                 # case : activity already in api -> activity modified
+                                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected modified activity {activity_data_new.id}")
                                 # TODO add logic for modifying notifications (if desired, prereq: need to add method for storing/loading message data for shutdowns, what data to change, etc)
-                                pass
                             else:
                                 # case : activity new
-                                pass
-                            # content = activity_data_new.generate_activities_content()
-                            # embed = activity_data_new.generate_activities_embed()
-                            # await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
+                                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected new activity {activity_data_new.id}")
+                                # create/send notification
+                                content = activity_data_new.generate_activities_content()
+                                embed = activity_data_new.generate_activities_embed()
+                                await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
+                                # indicate cache needs to be updated
+                                is_cache_outdated = True
+            if (is_cache_outdated == True):
+                # write new activity cache
+                self.club9_bot.activities_dict = activities_dict
+                await self.club9_bot.club9_cog_activities.write_cache()
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activities -> failed to refresh activities ({e})")
 

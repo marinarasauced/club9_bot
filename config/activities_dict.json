@@ -1,6 +1,338 @@
 {
     "activities": [
         {
+            "id": "c849badc-fcff-407f-85d5-a73f6af58d22",
+            "name": "[VAL] Like our 2025 VCT Walkout song Post",
+            "description": "Earn 10xp",
+            "url": "https://x.com/C9VAL/status/1879257303834308904",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e4ee5eee-8e66-42ae-8d97-4b506e01dbc4.png",
+            "iconImage": "",
+            "rewardMessage": "10 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[VAL] Like our 2025 VCT Walkout song Post",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e4ee5eee-8e66-42ae-8d97-4b506e01dbc4.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 10xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e4ee5eee-8e66-42ae-8d97-4b506e01dbc4.png",
+                "closed_at": "2025-01-21T20:00:09.128Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "56ba3958-9ea0-4990-bbdb-5ae0ba9d2eb2",
+                "activity_id": "c849badc-fcff-407f-85d5-a73f6af58d22",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "10",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[VAL] Like our 2025 VCT Walkout song Post",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/e4ee5eee-8e66-42ae-8d97-4b506e01dbc4.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 10xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_LIKE_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "7b438205-e5cf-4fb7-8728-62e7054e5e66",
+            "name": "[LOL] Tell us what you like most about for the Cloud9 Kia 2025 Pro Kit",
+            "description": "Earn 80xp",
+            "url": "https://x.com/C9LoL/status/1879249681848668364",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/cfbdb173-3b05-4d91-876c-049d70d1b6b9.png",
+            "iconImage": "",
+            "rewardMessage": "80 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[LOL] Tell us what you like most about for the Cloud9 Kia 2025 Pro Kit",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/cfbdb173-3b05-4d91-876c-049d70d1b6b9.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 80xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/cfbdb173-3b05-4d91-876c-049d70d1b6b9.png",
+                "closed_at": "2025-01-21T20:00:00.811Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": true
+            },
+            "reward": {
+                "reward_rule_id": "003fd4e0-7230-401f-9033-ba6bf8391845",
+                "activity_id": "7b438205-e5cf-4fb7-8728-62e7054e5e66",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "80",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[LOL] Tell us what you like most about for the Cloud9 Kia 2025 Pro Kit",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/cfbdb173-3b05-4d91-876c-049d70d1b6b9.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 80xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": false,
+            "retroactiveSubmission": true,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_COMMENT_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "53cf33a3-bf2c-45fd-a229-c091881140ca",
+            "name": "[LOL] Like the Cloud9 Kia Announcement Post",
+            "description": "Earn 20xp",
+            "url": "https://x.com/C9LoL/status/1879242079286800841",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/525d2131-a7aa-436b-a264-d0cc17d02a3d.png",
+            "iconImage": "",
+            "rewardMessage": "20 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[LOL] Like the Cloud9 Kia Announcement Post",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/525d2131-a7aa-436b-a264-d0cc17d02a3d.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 20xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/525d2131-a7aa-436b-a264-d0cc17d02a3d.png",
+                "closed_at": "2025-01-21T20:00:29.327Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "cb21f5bb-679c-4d7e-87f3-57faa38c4808",
+                "activity_id": "53cf33a3-bf2c-45fd-a229-c091881140ca",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "20",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[LOL] Like the Cloud9 Kia Announcement Post",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/525d2131-a7aa-436b-a264-d0cc17d02a3d.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 20xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_LIKE_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "f59c0518-5f8e-4745-955e-9a76e9db5888",
+            "name": "[COD] Like the C9NY Team Pack Post",
+            "description": "Earn 10xp",
+            "url": "https://x.com/C9COD_/status/1876721724483571805",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/60e4b9ea-5dec-40e8-8916-47e0ff6b76e5.png",
+            "iconImage": "",
+            "rewardMessage": "10 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[COD] Like the C9NY Team Pack Post",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/60e4b9ea-5dec-40e8-8916-47e0ff6b76e5.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 10xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/60e4b9ea-5dec-40e8-8916-47e0ff6b76e5.png",
+                "closed_at": "2025-01-21T20:00:46.097Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "83fa9b83-25c3-45cf-9a97-d17e1187c0d9",
+                "activity_id": "f59c0518-5f8e-4745-955e-9a76e9db5888",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "10",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[COD] Like the C9NY Team Pack Post",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/60e4b9ea-5dec-40e8-8916-47e0ff6b76e5.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 10xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_LIKE_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
             "id": "18111518-18f3-43e8-a96d-0b3d4e66effb",
             "name": "[VAL] Watch C9 vs NRG - VCT Americas Kickoff",
             "description": "",
@@ -80,6 +412,111 @@
             "typeIdentifier": "NON_INTEGRATION_CUSTOM",
             "completionsLimit": {
                 "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "79d9ccc3-8efe-4490-b406-1b799776953f",
+            "name": "C9VAL Challenge",
+            "description": "Earn 25xp",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "C9VAL Challenge",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false,
+                "challenges_activities": [
+                    {
+                        "count": 1,
+                        "label": "Complete your profile",
+                        "value": "fc1f1e2e-8f54-4363-8c96-4644300edb2d"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[VAL] Follow C9VAL on X",
+                        "value": "cf26d04c-172a-4a37-bfbd-732603db17d8"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[VAL] Follow C9VAL on TikTok",
+                        "value": "5ec2d533-aa7e-4608-b219-026abcfbd817"
+                    },
+                    {
+                        "count": 1,
+                        "label": "[VAL] Subscribe to C9VAL on YouTube",
+                        "value": "c8c75d77-f3a9-4fec-975c-e802271d10a0"
+                    }
+                ]
+            },
+            "reward": {
+                "reward_rule_id": "4b6d4fde-f0bd-4fbc-bde1-123ac7c9bdf8",
+                "activity_id": "79d9ccc3-8efe-4490-b406-1b799776953f",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "C9VAL Challenge",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/16bab9bc-0c86-4947-bb3e-af8d2f6277d5.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "CHALLENGE",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
             },
             "products": null
         },

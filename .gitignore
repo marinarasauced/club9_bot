@@ -1,6 +1,6 @@
 
 # PROTECTED ENVIRONMENT VARIABLES
-# .env
+.env
 
 # DISCORD.pPY BOT LOGS
 logs/
