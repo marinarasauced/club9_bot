@@ -111,22 +111,6 @@ class Club9ActivityData():
         return content
 
 
-    def embed_add_closed_time(self, embed: discord.Embed, closed_at: str) -> discord.Embed:
-        """
-        Adds a field containing an embedded time at which the quest will close.
-        """
-        stamp_dt = datetime.datetime.fromisoformat(closed_at.replace("Z", "+00:00"))
-        stamp_unix = int(stamp_dt.timestamp())
-        print(stamp_unix)
-        stamp_discord = f"<t:{stamp_unix}>"
-        embed.add_field(
-            name="Available Until",
-            value=stamp_discord,
-            inline=False,
-        )
-
-
-
     def generate_activities_embed(self) -> discord.Embed:
         """
         Generates the discord embed of the discord notification for a new activity including a name, reward, image, visibility, start/stop times if applicable, etc.
@@ -136,12 +120,11 @@ class Club9ActivityData():
         embed.title = self.name                                 # set name by default
         embed.set_image(url=self.image)                         # set image by default
         if (NOTIFICATIONS_ENABLE_URL == True):
-            embed.url = NOTIFICATIONS_URL
+            embed.url = NOTIFICATIONS_URL                       # URL only links to the url in config.py (default club9 site)
         if self.club9_activity_type == Club9ActivityType.CHALLENGE:
             embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
             # add reward amount field indicating the reward value
             if self.reward_amount_to_reward is not None:
-                print("challenge reward")
                 embed.add_field(
                     name="Reward",
                     value=f"{self.reward_amount_to_reward} XP",
@@ -174,7 +157,6 @@ class Club9ActivityData():
             if self.additionalFields_closed_at is not None:
                 stamp_dt = datetime.datetime.fromisoformat(self.additionalFields_closed_at.replace("Z", "+00:00"))
                 stamp_unix = int(stamp_dt.timestamp())
-                print(stamp_unix)
                 stamp_discord = f"<t:{stamp_unix}>"
                 embed.add_field(
                     name="Available Until",
