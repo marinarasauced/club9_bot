@@ -24,7 +24,7 @@ class Club9Bot(commands.Bot):
         self.api = Club9API(self.logger)
 
         self.activities_dict: dict = {}
-        self.activities_mapping: dict[str, Club9ActivityData] = {}  # map of activity ids to Club9Activity objects generated on startup for comparison to requests during refresh comparison
+        self.activities_mapping: dict = {}  # map of activity ids to Club9Activity objects generated on startup for comparison to requests during refresh comparison
         # TODO add mapping attribute dict for tracking messages in case of editing quests upon api change
 
 
@@ -34,6 +34,7 @@ class Club9Bot(commands.Bot):
         await self.load_extension("cogs.activities")
         self.club9_cog_activities = self.get_cog("Club9Activities")
         if self.club9_cog_activities:
+            await self.club9_cog_activities.read_cache()
             await self.club9_cog_activities.refresh()
 
 
