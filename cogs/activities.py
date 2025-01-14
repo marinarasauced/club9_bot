@@ -5,7 +5,7 @@ import logging
 
 from config.config import *
 from main import Club9Bot
-from utils.activity import Club9ActivityType
+import utils.activity
 from utils.api import Club9API
 
 
@@ -31,7 +31,14 @@ class Club9Activities(commands.Cog):
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> reading activities cache")
             with open(PATH_TOKI_ACTIVITIES_CACHE, "r") as file:
-                self.club9_bot.activities_data = json.load(file)
+                self.club9_bot.activities_dict = json.load(file)
+            activities_list = self.club9_bot.activities_dict.get("activities", [])
+            activities_data = utils.activity.generate_activities(activities_list=activities_list)
+            for activity_data in activities_data:
+                if (hasattr(activity_data, "id") == False or activity_data.club9_activity_type == utils.activity.Club9ActivityType.NONE):
+                    continue
+                else:
+                    self.club9_bot.activities_mapping[activity_data.id, activity_data]
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to read activities cache (file not found)")
         except json.JSONDecodeError:
@@ -49,7 +56,7 @@ class Club9Activities(commands.Cog):
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> writing activities cache")
             with open(PATH_TOKI_ACTIVITIES_CACHE, "w") as file:
-                json.dump(self.club9_bot.activities_data, file, indent=4)
+                json.dump(self.club9_bot.activities_dict, file, indent=4)
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to write activities cache (file not found)")
         except json.JSONDecodeError:
@@ -66,12 +73,24 @@ class Club9Activities(commands.Cog):
         """
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshing activities")
-            activities = self.club9_bot.api.fetch_activities()
-            if (activities == self.club9_bot.activities_data):
+            activities_dict: dict = self.club9_bot.api.fetch_activities()
+            if (activities_dict == self.club9_bot.activities_dict):
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshed activities (no changes detected)")
             else:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshed activities (changes detected)")
-                # TODO add logic for change detection
+                activities_list = activities_dict.get("activities", [])
+                activities_data = utils.activity.generate_activities(activities_list=activities_list)
+                for activity_data_new in activities_data:
+                    if (hasattr(activity_data_new, "id") == False or activity_data_new.club9_activity_type == utils.activity.Club9ActivityType.NONE):
+                        continue
+                    else:
+                        activity_data_old: utils.activity.Club9ActivityData = self.club9_bot.activities_mapping[activity_data_new.id]
+                        if (activity_data_old.club9_activity_data == activity_data_new.club9_activity_data):
+                            # TODO CASE 1 -> detected no changes in current activity
+                            pass
+                        else:
+                            # TODO CASE 2 -> detected changes in current activity
+                            pass
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to refresh activities ({e})")
 

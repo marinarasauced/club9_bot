@@ -38,7 +38,7 @@ class Club9ActivityData():
         self.club9_activity_type = self.get_activity_type()
 
 
-    def show(self):
+    def show(self) -> None:
         """
         Prints all attributes to the terminal.
         """
@@ -69,8 +69,21 @@ class Club9ActivityData():
         """
         Gets the activity type by analyzing the activity data.
         """
-        if (hasattr(self, "typeIdentifier") == False):
-            # TODO add logic in case the typeIdentifier attribute is missing (seems unlikely that it would ever be missing)
+        if (hasattr(self, "typeIdentifier") == False or hasattr(self, "id") == False):
             return Club9ActivityType(None)
         else:
             return Club9ActivityType(self.typeIdentifier)
+
+
+def generate_activities(activities_list: list) -> list[Club9ActivityData]:
+    """
+    Generates a list of Club9ActivityData objects from a list of activity dictionaries.
+
+    @param activities: A list of activity dictionaries from the activities query results after getting 'activities'.
+    @return: A list of Club9ActivityData objects.
+    """
+    activities_data = []
+    for activity_dict in activities_list:
+        activity_data = Club9ActivityData(data=activity_dict)
+        activities_data.append(activity_data)
+    return activities_data

@@ -28,7 +28,7 @@ class Club9API():
         self.logger = logger
 
 
-    def fetch(self, url: str | bytes, params: dict = None, headers: dict = None):
+    def fetch(self, url: str | bytes, params: dict = None, headers: dict = None) -> dict:
         """
         Fetches data from the given API URL.
 
@@ -46,7 +46,7 @@ class Club9API():
             return None
 
 
-    def fetch_activities(self):
+    def fetch_activities(self) -> dict:
         """
         Fetches activities data from the Club9 TOKI API.
 
@@ -62,7 +62,7 @@ class Club9API():
         return activities
 
 
-    def generate_activities_content(self):
+    def generate_activities_content(self) -> str:
         """
         Generates the text component of the discord notification for a new activity including a role ping and a short indication that there is a new quest/challenge.
 
@@ -80,7 +80,7 @@ class Club9API():
         return content
 
 
-    def generate_activities_embed(self, activity):
+    def generate_activities_embed(self, activity) -> discord.Embed:
         """
         Generates the discord embed of the discord notification for a new activity including a name, reward, image, visibility, start/stop times if applicable, etc.
         """
