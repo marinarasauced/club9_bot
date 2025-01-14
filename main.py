@@ -8,10 +8,7 @@ import os
 from typing import Final
 
 from config.config import *
-from utils.activity import (
-    Club9ActivityType,
-    Club9ActivityData,
-)
+from utils.activity import Club9ActivityData
 from utils.api import Club9API
 
 
