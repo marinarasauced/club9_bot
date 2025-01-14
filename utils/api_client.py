@@ -130,55 +130,55 @@ class APIClient:
             """
             self.id = data.get("id")
             self.name = data.get("name")
-            # self.description = data.get("description")
-            # self.url = data.get("url")
+            self.description = data.get("description")
+            self.url = data.get("url")
             self.image = data.get("image")
-            # self.icon_image = data.get("iconImage")
-            # self.custom = data.get("custom")
-            # self.reward_message = data.get("rewardMessage")
-            # self.completed = data.get("completed")
-            # self.limit_reached = data.get("limitReached")
-            # self.pending_review = data.get("pendingReview")
-            # self.automatically_approve = data.get("automaticallyApprove")
-            # self.retroactive_submission = data.get("retroactiveSubmission")
-            # self.max_files_limit = data.get("maxFilesLimit")
-            # self.type_identifier = data.get("typeIdentifier")
+            self.icon_image = data.get("iconImage")
+            self.custom = data.get("custom")
+            self.reward_message = data.get("rewardMessage")
+            self.completed = data.get("completed")
+            self.limit_reached = data.get("limitReached")
+            self.pending_review = data.get("pendingReview")
+            self.automatically_approve = data.get("automaticallyApprove")
+            self.retroactive_submission = data.get("retroactiveSubmission")
+            self.max_files_limit = data.get("maxFilesLimit")
+            self.type_identifier = data.get("typeIdentifier")
             self.completions_limit = data.get("completionsLimit", {})
-            # self.products = data.get("products")
+            self.products = data.get("products")
 
             additional_fields = data.get("additionalFields", {})
-            # self.additional_fields_shop_ids = additional_fields.get("shopIds", [])
-            # self.additional_fields_reward_name = additional_fields.get("rewardName")
-            # self.additional_fields_description = additional_fields.get("description")
-            # self.additional_fields_display_rule = additional_fields.get("displayRule", {})
-            # self.additional_fields_button_settings = additional_fields.get("buttonSettings", {})
-            # self.additional_fields_is_one_time_reward = additional_fields.get("isOneTimeReward")
-            # self.additional_fields_visibility_settings = additional_fields.get("visibilitySettings", {})
-            # self.additional_fields_image = additional_fields.get("image")
+            self.additional_fields_shop_ids = additional_fields.get("shopIds", [])
+            self.additional_fields_reward_name = additional_fields.get("rewardName")
+            self.additional_fields_description = additional_fields.get("description")
+            self.additional_fields_display_rule = additional_fields.get("displayRule", {})
+            self.additional_fields_button_settings = additional_fields.get("buttonSettings", {})
+            self.additional_fields_is_one_time_reward = additional_fields.get("isOneTimeReward")
+            self.additional_fields_visibility_settings = additional_fields.get("visibilitySettings", {})
+            self.additional_fields_image = additional_fields.get("image")
             self.additional_fields_closed_at = additional_fields.get("closed_at")
-            # self.additional_fields_icon_image = additional_fields.get("iconImage")
+            self.additional_fields_icon_image = additional_fields.get("iconImage")
             self.additional_fields_started_at = additional_fields.get("started_at")
-            # self.additional_fields_prevent_re_submissions = additional_fields.get("preventReSubmissions")
+            self.additional_fields_prevent_re_submissions = additional_fields.get("preventReSubmissions")
 
             reward = data.get("reward", {})
-            # self.reward_rule_id = reward.get("reward_rule_id")
-            # self.reward_activity_id = reward.get("activity_id")
-            # self.reward_type = reward.get("reward_type")
-            # self.reward_asset_to_reward_id = reward.get("asset_to_reward_id")
+            self.reward_rule_id = reward.get("reward_rule_id")
+            self.reward_activity_id = reward.get("activity_id")
+            self.reward_type = reward.get("reward_type")
+            self.reward_asset_to_reward_id = reward.get("asset_to_reward_id")
             self.reward_amount_to_reward = reward.get("amount_to_reward")
-            # self.reward_amount_to_reward_percentage = reward.get("amount_to_reward_percentage")
-            # self.reward_product_variant_id = reward.get("product_variant_id")
-            # self.reward_discount_absolute = reward.get("discount_absolute")
-            # self.reward_discount_percent = reward.get("discount_percent")
-            # self.reward_segment_id = reward.get("segment_id")
-            # self.reward_order_number = reward.get("order_number")
-            # self.reward_additional_fields = reward.get("additional_fields", {})
-            # self.reward_tier_id = reward.get("tier_id")
-            # self.reward_product_variant_ids = reward.get("product_variant_ids")
-            # self.reward_token_name = reward.get("token_name")
-            # self.reward_token_id = reward.get("token_id")
-            # self.reward_image_url = reward.get("image_url")
-            # self.reward_shopify_product_variant_label = reward.get("shopify_product_variant_label")
+            self.reward_amount_to_reward_percentage = reward.get("amount_to_reward_percentage")
+            self.reward_product_variant_id = reward.get("product_variant_id")
+            self.reward_discount_absolute = reward.get("discount_absolute")
+            self.reward_discount_percent = reward.get("discount_percent")
+            self.reward_segment_id = reward.get("segment_id")
+            self.reward_order_number = reward.get("order_number")
+            self.reward_additional_fields = reward.get("additional_fields", {})
+            self.reward_tier_id = reward.get("tier_id")
+            self.reward_product_variant_ids = reward.get("product_variant_ids")
+            self.reward_token_name = reward.get("token_name")
+            self.reward_token_id = reward.get("token_id")
+            self.reward_image_url = reward.get("image_url")
+            self.reward_shopify_product_variant_label = reward.get("shopify_product_variant_label")
 
 
     def fetch_api_data(self, url: str | bytes, params: dict = None, headers: dict = None):
@@ -246,6 +246,14 @@ class APIClient:
     def generate_api_activity_embed(self, activity: Activity):
         """
         """
+        # has_additional_fields_started_at = hasattr(activity, "additional_fields_started_at")
+        # has_additional_fields_closed_at = hasattr(activity, "additional_fields_closed_at")
+        # is_timed = False
+        # if (has_additional_fields_started_at and has_additional_fields_closed_at):
+        #     if (activity.additional_fields_started_at != None and activity.additional_fields_closed_at != None):
+        #         is_timed = True
+        # print(is_timed)
+        activity.show()
         activity_name = activity.name
         activity_reward = activity.reward_amount_to_reward
         try:
@@ -261,9 +269,3 @@ class APIClient:
         return embed
     
 
-        # has_additional_fields_started_at = hasattr(activity, "additional_fields_started_at")
-        # has_additional_fields_closed_at = hasattr(activity, "additional_fields_closed_at")
-        # is_timed = False
-        # if (has_additional_fields_started_at and has_additional_fields_closed_at):
-        #     if (activity.additional_fields_started_at != None and activity.additional_fields_closed_at != None):
-        #         is_timed = True

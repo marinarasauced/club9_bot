@@ -1,4 +1,5 @@
 
+import asyncio
 from config.config import *
 import discord
 from discord.ext import commands
@@ -33,6 +34,20 @@ class Club9Bot(commands.Bot):
             self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
             await cog_api_activities.read_api_activities_cache()
             await cog_api_activities.refresh()
+
+            self.loop.create_task(self.query())
+
+
+    async def query(self) -> None:
+        """
+        """
+        await self.wait_until_ready()
+        while not self.is_closed():
+            cog_api_activities = self.get_cog("APIActivities")
+            if cog_api_activities:
+                self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
+                await cog_api_activities.refresh()
+                await asyncio.sleep(300)
 
 
 def main():

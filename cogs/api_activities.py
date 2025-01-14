@@ -37,7 +37,9 @@ class APIActivities(commands.Cog):
         data = {}
         keys = activities.keys()
         for key in keys:
-            value = activities[key].data
+            value = []
+            if (hasattr(activities[key], "data")):
+                value = activities[key].data
             data[key] = value
         self.bot.logger.log(level=logging.INFO, msg=f"writing api activities to cache")
         with open(PATH_CACHE_API_ACTIVITIES, "w") as file:
