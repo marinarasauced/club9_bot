@@ -1,4 +1,5 @@
 
+import datetime
 import discord
 from enum import Enum
 import random
@@ -108,26 +109,52 @@ class Club9ActivityData():
         return content
 
 
+    def embed_add_closed_time(self, embed: discord.Embed, closed_at: str) -> discord.Embed:
+        """
+        Adds a field containing an embedded time at which the quest will close.
+        """
+        stamp_dt = datetime.datetime.fromisoformat(closed_at.replace("Z", "+00:00"))
+        stamp_unix = int(stamp_dt.timestamp())
+        print(stamp_unix)
+        stamp_discord = f"<t:{stamp_unix}>"
+        embed.add_field(
+            name="Available Until",
+            value=stamp_discord
+        )
+
+
+
     def generate_activities_embed(self) -> discord.Embed:
         """
         Generates the discord embed of the discord notification for a new activity including a name, reward, image, visibility, start/stop times if applicable, etc.
         """
         embed = discord.Embed()
+        embed.color = discord.Color.blue()                      # default color
+        embed.title = self.name                                 # set name by default
+        embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
+        embed.set_image(url=self.image)                         # set image by default
         if self.club9_activity_type == Club9ActivityType.CHALLENGE:
-            embed.color = discord.Color.blue()
-            embed.title = self.name
-            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
-            embed.description = self.description
-            embed.set_image(url=self.image)
-            embed.add_field(name="Quests", value="\n".join(activity.get("label", "") for activity in self.additionalFields_challenges_activities))
+            embed.set_author(name="Club9 Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Club9 Quest", icon_url=CLUB9_BOT_ICON_URL)
+            # add quest field indicating which quests are necessary to complete challenge
+            embed.add_field(
+                name="Quests", 
+                value="\n".join(activity.get("label", "") for activity in self.additionalFields_challenges_activities)
+            )
         elif self.club9_activity_type == Club9ActivityType.QUEST_EXTERNAL:
-            return None
+            # TODO add more specific data information for video quests i.e., reward amount ?, start/stop time for video tracking if applicable ? placeholder below
+            embed.set_author(name="Club9 Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Club9 Quest", icon_url=CLUB9_BOT_ICON_URL)
         elif self.club9_activity_type == Club9ActivityType.QUEST_INTERNAL:
-            embed.color = discord.Color.blue()
-            embed.title = self.name
-            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
-            embed.description = self.description
-            embed.set_image(url=self.image)
+            embed.set_author(name="Club9 Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Club9 Quest", icon_url=CLUB9_BOT_ICON_URL)
+            # add closed at field indicating when the quest is available until
+            if self.additionalFields_closed_at is not None:
+                stamp_dt = datetime.datetime.fromisoformat(self.additionalFields_closed_at.replace("Z", "+00:00"))
+                stamp_unix = int(stamp_dt.timestamp())
+                print(stamp_unix)
+                stamp_discord = f"<t:{stamp_unix}>"
+                embed.add_field(
+                    name="Available Until",
+                    value=stamp_discord
+                )
         elif self.club9_activity_type == Club9ActivityType.NONE:
             return None
         else:
