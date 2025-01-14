@@ -1,5 +1,4 @@
 
-import asyncio
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -8,7 +7,6 @@ import os
 from typing import Final
 
 from config.config import *
-from utils.activity import Club9ActivityData
 from utils.api import Club9API
 
 
@@ -31,9 +29,12 @@ class Club9Bot(commands.Bot):
     async def on_ready(self) -> None:
         """
         """
+        await self.load_extension("cogs.commands")
+        self.club9_cog_commands = self.get_cog("Club9Commands")
+
         await self.load_extension("cogs.notifications")
         self.club9_cog_notifications = self.get_cog("Club9Notifications")
-        # if self.club9_cog_notifications:
+        # if self.club9_cog_notifications:    async def 
             # await self.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content="test2")
 
         await self.load_extension("cogs.activities")
@@ -53,18 +54,20 @@ class Club9Bot(commands.Bot):
         #     await cog_api_activities.refresh()
 
         #     self.loop.create_task(self.query())
+    
 
 
-    async def query(self) -> None:
-        """
-        """
-        await self.wait_until_ready()
-        while not self.is_closed():
-            cog_api_activities = self.get_cog("APIActivities")
-            if cog_api_activities:
-                self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
-                await cog_api_activities.refresh()
-                await asyncio.sleep(300)
+
+    # async def query(self) -> None:
+    #     """
+    #     """
+    #     await self.wait_until_ready()
+    #     while not self.is_closed():
+    #         cog_api_activities = self.get_cog("APIActivities")
+    #         if cog_api_activities:
+    #             self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
+    #             await cog_api_activities.refresh()
+    #             await asyncio.sleep(300)
 
 
 def main():

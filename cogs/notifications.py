@@ -9,7 +9,7 @@ from main import Club9Bot
 
 class Club9Notifications(commands.Cog):
     """
-    This class provides a methods to send and edit notifications consisting of text content and a discord embed.
+    This class provides methods to send and edit notifications consisting of text content and a discord embed.
 
     @param bot: The Club9Bot to load this cog.
     """
