@@ -8,6 +8,8 @@ from typing import Any
 from config.config import (
     DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS,
     CLUB9_BOT_ICON_URL,
+    NOTIFICATIONS_ENABLE_URL,
+    NOTIFICATIONS_URL,
 )
 
 
@@ -119,7 +121,8 @@ class Club9ActivityData():
         stamp_discord = f"<t:{stamp_unix}>"
         embed.add_field(
             name="Available Until",
-            value=stamp_discord
+            value=stamp_discord,
+            inline=False,
         )
 
 
@@ -131,20 +134,42 @@ class Club9ActivityData():
         embed = discord.Embed()
         embed.color = discord.Color.blue()                      # default color
         embed.title = self.name                                 # set name by default
-        embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
         embed.set_image(url=self.image)                         # set image by default
+        if (NOTIFICATIONS_ENABLE_URL == True):
+            embed.url = NOTIFICATIONS_URL
         if self.club9_activity_type == Club9ActivityType.CHALLENGE:
-            embed.set_author(name="Club9 Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Club9 Quest", icon_url=CLUB9_BOT_ICON_URL)
+            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
+            # add reward amount field indicating the reward value
+            if self.reward_amount_to_reward is not None:
+                print("challenge reward")
+                embed.add_field(
+                    name="Reward",
+                    value=f"{self.reward_amount_to_reward} XP",
+                    inline=False,
+                )
+            else:
+                embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
             # add quest field indicating which quests are necessary to complete challenge
             embed.add_field(
                 name="Quests", 
-                value="\n".join(activity.get("label", "") for activity in self.additionalFields_challenges_activities)
+                value="\n".join(activity.get("label", "") for activity in self.additionalFields_challenges_activities),
+                inline=False,
             )
         elif self.club9_activity_type == Club9ActivityType.QUEST_EXTERNAL:
             # TODO add more specific data information for video quests i.e., reward amount ?, start/stop time for video tracking if applicable ? placeholder below
-            embed.set_author(name="Club9 Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Club9 Quest", icon_url=CLUB9_BOT_ICON_URL)
+            embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
+            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
         elif self.club9_activity_type == Club9ActivityType.QUEST_INTERNAL:
-            embed.set_author(name="Club9 Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Club9 Quest", icon_url=CLUB9_BOT_ICON_URL)
+            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
+            # add reward amount field indicating the reward value
+            if self.reward_amount_to_reward is not None:
+                embed.add_field(
+                    name="Reward",
+                    value=f"{self.reward_amount_to_reward} XP",
+                    inline=False,
+                )
+            else:
+                embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
             # add closed at field indicating when the quest is available until
             if self.additionalFields_closed_at is not None:
                 stamp_dt = datetime.datetime.fromisoformat(self.additionalFields_closed_at.replace("Z", "+00:00"))
@@ -153,7 +178,8 @@ class Club9ActivityData():
                 stamp_discord = f"<t:{stamp_unix}>"
                 embed.add_field(
                     name="Available Until",
-                    value=stamp_discord
+                    value=stamp_discord,
+                    inline=False,
                 )
         elif self.club9_activity_type == Club9ActivityType.NONE:
             return None

@@ -60,14 +60,24 @@ class Club9Commands(commands.Cog):
         Stops the Club9Bot's monitoring cycle.
 
         This command stops the monitoring cycle by setting the flag to False.
+        @param ctx: The context of the command.
         """
         if not self.monitoring_flag:
             await ctx.send("Monitoring is not currently running!")
             return
 
         self.monitoring_flag = False
-        await ctx.send("Stopping monitoring. It will stop after the current cycle.")
+        await ctx.send("Stopping monitoring. It will stop at the end of the current period.")
         self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> Stopping monitoring.")
+
+
+    @commands.command(name="runtime")
+    async def runtime(self, ctx) -> None:
+        """
+        Prints the bot's runtime and stats like number of new quests, number of message edits, etc.
+
+        @param ctx: The context of the command.
+        """
 
 
 async def setup(bot: Club9Bot) -> None:

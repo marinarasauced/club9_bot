@@ -93,7 +93,7 @@ class Club9Activities(commands.Cog):
                             # TODO CASE 2 -> detected added/modified current activity
                             content = activity_data_new.generate_activities_content()
                             embed = activity_data_new.generate_activities_embed()
-                            # await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
+                            await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activities -> failed to refresh activities ({e})")
 
