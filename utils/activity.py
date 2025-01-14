@@ -13,6 +13,8 @@ from config.config import (
 class Club9ActivityType(Enum):
     """
     This class provides several enum used to differentiate activity types.
+
+    The default enum is labeled as QUEST_INTERNAL, and in this case, if a notification were to be sent, the only information included are the name, description, and image from the quest data from the api. Challenges include a field in the embed where all required quest names are listed in order to complete the challenge. External quests (i.e., video quests) TODO ...
     """
     NONE = None                                     # A placeholder value for quests that have not yet been loaded.
     CHALLENGE = "CHALLENGE"                         # Users complete the activity by completing several quests.
