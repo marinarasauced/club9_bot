@@ -2,6 +2,7 @@
 import asyncio
 from discord.ext import commands
 import logging
+import time
 
 from config.config import *
 from main import Club9Bot
@@ -31,25 +32,22 @@ class Club9Commands(commands.Cog):
         @param ctx: The context of the command.
         @param period: The period at which the monitoring cycle is conducted (i.e., period = 300 (seconds) means that the refresh methods are called once every five minutes)
         """
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring_start {period}'")
         if self.monitoring_flag:
             await ctx.send("Monitoring is already running!")
             return
-
         if period < 30:
             await ctx.send("The period must be at least 30 seconds.")
             self.club9_bot.logger.log(level=logging.ERROR, msg="Club9Commands -> period must be greater than or equal to 30 seconds")
             return
-
         self.monitoring_flag = True
         await ctx.send(f"Starting monitoring with a period of {period} seconds.")
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> Starting monitoring with period {period}")
-
         await self.club9_bot.wait_until_ready()
         while self.monitoring_flag:
             if self.club9_bot.club9_cog_activities:
                 await self.club9_bot.club9_cog_activities.refresh()
                 await asyncio.sleep(period)
-
         await ctx.send("Monitoring stopped.")
         self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> Monitoring stopped.")
 
@@ -62,10 +60,10 @@ class Club9Commands(commands.Cog):
         This command stops the monitoring cycle by setting the flag to False.
         @param ctx: The context of the command.
         """
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring_stop'")
         if not self.monitoring_flag:
             await ctx.send("Monitoring is not currently running!")
             return
-
         self.monitoring_flag = False
         await ctx.send("Stopping monitoring. It will stop at the end of the current period.")
         self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> Stopping monitoring.")
@@ -78,6 +76,15 @@ class Club9Commands(commands.Cog):
 
         @param ctx: The context of the command.
         """
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}runtime'")
+        runtime_curr = time.time() - self.club9_bot.runtime_start
+        days = int(runtime_curr // 86400)  # 1 day = 86400 seconds
+        hours = int((runtime_curr % 86400) // 3600)  # 1 hour = 3600 seconds
+        minutes = int((runtime_curr % 3600) // 60)  # 1 minute = 60 seconds
+        seconds = round(runtime_curr % 60) 
+        runtime_formatted = f"{days} day{'' if days == 1 else 's'} {hours:02}:{minutes:02}:{seconds:02}"
+        await ctx.send(f"Runtime: {runtime_formatted}.")
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> returned runtime as {runtime_formatted}")
 
 
 async def setup(bot: Club9Bot) -> None:

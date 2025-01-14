@@ -84,16 +84,24 @@ class Club9Activities(commands.Cog):
                         # TODO log skip?
                         continue
                     else:
+                        keys_old = self.club9_bot.activities_mapping.keys()
                         activity_data_old: utils.activity.Club9ActivityData = self.club9_bot.activities_mapping.get(activity_data_new.id, utils.activity.Club9ActivityData(data={}))        # default value is empty activity (need comparison for new activities since key wouldn't exist in mapping)
                         if (activity_data_old.club9_activity_data == activity_data_new.club9_activity_data):
-                            # TODO CASE 1 -> detected constant current activity
-                            # print("no change")
-                            pass
+                            # case : detected no change
+                            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected no change with activity {activity_data_old.id}")
                         else:
-                            # TODO CASE 2 -> detected added/modified current activity
-                            content = activity_data_new.generate_activities_content()
-                            embed = activity_data_new.generate_activities_embed()
-                            await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
+                            # case : detected change
+                            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected change with activity {activity_data_new.id}")
+                            if (activity_data_new.id in keys_old):
+                                # case : activity already in api -> activity modified
+                                # TODO add logic for modifying notifications (if desired, prereq: need to add method for storing/loading message data for shutdowns, what data to change, etc)
+                                pass
+                            else:
+                                # case : activity new
+                                pass
+                            # content = activity_data_new.generate_activities_content()
+                            # embed = activity_data_new.generate_activities_embed()
+                            # await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activities -> failed to refresh activities ({e})")
 
