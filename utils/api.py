@@ -10,10 +10,11 @@ from config.config import (
     API_TOKI_ACTIVITIES_HEADERS,
     DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS,
 )
-from cogs.activities import (
-    Club9ActivityType,
-    Club9Activity,
-)
+from utils.activity import Club9ActivityType
+# from cogs.activities import (
+#     Club9ActivityType,
+#     Club9Activity,
+# )
 
 
 class Club9API():
@@ -45,9 +46,9 @@ class Club9API():
             return None
 
 
-    def get_activities(self):
+    def fetch_activities(self):
         """
-        Gets activities data from the Club9 TOKI API.
+        Fetches activities data from the Club9 TOKI API.
 
         This method calls the fetch method using the url, params, and headers loaded from config.py to retrieve a dict of all live activities. If the fetch is unsuccessful, the output of this method is None.
 
@@ -79,7 +80,7 @@ class Club9API():
         return content
 
 
-    def generate_activities_embed(self, activity: Club9Activity):
+    def generate_activities_embed(self, activity):
         """
         Generates the discord embed of the discord notification for a new activity including a name, reward, image, visibility, start/stop times if applicable, etc.
         """

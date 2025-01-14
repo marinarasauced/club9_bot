@@ -8,6 +8,7 @@ import logging
 import os
 from typing import Final
 from utils.api_client import APIClient
+from utils.api import Club9API
 
 
 class Club9Bot(commands.Bot):
@@ -22,20 +23,27 @@ class Club9Bot(commands.Bot):
         self.api_client = APIClient(self.logger)
         self.activities: dict = {}
 
+        self.api = Club9API(self.logger)
+
 
     async def on_ready(self) -> None:
         """
         """
-        self.logger.log(level=logging.INFO, msg="loading api activities cog")
-        await self.load_extension("cogs.api_activities")
+        await self.load_extension("cogs.activities")
+        cog_activities = self.get_cog("Club9Activities")
+        if cog_activities:
+        #     self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
+            await cog_activities.refresh()
+        # self.logger.log(level=logging.INFO, msg="loading api activities cog")
+        # await self.load_extension("cogs.api_activities")
         
-        cog_api_activities = self.get_cog("APIActivities")
-        if cog_api_activities:
-            self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
-            await cog_api_activities.read_api_activities_cache()
-            await cog_api_activities.refresh()
+        # cog_api_activities = self.get_cog("APIActivities")
+        # if cog_api_activities:
+        #     self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
+        #     await cog_api_activities.read_api_activities_cache()
+        #     await cog_api_activities.refresh()
 
-            self.loop.create_task(self.query())
+        #     self.loop.create_task(self.query())
 
 
     async def query(self) -> None:

@@ -1,25 +1,16 @@
 
 from discord.ext import commands
-from enum import Enum
 import json
 import logging
 
 from config.config import *
 from main import Club9Bot
+from utils.activity import Club9ActivityType
 from utils.api import Club9API
 
 
-class Club9ActivityType(Enum):
-    """
-    This class provides several enum used to differentiate activity types.
-    """
-    QUEST_INTERNAL = 0      # Users complete the activity on the 'https://store.cloud9.gg/pages/club9' page.
-    QUEST_EXTERNAL = 1      # Users complete the activity external to the 'https://store.cloud9.gg/pages/club9' page.
-    CHALLENGE = 2           # Users complete the activity by completing several quests.
-    NONE = 3                # A placeholder value for quests that have not yet been loaded.
 
-
-class Club9Activity(commands.Cog):
+class Club9Activities(commands.Cog):
     """
     This class provides a structure to map and store data from the TOKI API activity requests and asynchronous methods relating to the activities data.
 
@@ -67,3 +58,22 @@ class Club9Activity(commands.Cog):
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to decode activities cache (json decode error)")
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to write activities cache ({e})")
+
+
+    async def refresh(self) -> None:
+        """
+        Refreshes the bot's activities to determine whether any activities have been added/removed/modified.
+
+        This method queries the TOKI API and compares the requested data with the previous activities to detect changes. If changes are detected, the method will determine the exact changes and follow the corresponding logic; i.e., send or modify a notification, write to the activities cache.
+        """
+        try:
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshing activities")
+            activities = self.club9_bot.api.fetch_activities()
+        except Exception as e:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to refresh activities ({e})")
+
+
+async def setup(bot: Club9Bot) -> None:
+    """
+    """
+    await bot.add_cog(Club9Activities(bot))
