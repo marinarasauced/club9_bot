@@ -8,6 +8,11 @@ import logging
 import os
 from typing import Final
 from utils.api_client import APIClient
+
+from utils.activity import (
+    Club9ActivityType,
+    Club9ActivityData,
+)
 from utils.api import Club9API
 
 
@@ -21,7 +26,8 @@ class Club9Bot(commands.Bot):
         super().__init__(command_prefix=command_prefix, intents=intents)
         self.logger = logger
         self.api_client = APIClient(self.logger)
-        self.activities: dict = {}
+        self.activities_data: dict = {}
+        self.activities_objects: dict[str, Club9Activity] = {}
 
         self.api = Club9API(self.logger)
 
@@ -30,10 +36,11 @@ class Club9Bot(commands.Bot):
         """
         """
         await self.load_extension("cogs.activities")
-        cog_activities = self.get_cog("Club9Activities")
-        if cog_activities:
-        #     self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
-            await cog_activities.refresh()
+        self.club9_cog_activities = self.get_cog("Club9Activities")
+        if self.club9_cog_activities:
+            await self.club9_cog_activities.refresh()
+
+
         # self.logger.log(level=logging.INFO, msg="loading api activities cog")
         # await self.load_extension("cogs.api_activities")
         

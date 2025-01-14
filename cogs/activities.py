@@ -9,7 +9,6 @@ from utils.activity import Club9ActivityType
 from utils.api import Club9API
 
 
-
 class Club9Activities(commands.Cog):
     """
     This class provides a structure to map and store data from the TOKI API activity requests and asynchronous methods relating to the activities data.
@@ -18,10 +17,9 @@ class Club9Activities(commands.Cog):
     """
     def __init__(self, bot: Club9Bot):
         """
-        Initializes the Club9 activity.
+        Initializes the Club9 activities cog.
         """
         self.club9_bot = bot
-        self.club9_activity_type = Club9ActivityType.NONE
 
 
     async def read_cache(self) -> None:
@@ -33,7 +31,7 @@ class Club9Activities(commands.Cog):
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> reading activities cache")
             with open(PATH_TOKI_ACTIVITIES_CACHE, "r") as file:
-                self.club9_bot.activities = json.load(file)
+                self.club9_bot.activities_data = json.load(file)
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to read activities cache (file not found)")
         except json.JSONDecodeError:
@@ -51,7 +49,7 @@ class Club9Activities(commands.Cog):
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> writing activities cache")
             with open(PATH_TOKI_ACTIVITIES_CACHE, "w") as file:
-                json.dump(self.club9_bot.activities, file, indent=4)
+                json.dump(self.club9_bot.activities_data, file, indent=4)
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to write activities cache (file not found)")
         except json.JSONDecodeError:
@@ -69,11 +67,17 @@ class Club9Activities(commands.Cog):
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshing activities")
             activities = self.club9_bot.api.fetch_activities()
+            if (activities == self.club9_bot.activities_data):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshed activities (no changes detected)")
+            else:
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activity -> refreshed activities (changes detected)")
+                # TODO add logic for change detection
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activity -> failed to refresh activities ({e})")
 
 
 async def setup(bot: Club9Bot) -> None:
     """
+    Adds the cog to the discord bot during extension load.
     """
     await bot.add_cog(Club9Activities(bot))
