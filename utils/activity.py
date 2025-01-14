@@ -7,7 +7,6 @@ from typing import Any
 from config.config import (
     DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS,
     CLUB9_BOT_ICON_URL,
-    ENABLE_URLS_IN_NOTIFICATIONS,
 )
 
 
