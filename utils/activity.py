@@ -1,6 +1,10 @@
 
+import discord
 from enum import Enum
+import random
 from typing import Any
+
+from config.config import DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS
 
 
 class Club9ActivityType(Enum):
@@ -11,6 +15,7 @@ class Club9ActivityType(Enum):
     CHALLENGE = "CHALLENGE"                         # Users complete the activity by completing several quests.
     QUEST_EXTERNAL = "NON_INTEGRATION_CUSTOM"       # Users complete the activity external to the 'https://store.cloud9.gg/pages/club9' page.
     QUEST_INTERNAL = "DEFAULT"                      # Users complete the activity on the 'https://store.cloud9.gg/pages/club9' page.
+    # HIDDEN = "HIDDEN"                               # 
 
 
     @classmethod
@@ -73,6 +78,47 @@ class Club9ActivityData():
             return Club9ActivityType(None)
         else:
             return Club9ActivityType(self.typeIdentifier)
+
+
+    def generate_activities_content(self) -> str:
+        """
+        Generates the text component of the discord notification for a new activity including a role ping and a short indication that there is a new quest/challenge.
+
+        @return: The 'content' string for the discord bot to publish in the notification message.
+        """
+        activity_type = ""
+        if (self.club9_activity_type == Club9ActivityType.CHALLENGE):
+            activity_type = "challenge"
+        elif (self.club9_activity_type == Club9ActivityType.QUEST_INTERNAL or self.club9_activity_type == Club9ActivityType.QUEST_EXTERNAL):
+            activity_type = "quest"
+        messages = [
+            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a new {activity_type} has been posted!",
+            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a fresh {activity_type} is now live!",
+            f"A new {activity_type} has arrived <@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>!",
+            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a brand new {activity_type} is now available!",
+            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a new {activity_type} has been added!",
+            f"New {activity_type} alert <@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>!",
+        ]
+        content = random.choice(messages)
+        return content
+
+
+    def generate_activities_embed(self) -> discord.Embed:
+        """
+        Generates the discord embed of the discord notification for a new activity including a name, reward, image, visibility, start/stop times if applicable, etc.
+        """
+        embed = discord.Embed(color=discord.Color.blue())
+        if self.club9_activity_type == Club9ActivityType.CHALLENGE:
+            pass
+        elif self.club9_activity_type == Club9ActivityType.QUEST_EXTERNAL:
+            pass
+        elif self.club9_activity_type == Club9ActivityType.QUEST_INTERNAL:
+            pass
+        elif self.club9_activity_type == Club9ActivityType.NONE:
+            return None
+        else:
+            return None
+        return embed
 
 
 def generate_activities(activities_list: list) -> list[Club9ActivityData]:

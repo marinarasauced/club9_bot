@@ -8,13 +8,7 @@ from config.config import (
     API_TOKI_ACTIVITIES_URL,
     API_TOKI_ACTIVITIES_PARAMS,
     API_TOKI_ACTIVITIES_HEADERS,
-    DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS,
 )
-from utils.activity import Club9ActivityType
-# from cogs.activities import (
-#     Club9ActivityType,
-#     Club9Activity,
-# )
 
 
 class Club9API():
@@ -60,40 +54,3 @@ class Club9API():
         self.logger.log(level=logging.INFO, msg=f"Club9API -> fetching activities")
         activities = self.fetch(url=url, params=params, headers=headers)
         return activities
-
-
-    def generate_activities_content(self) -> str:
-        """
-        Generates the text component of the discord notification for a new activity including a role ping and a short indication that there is a new quest/challenge.
-
-        @return: The 'content' string for the discord bot to publish in the notification message.
-        """
-        messages = [
-            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a new quest has been posted!",
-            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a fresh quest is now live!",
-            f"A new quest has arrived <@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>!",
-            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a brand new quest is now available!",
-            f"<@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>, a new quest has been added!",
-            f"New quest alert <@&{DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS}>!",
-        ]
-        content = random.choice(messages)
-        return content
-
-
-    def generate_activities_embed(self, activity) -> discord.Embed:
-        """
-        Generates the discord embed of the discord notification for a new activity including a name, reward, image, visibility, start/stop times if applicable, etc.
-        """
-        type = activity.club9_activity_type
-        embed = discord.Embed(color=discord.Color.blue())
-        if type == Club9ActivityType.QUEST_INTERNAL:
-            pass
-        elif type == Club9ActivityType.QUEST_EXTERNAL:
-            pass
-        elif type == Club9ActivityType.CHALLENGE:
-            pass
-        elif type == Club9ActivityType.NONE:
-            pass
-        else:
-            pass
-        return embed

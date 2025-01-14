@@ -31,6 +31,11 @@ class Club9Bot(commands.Bot):
     async def on_ready(self) -> None:
         """
         """
+        await self.load_extension("cogs.notifications")
+        self.club9_cog_notifications = self.get_cog("Club9Notifications")
+        if self.club9_cog_notifications:
+            await self.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content="test2")
+
         await self.load_extension("cogs.activities")
         self.club9_cog_activities = self.get_cog("Club9Activities")
         if self.club9_cog_activities:

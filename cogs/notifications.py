@@ -20,7 +20,7 @@ class Club9Notifications(commands.Cog):
         self.club9_bot = bot
 
 
-    async def send_notification(self, channel_id: int, content: str, embed: discord.Embed) -> discord.Message:
+    async def send_notification(self, channel_id: int, content: str, embed: discord.Embed = None) -> discord.Message:
         """
         Sends a message to a channel consisting of a content string and a discord embed.
         
@@ -32,6 +32,7 @@ class Club9Notifications(commands.Cog):
         channel = self.club9_bot.get_channel(channel_id)
         if channel:
             message = await channel.send(content=content, embed=embed)
+            print(message)
             return message
         return None
 
