@@ -78,7 +78,7 @@ def main():
     """
     """
     load_dotenv(dotenv_path=PATH_DOTENV)
-    TOKEN: Final[str] = os.getenv("DISCORD_TOKEN")
+    TOKEN: Final[str] = os.getenv(DISCORD_TOKEN_NAME)
 
     logger = logging.getLogger("discord")
     logger.setLevel(logging.DEBUG)
