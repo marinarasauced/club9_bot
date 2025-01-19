@@ -22,7 +22,7 @@ import datetime
 def PATH_DISCORD_LOGS() -> str:
     """
     """
-    timestamp = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
     return f"logs/discord_{timestamp}.log"
 
 
