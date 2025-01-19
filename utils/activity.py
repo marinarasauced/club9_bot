@@ -8,8 +8,8 @@ from typing import Any
 from config.config import (
     DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS,
     CLUB9_BOT_ICON_URL,
-    NOTIFICATIONS_ENABLE_URL,
-    NOTIFICATIONS_URL,
+    NOTIFICATIONS_ACTIVITIES_ENABLE_URLS,
+    NOTIFICATIONS_ACTIVITIES_URL,
 )
 
 
@@ -119,8 +119,8 @@ class Club9ActivityData():
         embed.color = discord.Color.blue()                      # default color
         embed.title = self.name                                 # set name by default
         embed.set_image(url=self.image)                         # set image by default
-        if (NOTIFICATIONS_ENABLE_URL == True):
-            embed.url = NOTIFICATIONS_URL                       # URL only links to the url in config.py (default club9 site)
+        if (NOTIFICATIONS_ACTIVITIES_ENABLE_URLS == True):
+            embed.url = NOTIFICATIONS_ACTIVITIES_URL            # URL only links to the url in config.py (default club9 site)
         if self.club9_activity_type == Club9ActivityType.CHALLENGE:
             embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
             # add reward amount field indicating the reward value
