@@ -34,6 +34,9 @@ class Club9Commands(commands.Cog):
         @param period: The period at which the monitoring cycle is conducted (i.e., period = 300 (seconds) means that the refresh methods are called once every five minutes)
         """
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring_start {period}'")
+        if (ctx.channel.id != DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring_start {period}' (not executed in permitted channel)")
+            return
         if self.monitoring_flag:
             await ctx.send("Monitoring is already running!")
             return
@@ -42,15 +45,15 @@ class Club9Commands(commands.Cog):
             self.club9_bot.logger.log(level=logging.ERROR, msg="Club9Commands -> period must be greater than or equal to 30 seconds")
             return
         self.monitoring_flag = True
-        await ctx.send(f"Starting monitoring with a period of {period} seconds.")
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> Starting monitoring with period {period}")
+        await ctx.send(f"starting monitoring with a period of {period} seconds.")
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> starting monitoring with period {period}")
         await self.club9_bot.wait_until_ready()
         while self.monitoring_flag:
             if self.club9_bot.club9_cog_activities:
                 await self.club9_bot.club9_cog_activities.refresh()
                 await asyncio.sleep(period)
-        await ctx.send("Monitoring stopped.")
-        self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> Monitoring stopped.")
+        await ctx.send("stopped monitoring.")
+        self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> monitoring stopped.")
 
 
     @commands.command(name="monitoring_stop")
@@ -62,12 +65,15 @@ class Club9Commands(commands.Cog):
         @param ctx: The context of the command.
         """
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring_stop'")
+        if (ctx.channel.id != DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring_stop' (not executed in permitted channel)")
+            return
         if not self.monitoring_flag:
             await ctx.send("Monitoring is not currently running!")
             return
         self.monitoring_flag = False
-        await ctx.send("Stopping monitoring. It will stop at the end of the current period.")
-        self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> Stopping monitoring.")
+        await ctx.send("stopping monitoring at the end of the current period.")
+        self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> stopping monitoring at the end of the current period.")
 
 
     @commands.command(name="runtime")
@@ -78,6 +84,9 @@ class Club9Commands(commands.Cog):
         @param ctx: The context of the command.
         """
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}runtime'")
+        if (ctx.channel.id != DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}runtime' (not executed in permitted channel)")
+            return
         runtime_curr = time.time() - self.runtime_start
         days = int(runtime_curr // 86400)  # 1 day = 86400 seconds
         hours = int((runtime_curr % 86400) // 3600)  # 1 hour = 3600 seconds
