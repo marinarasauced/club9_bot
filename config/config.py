@@ -26,26 +26,27 @@ def PATH_DISCORD_LOGS() -> str:
     return f"logs/discord_{timestamp}.log"
 
 
-
+# .env
 PATH_DOTENV = "../.env"
+DISCORD_TOKEN_NAME = "PROJETS_CLUB9_BOT_DISCORD_TOKEN"
 
+# graphics
 CLUB9_BOT_ICON_URL = "https://1000logos.net/wp-content/uploads/2017/08/Logo-Cloud-9.jpg"
 
+# toki api
 API_TOKI_ACTIVITIES_URL = "https://api.buildwithtoki.com/merchant/brand/activities"
 API_TOKI_ACTIVITIES_PARAMS = None
 API_TOKI_ACTIVITIES_HEADERS = {"x-shopify-shop-domain": "cloud9gg.myshopify.com",}
 PATH_TOKI_ACTIVITIES_CACHE = "config/activities_dict.json"
 
-
-
-DISCORD_TOKEN_NAME = "PROJETS_CLUB9_BOT_DISCORD_TOKEN"
-
+# discord notifications
 DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS = 1330410207376838737
 DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS = 1328430817214599370
 
+# discord diagnostics
 DISCORD_CHANNEL_ID_CLUB9_BOT_LOGS = 1330310063482732614
 DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS = 1330310094524518480
 
-
+# bot settings
 NOTIFICATIONS_ACTIVITIES_ENABLE_URLS = True
 NOTIFICATIONS_ACTIVITIES_URL = "https://store.cloud9.gg/pages/club9"
