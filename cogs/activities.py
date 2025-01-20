@@ -108,7 +108,7 @@ class Club9Activities(commands.Cog):
                                 embed = activity_data_new.generate_activities_embed()
                                 await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
                                 # indicate cache needs to be updated
-                                self.club9_bot.num_activities_new_detected += 1
+                                # self.club9_bot.num_activities_new_detected += 1
                                 is_cache_outdated = True
             if (is_cache_outdated == True):
                 # write new activity cache

@@ -26,6 +26,7 @@ class Club9Bot(commands.Bot):
         self.activities_mapping: dict = {}  # map of activity ids to Club9Activity objects generated on startup for comparison to requests during refresh comparison
         # TODO add mapping attribute dict for tracking messages in case of editing quests upon api change
         self.rewards_dict: dict = {}
+        self.messages_dict: dict = {}
 
 
         self.num_activities_cache_read = 0
@@ -42,8 +43,8 @@ class Club9Bot(commands.Bot):
 
         await self.load_extension("cogs.notifications")
         self.club9_cog_notifications = self.get_cog("Club9Notifications")
-        # if self.club9_cog_notifications:    async def 
-            # await self.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content="test2")
+        if self.club9_cog_notifications:
+            await self.club9_cog_notifications.read_cache()
 
         await self.load_extension("cogs.activities")
         self.club9_cog_activities = self.get_cog("Club9Activities")

@@ -34,8 +34,9 @@ DISCORD_TOKEN_NAME = "PROJETS_CLUB9_BOT_DISCORD_TOKEN"
 PATH_COOKIES = "../cookies.txt"
 
 # caches
-PATH_ACTIVITIES_CACHE = "config/activities_dict.json"
-PATH_REWARDS_CACHE = "config/rewards_dict.json"
+PATH_ACTIVITIES_CACHE = "config/dict_activities.json"
+PATH_MESSAGES_CACHE = "config/dict_messages.json"
+PATH_REWARDS_CACHE = "config/dict_rewards.json"
 
 # graphics
 CLUB9_BOT_ICON_URL = "https://1000logos.net/wp-content/uploads/2017/08/Logo-Cloud-9.jpg"
@@ -78,3 +79,4 @@ DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS = 1330310094524518480
 # bot settings
 NOTIFICATIONS_ACTIVITIES_ENABLE_URLS = True
 NOTIFICATIONS_ACTIVITIES_URL = "https://store.cloud9.gg/pages/club9"
+NOTIFICATIONS_REWARDS_ENABLE_URLS = True

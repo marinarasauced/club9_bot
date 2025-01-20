@@ -8,7 +8,12 @@ import re
 
 from config.config import *
 from main import Club9Bot
-from utils.reward import Club9RewardType, get_reward_types
+from utils.reward import (
+    Club9RewardType,
+    get_reward_types,
+    get_reward_channel_id,
+    generate_reward_embed,
+)
 import json
 
 class Club9Rewards(commands.Cog):
@@ -137,7 +142,8 @@ class Club9Rewards(commands.Cog):
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> refreshing rewards")
             rewards_dict: dict = {}
-            is_cache_outdated: bool = False
+            is_cache_rewards_outdated: bool = False
+            is_cache_messages_outdated: bool = False
             for reward_type in Club9RewardType.__members__.values():
                 if (reward_type is not Club9RewardType.NONE):
                     rewards_dict[reward_type.value] = await self.club9_bot.club9_cog_rewards.parse(category=reward_type)
@@ -158,6 +164,12 @@ class Club9Rewards(commands.Cog):
                             if (reward_id not in rewards_ids_old):
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected reward {reward_id} added to {category}")
                                 # TODO reward added -> need to send new reward in appropriate channel
+                                reward_data_new = rewards_data_new[reward_id]
+                                embed = generate_reward_embed(reward_data=reward_data_new, category=category)
+                                channel_id = get_reward_channel_id(category)
+                                await self.club9_bot.club9_cog_notifications.send_notification(channel_id=channel_id, content="", embed=embed, type="Rewards", id=reward_id)
+                                is_cache_rewards_outdated = True
+                                is_cache_messages_outdated = True
                         # detect if any rewards were removed
                         for reward_id in rewards_ids_old:
                             if (reward_id not in rewards_ids_new):
@@ -174,7 +186,12 @@ class Club9Rewards(commands.Cog):
                                 else:
                                     # change detected
                                     # TODO change code -> need to modify message
-                                    pass
+                                    self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected changes to reward {reward_id} in {category}")
+            if (is_cache_rewards_outdated == True):
+                self.club9_bot.rewards_dict = rewards_dict
+                await self.club9_bot.club9_cog_rewards.write_cache()
+            if (is_cache_messages_outdated == True):
+                await self.club9_bot.club9_cog_notifications.write_cache()
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to refresh rewards ({e})")
 
