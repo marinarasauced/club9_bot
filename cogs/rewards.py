@@ -22,16 +22,22 @@ class Club9Rewards(commands.Cog):
         Initializes the Club9 activities cog.
         """
         self.club9_bot = bot
-        cookies = MozillaCookieJar()
-        cookies.load(PATH_COOKIES, ignore_discard=True, ignore_expires=True)
-        self.cookies = {cookie.name: cookie.value for cookie in cookies}
-        self.session = requests.Session()
-        self.session.cookies.update(self.cookies)
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> loading Club9 site cookies")
+        try:
+            cookies = MozillaCookieJar()
+            cookies.load(PATH_COOKIES, ignore_discard=True, ignore_expires=True)
+            self.cookies = {cookie.name: cookie.value for cookie in cookies}
+            self.session = requests.Session()
+            self.session.cookies.update(self.cookies)
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> loaded Club9 site cookies")
+        except:
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> failed to load Club9 site cookies")
 
 
-    async def parse(self, category: Club9RewardType) -> list[str]:
+    async def parse(self, category: Club9RewardType) -> tuple[list[str], str]:
         """
         """
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> parsing shop for {category} rewards")
         cat_url = None
         cat_string = None
         if (category == Club9RewardType.NONE):
@@ -52,19 +58,23 @@ class Club9Rewards(commands.Cog):
         elif (category == Club9RewardType.MASTER):
             cat_url = REWARDS_MASTER_URL
             cat_string = REWARDS_MYTHIC_URL
-        response = self.session.get(url=cat_url)
-        html = response.text
-        pattern = rf"[\"']({re.escape(cat_string)}.*?)[\"']"        
-        matches = re.findall(pattern, html)
-        rewards_names = sorted(set(matches))
-        for i in range(len(rewards_names)):
-            rewards_names[i] = rewards_names[i].split("/")[-1]
-        rewards_query = ' OR '.join([f'handle:"{reward}"' for reward in rewards_names])
-        data_url = REWARDS_QUERY_URL + rewards_query
-        response = self.session.get(url=data_url)
-        rewards_data = response.text
-        print(rewards_data)
-
+        try:
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> fetching html data for {category} rewards")
+            response = self.session.get(url=cat_url)
+            html = response.text
+            pattern = rf"[\"']({re.escape(cat_string)}.*?)[\"']"        
+            matches = re.findall(pattern, html)
+            rewards_names = sorted(set(matches))
+            for i in range(len(rewards_names)):
+                rewards_names[i] = rewards_names[i].split("/")[-1]
+            rewards_query = ' OR '.join([f'handle:"{reward}"' for reward in rewards_names])
+            data_url = REWARDS_QUERY_URL + rewards_query
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> fetching rewards data for {category} rewards")
+            response = self.session.get(url=data_url)
+            rewards_data = response.text
+            return rewards_names, rewards_data
+        except Exception as e:
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> failed to parse rewards {e}")
 
 
 
