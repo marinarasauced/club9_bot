@@ -44,15 +44,16 @@ class Club9Bot(commands.Bot):
 
         await self.load_extension("cogs.activities")
         self.club9_cog_activities = self.get_cog("Club9Activities")
-        if self.club9_cog_activities:
-            await self.club9_cog_activities.read_cache()
-            await self.club9_cog_activities.refresh()
+        # if self.club9_cog_activities:
+        #     await self.club9_cog_activities.read_cache()
+        #     await self.club9_cog_activities.refresh()
 
 
         await self.load_extension("cogs.rewards")
         self.club9_cog_rewards = self.get_cog("Club9Rewards")
         if self.club9_cog_rewards:
-            await self.club9_cog_rewards.parse(category = Club9RewardType.ELITE)
+            test = await self.club9_cog_rewards.parse(category = Club9RewardType.ELITE)
+            print(test)
 
 
         # self.logger.log(level=logging.INFO, msg="loading api activities cog")

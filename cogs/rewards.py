@@ -34,15 +34,19 @@ class Club9Rewards(commands.Cog):
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> failed to load Club9 site cookies")
 
 
-    async def parse(self, category: Club9RewardType) -> tuple[list[str], str]:
+    async def parse(self, category: Club9RewardType = Club9RewardType.NONE) -> dict[str, str]:
         """
+        Parses the Club9 Rewards page HTML to determine rewards in a given category and fetches corresponding rewards data from API.
+
+        @param category: The Club9 reward type 'category'.
+        @return: A dictionary of reward handle names to the respective fetched data.
         """
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> parsing shop for {category} rewards")
         cat_url = None
         cat_string = None
         if (category == Club9RewardType.NONE):
-            #
-            pass
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> invalid reward category")
+            return {}
         elif (category == Club9RewardType.ELITE):
             cat_url = REWARDS_ELITE_URL
             cat_string = REWARDS_ELITE_SEARCH_STRING
@@ -65,16 +69,26 @@ class Club9Rewards(commands.Cog):
             pattern = rf"[\"']({re.escape(cat_string)}.*?)[\"']"        
             matches = re.findall(pattern, html)
             rewards_names = sorted(set(matches))
+            if not rewards_names:
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> no rewards data found for {category} category")
+                return {}
             for i in range(len(rewards_names)):
                 rewards_names[i] = rewards_names[i].split("/")[-1]
             rewards_query = ' OR '.join([f'handle:"{reward}"' for reward in rewards_names])
             data_url = REWARDS_QUERY_URL + rewards_query
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> fetching rewards data for {category} rewards")
             response = self.session.get(url=data_url)
-            rewards_data = response.text
-            return rewards_names, rewards_data
+            rewards_data = response.json()
+            rewards_items = rewards_data.get("Items")
+            rewards_dict = {}
+            for reward_item in rewards_items:
+                reward_key = reward_item.get("handle", None)
+                if reward_key is not None and reward_key in rewards_names:
+                    rewards_dict[reward_key] = reward_item
+            return rewards_dict
         except Exception as e:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> failed to parse rewards {e}")
+            return {}
 
 
 
