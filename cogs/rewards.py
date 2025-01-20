@@ -34,6 +34,18 @@ class Club9Rewards(commands.Cog):
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> failed to load Club9 site cookies")
 
 
+    async def read_cache(self) -> None:
+        """
+        """
+        pass
+
+
+    async def write_cache(self) -> None:
+        """
+        """
+        pass
+
+
     async def parse(self, category: Club9RewardType = Club9RewardType.NONE) -> dict[str, str]:
         """
         Parses the Club9 Rewards page HTML to determine rewards in a given category and fetches corresponding rewards data from API.
@@ -91,6 +103,10 @@ class Club9Rewards(commands.Cog):
             return {}
 
 
+    async def refresh(self) -> None:
+        """
+        """
+        pass
 
 
 
