@@ -8,6 +8,7 @@ from typing import Final
 
 from config.config import *
 from utils.api import Club9API
+from utils.reward import Club9RewardType
 
 
 class Club9Bot(commands.Bot):
@@ -46,6 +47,12 @@ class Club9Bot(commands.Bot):
         if self.club9_cog_activities:
             await self.club9_cog_activities.read_cache()
             await self.club9_cog_activities.refresh()
+
+
+        await self.load_extension("cogs.rewards")
+        self.club9_cog_rewards = self.get_cog("Club9Rewards")
+        if self.club9_cog_rewards:
+            await self.club9_cog_rewards.parse(category = Club9RewardType.ELITE)
 
 
         # self.logger.log(level=logging.INFO, msg="loading api activities cog")

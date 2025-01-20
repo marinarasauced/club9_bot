@@ -30,6 +30,9 @@ def PATH_DISCORD_LOGS() -> str:
 PATH_DOTENV = "../.env"
 DISCORD_TOKEN_NAME = "PROJETS_CLUB9_BOT_DISCORD_TOKEN"
 
+# cookies
+PATH_COOKIES = "../cookies.txt"
+
 # graphics
 CLUB9_BOT_ICON_URL = "https://1000logos.net/wp-content/uploads/2017/08/Logo-Cloud-9.jpg"
 
@@ -39,9 +42,31 @@ API_TOKI_ACTIVITIES_PARAMS = None
 API_TOKI_ACTIVITIES_HEADERS = {"x-shopify-shop-domain": "cloud9gg.myshopify.com",}
 PATH_TOKI_ACTIVITIES_CACHE = "config/activities_dict.json"
 
+# rewards url
+REWARDS_ELITE_URL = "https://store.cloud9.gg/collections/elite-tier-rewards"
+REWARDS_MASTER_URL = "https://store.cloud9.gg/collections/master-tier-rewards"
+REWARDS_CHAMPION_URL = "https://store.cloud9.gg/collections/champion-tier-rewards"
+REWARDS_LEGENDARY_URL = "https://store.cloud9.gg/collections/legendary-tier-rewards"
+REWARDS_MYTHIC_URL = "https://store.cloud9.gg/collections/mythic-tier-rewards"
+
+REWARDS_ELITE_SEARCH_STRING = "/collections/elite-tier-rewards/products/"
+REWARDS_MASTER_SEARCH_STRING = "/collections/master-tier-rewards/products/"
+REWARDS_CHAMPION_SEARCH_STRING = "/collections/champion-tier-rewards/products/"
+REWARDS_LEGENDARY_SEARCH_STRING = "/collections/legendary-tier-rewards/products/"
+REWARDS_MYTHIC_SEARCH_STRING = "/collections/mythic-tier-rewards/products/"
+
+REWARDS_QUERY_URL = "https://store.cloud9.gg/search?type=product&view=sc-pb-front-25052016&q="
+
 # discord notifications
 DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS = 1330410207376838737
 DISCORD_ROLE_ID_CLUB9_NOTIFICATIONS = 1328430817214599370
+
+# discord rewards
+DISCORD_CHANNEL_ID_CLUB9_REWARDS_ELITE = 1330686037243986074
+DISCORD_CHANNEL_ID_CLUB9_REWARDS_MASTER = 1330686452673150976
+DISCORD_CHANNEL_ID_CLUB9_REWARDS_CHAMPION = 1330686482066833460
+DISCORD_CHANNEL_ID_CLUB9_REWARDS_LEGENDARY = 1330686526828445856
+DISCORD_CHANNEL_ID_CLUB9_REWARDS_MYTHIC = 1330686616624431217
 
 # discord diagnostics
 DISCORD_CHANNEL_ID_CLUB9_BOT_LOGS = 1330310063482732614
