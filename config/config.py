@@ -33,6 +33,10 @@ DISCORD_TOKEN_NAME = "PROJETS_CLUB9_BOT_DISCORD_TOKEN"
 # cookies
 PATH_COOKIES = "../cookies.txt"
 
+# caches
+PATH_ACTIVITIES_CACHE = "config/activities_dict.json"
+PATH_REWARDS_CACHE = "config/rewards_dict.json"
+
 # graphics
 CLUB9_BOT_ICON_URL = "https://1000logos.net/wp-content/uploads/2017/08/Logo-Cloud-9.jpg"
 
@@ -40,7 +44,6 @@ CLUB9_BOT_ICON_URL = "https://1000logos.net/wp-content/uploads/2017/08/Logo-Clou
 API_TOKI_ACTIVITIES_URL = "https://api.buildwithtoki.com/merchant/brand/activities"
 API_TOKI_ACTIVITIES_PARAMS = None
 API_TOKI_ACTIVITIES_HEADERS = {"x-shopify-shop-domain": "cloud9gg.myshopify.com",}
-PATH_TOKI_ACTIVITIES_CACHE = "config/activities_dict.json"
 
 # rewards url
 REWARDS_ELITE_URL = "https://store.cloud9.gg/collections/elite-tier-rewards"

@@ -1,0 +1,1698 @@
+{
+    "ELITE": {
+        "8547913924771": {
+            "id": "8547913924771",
+            "title": "Custom Cloud9 Wallpaper",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_CustomWallpaper_5c57f2ad-a771-4871-be93-d0f57b8cb750_thumb.png?v=1736525424"
+            },
+            "handle": "custom-cloud9-wallpaper-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 449498944871523,
+                    "title": "Default Title",
+                    "price": 500,
+                    "inventory_quantity": 0,
+                    "sku": "CUSTOMWALLPPRCLB9"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8546158641315": {
+            "id": "8546158641315",
+            "title": "Early Access to the next Merch Drop",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_EarlyAccess_6d307bb1-77df-4116-833a-bdfd28153952_thumb.png?v=1721848274"
+            },
+            "handle": "early-access-to-the-next-merch-drop-reward",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 44922576437411,
+                    "title": "Default Title",
+                    "price": 750,
+                    "inventory_quantity": 5000,
+                    "sku": "EARLYDROPCLB9"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8546155626659": {
+            "id": "8546155626659",
+            "title": "Cloud9 Store Discount",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_StoreDiscount_thumb.png?v=1721749689"
+            },
+            "handle": "c9-store-discount-code-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44922570047651,
+                    "title": "Default Title",
+                    "price": 500,
+                    "inventory_quantity": 500,
+                    "inventory_management": "shopify",
+                    "sku": "STOREDISCCLB9"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8671988318371": {
+            "id": "8671988318371",
+            "title": "Cloud9 Wallpaper",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_Wallpaper_thumb.png?v=1721938503"
+            },
+            "handle": "cloud9-wallpaper",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513278390435,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 0,
+                    "sku": "WALLPPRCLB9"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8542000578723": {
+            "id": "8542000578723",
+            "title": "2025 Event Celebration Pack",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_EventPack_thumb.png?v=1724091038"
+            },
+            "handle": "2024-event-celebration-pack-reward",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 44853760032931,
+                    "title": "Default Title",
+                    "price": 500,
+                    "inventory_quantity": 50,
+                    "inventory_management": "shopify",
+                    "sku": "2025CELPACK"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8663969661091": {
+            "id": "8663969661091",
+            "title": "2025 Cloud9 Pro Jersey Patch (Elite)",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/2025_club9_ironon_patch_elite_mock_thumb.png?v=1736525149"
+            },
+            "handle": "2025-cloud9-pro-jersey-patch-elite",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45483924619427,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 250,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9JERSEYPATCH"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8663969202339": {
+            "id": "8663969202339",
+            "title": "Exclusive Club9 Sticker Pack",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/2025_Club9_Sticker_pack_mock_thumb.png?v=1736525233"
+            },
+            "handle": "exclusive-club9-sticker-pack",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45483923669155,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 100,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9STICKERPACK"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8546166440099": {
+            "id": "8546166440099",
+            "title": "Live Event Fast Pass",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_FastPass_thumb.png?v=1721750265"
+            },
+            "handle": "fast-pass-lane-for-live-events-reward",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 44922585514147,
+                    "title": "Default Title",
+                    "price": 750,
+                    "inventory_quantity": 1000,
+                    "inventory_management": "shopify",
+                    "sku": "FASTPASSCLB9"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8547883810979": {
+            "id": "8547883810979",
+            "title": "Free Shipping Code",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_FreeShipping_thumb.png?v=1721844685"
+            },
+            "handle": "free-shipping-code-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44949739110563,
+                    "title": "Default Title",
+                    "price": 450,
+                    "inventory_quantity": 450,
+                    "inventory_management": "shopify",
+                    "sku": "FREESHIPCLB9"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8663969333411": {
+            "id": "8663969333411",
+            "title": "Exclusive Club9 Keychain",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/2025_01_07_Club9_Rewards_Keychain_mock-01_thumb.png?v=1736525193"
+            },
+            "handle": "exclusive-club9-keychain",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45483923800227,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 97,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9KEYCHAIN"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        },
+        "8546169880739": {
+            "id": "8546169880739",
+            "title": "Special Shoutout from Cloud9",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T1_TYVideo_thumb.png?v=1721750406"
+            },
+            "handle": "special-thanks-on-a-cloud9-video-reward",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 44922589118627,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 4998,
+                    "sku": "SHOUTOUTCLB9"
+                }
+            ],
+            "collections": [
+                306986418339
+            ]
+        }
+    },
+    "MASTER": {
+        "8546178302115": {
+            "id": "8546178302115",
+            "title": "Birthday Wishes from your favorite C9 Player",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_BirthdayVideo_thumb.png?v=1721750798"
+            },
+            "handle": "birthday-video-from-talent-reward",
+            "published_at": "2024-08-16",
+            "variants": [
+                {
+                    "id": 45104483434659,
+                    "title": "League of Legends",
+                    "price": 750,
+                    "inventory_quantity": 15,
+                    "inventory_management": "shopify",
+                    "sku": "BDAYWISHLCSCLB9"
+                },
+                {
+                    "id": 45104483467427,
+                    "title": "VALORANT",
+                    "price": 750,
+                    "inventory_quantity": 20,
+                    "inventory_management": "shopify",
+                    "sku": "BDAYWISHVALCLB9"
+                },
+                {
+                    "id": 45104483500195,
+                    "title": "MANG0",
+                    "price": 750,
+                    "inventory_quantity": 19,
+                    "inventory_management": "shopify",
+                    "sku": "BDAYWISHMNGCLB9"
+                },
+                {
+                    "id": 45104483532963,
+                    "title": "SQUISHY",
+                    "price": 750,
+                    "inventory_quantity": 25,
+                    "inventory_management": "shopify",
+                    "sku": "BDAYWISHSQSCLB9"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8666233110691": {
+            "id": "8666233110691",
+            "title": "Signed Cloud9 Hat",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-cloud9-hat",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 45493851324579,
+                    "title": "League of Legends",
+                    "price": 1000,
+                    "inventory_quantity": 25,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SIGNEDHHAT-LOL"
+                },
+                {
+                    "id": 45493851357347,
+                    "title": "Valorant",
+                    "price": 1000,
+                    "inventory_quantity": 25,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SIGNEDHAT-VAL"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8547914809507": {
+            "id": "8547914809507",
+            "title": "Cloud9 Store Cashback",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_StoreCredit_thumb.png?v=1721861392"
+            },
+            "handle": "cloud9-store-cashback-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44949903409315,
+                    "title": "Default Title",
+                    "price": 500,
+                    "inventory_quantity": 500,
+                    "inventory_management": "shopify",
+                    "sku": "CASHBACKCLB9"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8546192588963": {
+            "id": "8546192588963",
+            "title": "X Follow from @JackEtienne",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_JackFollow_thumb.png?v=1721751491"
+            },
+            "handle": "twitter-follow-from-jacketienne-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44922617397411,
+                    "title": "Default Title",
+                    "price": 2500,
+                    "inventory_quantity": 1227,
+                    "inventory_management": "shopify",
+                    "sku": "JACKFLLWCLB9"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8666223050915": {
+            "id": "8666223050915",
+            "title": "Club9 Stainless Steel Tumbler",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "club9-stainless-steel-tumbler",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 45493816721571,
+                    "title": "Default Title",
+                    "price": 1500,
+                    "inventory_quantity": 100,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9WATERBOTTLE"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8542114218147": {
+            "id": "8542114218147",
+            "title": "Signed League of Legends Mousepad",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_AllMousepad_thumb.png?v=1724778648"
+            },
+            "handle": "signed-mousepad-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 45127086211235,
+                    "title": "Default Title",
+                    "price": 1500,
+                    "inventory_quantity": 13,
+                    "inventory_management": "shopify",
+                    "sku": "SIGNEDLCSMOUSEPADCLB9-LOL"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8673869004963": {
+            "id": "8673869004963",
+            "title": "Steam Signature from a Cloud9 Player",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "steam-signature-from-a-cloud9-player",
+            "published_at": "2025-01-10",
+            "variants": [
+                {
+                    "id": 45518235762851,
+                    "title": "Default Title",
+                    "price": 3000,
+                    "inventory_quantity": 50,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9STEAMSIGN"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8666240843939": {
+            "id": "8666240843939",
+            "title": "Club9 Role in the Official Cloud9 Discord",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_DiscordRole_9881b85b-03ee-4968-8357-3dfb721ca4d8_thumb.png?v=1736525580"
+            },
+            "handle": "club9-role-in-the-official-cloud9-discord",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 45493882749091,
+                    "title": "Default Title",
+                    "price": 150,
+                    "inventory_quantity": 500,
+                    "sku": "CLB9DISCORDROLE"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8546190786723": {
+            "id": "8546190786723",
+            "title": "X Follow from @Cloud9",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_C9Follow_thumb.png?v=1721751376"
+            },
+            "handle": "twitter-follow-from-cloud9-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44922615234723,
+                    "title": "Default Title",
+                    "price": 2000,
+                    "inventory_quantity": 1203,
+                    "inventory_management": "shopify",
+                    "sku": "CLOUD9FLLWCLB9"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8673871397027": {
+            "id": "8673871397027",
+            "title": "Club9 Pin",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/2024_07_24_Club9_ExclusivePinTransparentResized_thumb.png?v=1721928691"
+            },
+            "handle": "club9-pin-1",
+            "published_at": "2025-01-10",
+            "variants": [
+                {
+                    "id": 45518242447523,
+                    "title": "Default Title",
+                    "price": 500,
+                    "inventory_quantity": 85,
+                    "inventory_management": "shopify",
+                    "sku": "PINCLB92025"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8673267482787": {
+            "id": "8673267482787",
+            "title": "2025 Cloud9 Official Jersey",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/IMG_5488_edit_thumb.jpg?v=1736525683"
+            },
+            "handle": "2025-cloud9-official-jersey",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 45516145328291,
+                    "title": "SM",
+                    "price": 3750,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "CLB92025C9PROKITJERSEY-SM-HOME"
+                },
+                {
+                    "id": 45516145361059,
+                    "title": "MD",
+                    "price": 3750,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "CLB92025C9PROKITJERSEY-MD-HOME"
+                },
+                {
+                    "id": 45516145393827,
+                    "title": "LG",
+                    "price": 3750,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB92025C9PROKITJERSEY-LG-HOME"
+                },
+                {
+                    "id": 45516145426595,
+                    "title": "XL",
+                    "price": 3750,
+                    "inventory_quantity": 6,
+                    "inventory_management": "shopify",
+                    "sku": "CLB92025C9PROKITJERSEY-XL-HOME"
+                },
+                {
+                    "id": 45516145459363,
+                    "title": "2X",
+                    "price": 3750,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "CLB92025C9PROKITJERSEY-2X-HOME"
+                },
+                {
+                    "id": 45516145492131,
+                    "title": "3X",
+                    "price": 3750,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "CLB92025C9PROKITJERSEY-3X-HOME"
+                },
+                {
+                    "id": 45516145524899,
+                    "title": "4X",
+                    "price": 3750,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "CLB92025C9PROKITJERSEY-4X-HOME"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8666225246371": {
+            "id": "8666225246371",
+            "title": "2025 Cloud9 Pro Jersey Patch (Master)",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/2025_club9_ironon_patch_Master_Mock_thumb.png?v=1736525133"
+            },
+            "handle": "2025-cloud9-pro-jersey-patch-master",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 45493823570083,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 250,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9JERSEYPATCHMASTER"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8651199578275": {
+            "id": "8651199578275",
+            "title": "2025 C9NY Official Jersey - Home Edition",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/COD_Jersey_HOME_thumb.png?v=1733362064"
+            },
+            "handle": "2025-c9ny-official-jersey-home-edition-copy",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 45437935321251,
+                    "title": "S",
+                    "price": 3750,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9CDLJERSEYHOME-S"
+                },
+                {
+                    "id": 45437935354019,
+                    "title": "M",
+                    "price": 3750,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9CDLJERSEYHOME-M"
+                },
+                {
+                    "id": 45437935386787,
+                    "title": "L",
+                    "price": 3750,
+                    "inventory_quantity": 6,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9CDLJERSEYHOME-L"
+                },
+                {
+                    "id": 45437935419555,
+                    "title": "XL",
+                    "price": 3750,
+                    "inventory_quantity": 6,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9CDLJERSEYHOME-XL"
+                },
+                {
+                    "id": 45437935452323,
+                    "title": "2XL",
+                    "price": 3750,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9CDLJERSEYHOME-2X"
+                },
+                {
+                    "id": 45437935485091,
+                    "title": "3XL",
+                    "price": 3750,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9CDLJERSEYHOME-3X"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8548017602723": {
+            "id": "8548017602723",
+            "title": "$25 in VALORANT RP",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_VALRP_thumb.png?v=1721939141"
+            },
+            "handle": "25-in-valorant-rp-reward",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 44950378086563,
+                    "title": "Default Title",
+                    "price": 4500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "25VALRPCLB9"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8673873625251": {
+            "id": "8673873625251",
+            "title": "Signed VALORANT Mousepad",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_AllMousepad_thumb.png?v=1724778648"
+            },
+            "handle": "signed-valorant-mousepad",
+            "published_at": "2025-01-10",
+            "variants": [
+                {
+                    "id": 45518250705059,
+                    "title": "Default Title",
+                    "price": 1500,
+                    "inventory_quantity": -1,
+                    "inventory_management": "shopify",
+                    "sku": "SIGNEDLCSMOUSEPADCLB9-VAL"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        },
+        "8548016554147": {
+            "id": "8548016554147",
+            "title": "$25 in League of Legends RP",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T2_LOLRP_thumb.png?v=1721861606"
+            },
+            "handle": "25-in-league-of-legends-rp-reward",
+            "published_at": "2025-01-09",
+            "variants": [
+                {
+                    "id": 44950373335203,
+                    "title": "Default Title",
+                    "price": 4500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "25LOLRPCLB9"
+                }
+            ],
+            "collections": [
+                306986549411
+            ]
+        }
+    },
+    "CHAMPION": {
+        "8671888310435": {
+            "id": "8671888310435",
+            "title": "Signed 2025 C9NY Pro Kit Jersey",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-2025-c9ny-pro-kit-jersey",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513005334691,
+                    "title": "SM",
+                    "price": 5000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "SM2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513005367459,
+                    "title": "MD",
+                    "price": 5000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "MD2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513005400227,
+                    "title": "LG",
+                    "price": 5000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "LG2025JSYC9NYSIGNEDCLB9"
+                },
+                {
+                    "id": 45513005432995,
+                    "title": "XL",
+                    "price": 5000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "XL2025JSYC9NYSIGNEDCLB9"
+                },
+                {
+                    "id": 45513005465763,
+                    "title": "2X",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "2X2025JSYC9NYSIGNEDCLB9"
+                },
+                {
+                    "id": 45513005498531,
+                    "title": "3X",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "3X2025JSYC9NYSIGNEDCLB9"
+                },
+                {
+                    "id": 45513005531299,
+                    "title": "4X",
+                    "price": 5000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "4X2025JSYC9NYSIGNEDCLB9"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671887556771": {
+            "id": "8671887556771",
+            "title": "Signed 2025 VALORANT Pro Kit Jersey",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-2025-valorant-pro-kit-jersey",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513004253347,
+                    "title": "XS",
+                    "price": 5000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "XS2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513004286115,
+                    "title": "SM",
+                    "price": 5000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "SM2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513004318883,
+                    "title": "MD",
+                    "price": 5000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "MD2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513004351651,
+                    "title": "LG",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "LG2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513004384419,
+                    "title": "XL",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "XL2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45513004417187,
+                    "title": "2X",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "2X2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513004449955,
+                    "title": "3X",
+                    "price": 5000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "3X2025JSYVALSIGNEDCLB9"
+                },
+                {
+                    "id": 45513004482723,
+                    "title": "4X",
+                    "price": 5000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "4X2025JSYVALSIGNEDCLB9"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671795740835": {
+            "id": "8671795740835",
+            "title": "Virtual Meet-and-Greet",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "virtual-meet-and-greet",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45512780382371,
+                    "title": "Default Title",
+                    "price": 3000,
+                    "inventory_quantity": 36,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9VIRTUALMEET"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671793283235": {
+            "id": "8671793283235",
+            "title": "2025 Cloud9 Pro Jersey Patch (Champion)",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "2025-cloud9-pro-jersey-patch-champion",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45512776515747,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 250,
+                    "inventory_management": "shopify",
+                    "sku": "45512776515747"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8674233352355": {
+            "id": "8674233352355",
+            "title": "Secretlab TITAN Evo Cloud9 Edition Chair",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/CopyofTitanEvo-R-C9-02_1200x_cb80eba2-2e43-41f2-94fa-94f3715dde97_thumb.webp?v=1736555566"
+            },
+            "handle": "secretlab-titan-evo",
+            "published_at": "2025-01-10",
+            "variants": [
+                {
+                    "id": 45520548102307,
+                    "title": "Default Title",
+                    "price": 15000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SLTITANCHAIR"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671797543075": {
+            "id": "8671797543075",
+            "title": "Submit a Clip to be in a Cloud9 Video",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "submit-a-clip-to-be-in-a-cloud9-video",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45512783495331,
+                    "title": "Default Title",
+                    "price": 0,
+                    "inventory_quantity": 0,
+                    "sku": "CLB9VIDEOCLIP"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671792660643": {
+            "id": "8671792660643",
+            "title": "Custom Cloud9 Wrapped Switch",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "custom-cloud9-wrapped-switch",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45512775762083,
+                    "title": "Default Title",
+                    "price": 15000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9WRAPSWITCH"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671010816163": {
+            "id": "8671010816163",
+            "title": "Custom Cloud9 Wrapped Hit Box",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "custom-cloud9-wrapped-hit-box",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45510744047779,
+                    "title": "Default Title",
+                    "price": 12500,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9HITBOX"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8546215493795": {
+            "id": "8546215493795",
+            "title": "Play Spike Rush with our talent!",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T3_SpikeRush_thumb.png?v=1721752488"
+            },
+            "handle": "spike-rush-with-talent-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44922672611491,
+                    "title": "Default Title",
+                    "price": 5000,
+                    "inventory_quantity": 12,
+                    "inventory_management": "shopify",
+                    "sku": "SPIKERUSHCLB9"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671796920483": {
+            "id": "8671796920483",
+            "title": "Signed Cloud9 Polaroids",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-cloud9-poloroids",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45512782119075,
+                    "title": "Default Title",
+                    "price": 1250,
+                    "inventory_quantity": 150,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SIGNEDPOLAROID"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8546207105187": {
+            "id": "8546207105187",
+            "title": "Exclusive Meet & Greet Access at Live Event",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T3_MeetGreet_thumb.png?v=1721752145"
+            },
+            "handle": "reserved-meet-greet-time-at-event-reward",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 44922640367779,
+                    "title": "Default Title",
+                    "price": 3000,
+                    "inventory_quantity": 25,
+                    "inventory_management": "shopify",
+                    "sku": "MNGACCESSCLB9"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671970427043": {
+            "id": "8671970427043",
+            "title": "Club9 Limited Edition T-Shirt",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "club9-limited-edition-t-shirt",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513230680227,
+                    "title": "SM",
+                    "price": 2500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "SM2025CLUB9TEE"
+                },
+                {
+                    "id": 45513230712995,
+                    "title": "MD",
+                    "price": 2500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "MD2025CLUB9TEE"
+                },
+                {
+                    "id": 45513230745763,
+                    "title": "LG",
+                    "price": 2500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "LG2025CLUB9TEE"
+                },
+                {
+                    "id": 45513230778531,
+                    "title": "XL",
+                    "price": 2500,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "XL2024CLUB9TEE"
+                },
+                {
+                    "id": 45513230811299,
+                    "title": "2X",
+                    "price": 2500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "2X2025CLUB9TEE"
+                },
+                {
+                    "id": 45513230844067,
+                    "title": "3X",
+                    "price": 2500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "3X2025CLUB9TEE"
+                },
+                {
+                    "id": 45513230876835,
+                    "title": "4X",
+                    "price": 2500,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "4X2025CLUB9TEE"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671854100643": {
+            "id": "8671854100643",
+            "title": "Signed 2025 League of Legends Pro Kit Jersey",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-2025-league-of-legends-pro-kit-jersey",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45512925544611,
+                    "title": "XS",
+                    "price": 5000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "XS2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45512925577379,
+                    "title": "SM",
+                    "price": 5000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "SM2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45512925610147,
+                    "title": "MD",
+                    "price": 5000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "MD2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45512925642915,
+                    "title": "LG",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "LG2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45512925675683,
+                    "title": "XL",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "XL2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45512925708451,
+                    "title": "2X",
+                    "price": 5000,
+                    "inventory_quantity": 4,
+                    "inventory_management": "shopify",
+                    "sku": "2X2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45512925741219,
+                    "title": "3X",
+                    "price": 5000,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "3X2025JSYLOLSIGNEDCLB9"
+                },
+                {
+                    "id": 45512925773987,
+                    "title": "4X",
+                    "price": 5000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "4X2025JSYLOLSIGNEDCLB9"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8671793807523": {
+            "id": "8671793807523",
+            "title": "Signed Cloud9 Flag",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-cloud9-flag",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45512777105571,
+                    "title": "Default Title",
+                    "price": 2500,
+                    "inventory_quantity": 25,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SIGNEDFLAG"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8546202255523": {
+            "id": "8546202255523",
+            "title": "Become a Cloud9 Champion",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T3_Ambassador_thumb.png?v=1721752016"
+            },
+            "handle": "become-a-cloud9-champion-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44922629652643,
+                    "title": "Default Title",
+                    "price": 2500,
+                    "inventory_quantity": 100,
+                    "inventory_management": "shopify",
+                    "sku": "AMBASSADORCLB9"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        },
+        "8546210349219": {
+            "id": "8546210349219",
+            "title": "Play ARAM with our talent!",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/T3_ARAM_thumb.png?v=1721752294"
+            },
+            "handle": "aram-with-talent-reward",
+            "published_at": "2024-08-19",
+            "variants": [
+                {
+                    "id": 44922653376675,
+                    "title": "Default Title",
+                    "price": 5000,
+                    "inventory_quantity": 0,
+                    "inventory_management": "shopify",
+                    "sku": "ARAMCLB9"
+                }
+            ],
+            "collections": [
+                306986483875
+            ]
+        }
+    },
+    "LEGENDARY": {
+        "8671911018659": {
+            "id": "8671911018659",
+            "title": "Cloud9 Backpack",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "cloud9-backpack",
+            "published_at": "2025-01-10",
+            "variants": [
+                {
+                    "id": 45513057403043,
+                    "title": "Default Title",
+                    "price": 4500,
+                    "inventory_quantity": 50,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9BACKPACK"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671904202915": {
+            "id": "8671904202915",
+            "title": "Private Coaching Session with C9VAL",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "private-coaching-session-with-c9val",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513036988579,
+                    "title": "Default Title",
+                    "price": 10000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9C9NYCOACH"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671902728355": {
+            "id": "8671902728355",
+            "title": "Private Coaching Session with C9LOL",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "private-coaching-session-with-c9lol",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513034170531,
+                    "title": "Default Title",
+                    "price": 10000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9LOLCOACH"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671904628899": {
+            "id": "8671904628899",
+            "title": "Secretlab C9 MAGNUS Desk",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/CLOUD9-MAGNUS-02_1400x_99c879a4-b1bb-4c5e-9b75-de8fd04cbfce_thumb.webp?v=1736552999"
+            },
+            "handle": "secretlab-c9-magnus-desk",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513037840547,
+                    "title": "Default Title",
+                    "price": 25000,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "45513037840547"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671903842467": {
+            "id": "8671903842467",
+            "title": "Private Coaching Session with C9NY",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "private-coaching-session-with-c9ny",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513036234915,
+                    "title": "Default Title",
+                    "price": 10000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9C9NYCOACH"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671902335139": {
+            "id": "8671902335139",
+            "title": "Custom Cloud9 Wrapped Steam Deck",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "custom-cloud9-wrapped-steam-deck",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513032630435,
+                    "title": "Default Title",
+                    "price": 27500,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9WRAPSTEAMDECK"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671899091107": {
+            "id": "8671899091107",
+            "title": "Custom Cloud9 Wrapped PS5",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "custom-cloud9-wrapped-ps5",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513026011299,
+                    "title": "Default Title",
+                    "price": 25000,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9WRAPPS5"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671911346339": {
+            "id": "8671911346339",
+            "title": "Exclusive Cloud9 Gameday Experience",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "exclusive-cloud9-gameday-experience",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513058156707,
+                    "title": "Default Title",
+                    "price": 15000,
+                    "inventory_quantity": 2,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9GAMEDAY"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671910166691": {
+            "id": "8671910166691",
+            "title": "Signed Headset",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-headset",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513055273123,
+                    "title": "Default Title",
+                    "price": 5000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SIGNEDHEADSET"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671905284259": {
+            "id": "8671905284259",
+            "title": "2025 Cloud9 Pro Jersey Patch (Legendary)",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "2025-cloud9-pro-jersey-patch-legendary",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513039249571,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 250,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9LEGENDARYPATCH"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671903514787": {
+            "id": "8671903514787",
+            "title": "Private Coaching Session with mang0",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "private-coaching-session-with-mang0",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513035546787,
+                    "title": "Default Title",
+                    "price": 10000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9MANG0COACH"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        },
+        "8671910625443": {
+            "id": "8671910625443",
+            "title": "Signed Keyboard",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "signed-keyboard",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513056420003,
+                    "title": "Default Title",
+                    "price": 5000,
+                    "inventory_quantity": 5,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SIGNEDKEYBOARD"
+                }
+            ],
+            "collections": [
+                312451104931
+            ]
+        }
+    },
+    "MYTHIC": {
+        "8671924519075": {
+            "id": "8671924519075",
+            "title": "Cloud9 Streaming Setup",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "cloud9-streaming-setup",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513093873827,
+                    "title": "Default Title",
+                    "price": 33000,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9STREAMSETUP"
+                }
+            ],
+            "collections": [
+                312451137699
+            ]
+        },
+        "8671923699875": {
+            "id": "8671923699875",
+            "title": "Personalized Cloud9 Gaming Crate",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "personalized-cloud9-gaming-crate",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513090728099,
+                    "title": "Default Title",
+                    "price": 25000,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9CRATE"
+                }
+            ],
+            "collections": [
+                312451137699
+            ]
+        },
+        "8671921799331": {
+            "id": "8671921799331",
+            "title": "2025 Cloud9 Pro Jersey Patch (Mythic)",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "2025-cloud9-pro-jersey-patch-mythic",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513082994851,
+                    "title": "Default Title",
+                    "price": 250,
+                    "inventory_quantity": 250,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9MYTHICPATCH"
+                }
+            ],
+            "collections": [
+                312451137699
+            ]
+        },
+        "8671921078435": {
+            "id": "8671921078435",
+            "title": "Secretlab C9 MAGNUS Pro Desk",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shop/files/imag_1_700x_bdfad4a0-c944-46ee-b716-9b63888c195e_thumb.webp?v=1736552450"
+            },
+            "handle": "secretlab-c9-magnus-pro-desk",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513081094307,
+                    "title": "Default Title",
+                    "price": 32500,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9SLMAGNUSPRODESK"
+                }
+            ],
+            "collections": [
+                312451137699
+            ]
+        },
+        "8671922880675": {
+            "id": "8671922880675",
+            "title": "Virtual Dinner + Game Night with Cloud9",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "virtual-dinner-game-night-with-cloud9",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513086140579,
+                    "title": "Default Title",
+                    "price": 17500,
+                    "inventory_quantity": 3,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9DINNERGAME"
+                }
+            ],
+            "collections": [
+                312451137699
+            ]
+        },
+        "8671922323619": {
+            "id": "8671922323619",
+            "title": "Cloud9 LA Trip",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "cloud9-la-trip",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513084764323,
+                    "title": "Default Title",
+                    "price": 25000,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9LATRIP"
+                }
+            ],
+            "collections": [
+                312451137699
+            ]
+        },
+        "8671913640099": {
+            "id": "8671913640099",
+            "title": "Custom Cloud9 Wrapped PC",
+            "image": {
+                "src": "//store.cloud9.gg/cdn/shopifycloud/shopify/assets/no-image-50-3d8cc48bd078edcd544c8d60f929ed2d8800a3fc52e0f602e84b1767e392bfcd_thumb.gif"
+            },
+            "handle": "custom-cloud9-wrapped-pc",
+            "published_at": "2025-01-08",
+            "variants": [
+                {
+                    "id": 45513063465123,
+                    "title": "Default Title",
+                    "price": 30000,
+                    "inventory_quantity": 1,
+                    "inventory_management": "shopify",
+                    "sku": "CLB9WRAPPC"
+                }
+            ],
+            "collections": [
+                312451137699
+            ]
+        }
+    }
+}

@@ -29,7 +29,7 @@ class Club9Activities(commands.Cog):
         """
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> reading activities cache")
-            with open(PATH_TOKI_ACTIVITIES_CACHE, "r") as file:
+            with open(PATH_ACTIVITIES_CACHE, "r") as file:
                 self.club9_bot.activities_dict = json.load(file)
             activities_list = self.club9_bot.activities_dict.get("activities", [])
             activities_data = utils.activity.generate_activities(activities_list=activities_list)
@@ -50,13 +50,13 @@ class Club9Activities(commands.Cog):
 
     async def write_cache(self) -> None:
         """
-        Write a cache file storing the current activities data.
+        Writes a cache file storing the current activities data.
 
         This method writes a JSON cache file and assigns the data from the bot's activities data attribute to the file. Upon startup, this cache is read, allowing the bot to track which activities are old compared to any new requests.
         """
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> writing activities cache")
-            with open(PATH_TOKI_ACTIVITIES_CACHE, "w") as file:
+            with open(PATH_ACTIVITIES_CACHE, "w") as file:
                 json.dump(self.club9_bot.activities_dict, file, indent=4)
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> wrote activities cache")
             self.club9_bot.num_activities_cache_write += 1

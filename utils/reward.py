@@ -23,3 +23,14 @@ class Club9RewardType(Enum):
         @param value:
         """
         return cls.NONE
+
+
+def get_reward_types() -> list[str]:
+    """
+    Gets the reward types from the Club9Reward Enum class.
+    """
+    rewards_types = []
+    for reward_type in Club9RewardType.__members__.values():
+        if (reward_type is not Club9RewardType.NONE):
+            rewards_types.append(reward_type.value)
+    return rewards_types

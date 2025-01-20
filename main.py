@@ -25,6 +25,9 @@ class Club9Bot(commands.Bot):
         self.activities_dict: dict = {}
         self.activities_mapping: dict = {}  # map of activity ids to Club9Activity objects generated on startup for comparison to requests during refresh comparison
         # TODO add mapping attribute dict for tracking messages in case of editing quests upon api change
+        self.rewards_dict: dict = {}
+
+
         self.num_activities_cache_read = 0
         self.num_activities_cache_write = 0
         self.num_activities_new_detected = 0
@@ -44,16 +47,17 @@ class Club9Bot(commands.Bot):
 
         await self.load_extension("cogs.activities")
         self.club9_cog_activities = self.get_cog("Club9Activities")
-        # if self.club9_cog_activities:
-        #     await self.club9_cog_activities.read_cache()
-        #     await self.club9_cog_activities.refresh()
+        if self.club9_cog_activities:
+            await self.club9_cog_activities.read_cache()
+            # await self.club9_cog_activities.refresh()
 
 
         await self.load_extension("cogs.rewards")
         self.club9_cog_rewards = self.get_cog("Club9Rewards")
         if self.club9_cog_rewards:
-            test = await self.club9_cog_rewards.parse(category = Club9RewardType.ELITE)
-            print(test)
+            await self.club9_cog_rewards.read_cache()
+            await self.club9_cog_rewards.refresh()
+
 
 
         # self.logger.log(level=logging.INFO, msg="loading api activities cog")

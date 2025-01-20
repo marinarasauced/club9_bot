@@ -8,8 +8,8 @@ import re
 
 from config.config import *
 from main import Club9Bot
-from utils.reward import Club9RewardType
-
+from utils.reward import Club9RewardType, get_reward_types
+import json
 
 class Club9Rewards(commands.Cog):
     """
@@ -36,14 +36,41 @@ class Club9Rewards(commands.Cog):
 
     async def read_cache(self) -> None:
         """
+        Reads a cache file storing the previous rewards data for each tier.
+
+        This method reads a JSON cache file and assigns the data to a bot attribute in order to speed up fetching.
         """
-        pass
+        try:
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> reading rewards cache")
+            with open(PATH_REWARDS_CACHE, "r") as file:
+                self.club9_bot.rewards_dict = json.load(file)
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> read rewards cache")
+        except FileNotFoundError:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to read rewards cache (file not found)")
+        except json.JSONDecodeError:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to decode rewards cache (json decode error)")
+        except Exception as e:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to read rewards cache ({e})")
 
 
     async def write_cache(self) -> None:
         """
+        Writes a cache file storing the current rewards data for each tier.
+
+        This method writes a JSON cache file and assigns the data from the bot's rewards data attribute to the file. Upon startup, this cache is read, giving the bot a baseline to compare refreshes with.
         """
-        pass
+        try:
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> writing rewards cache")
+            with open(PATH_REWARDS_CACHE, "w") as file:
+                json.dump(self.club9_bot.rewards_dict, file, indent=4)
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> wrote rewards cache")
+            # self.club9_bot.num_activities_cache_write += 1
+        except FileNotFoundError:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to write rewards cache (file not found)")
+        except json.JSONDecodeError:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to decode rewards cache (json decode error)")
+        except Exception as e:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to write rewards cache ({e})")
 
 
     async def parse(self, category: Club9RewardType = Club9RewardType.NONE) -> dict[str, str]:
@@ -71,9 +98,9 @@ class Club9Rewards(commands.Cog):
         elif (category == Club9RewardType.LEGENDARY):
             cat_url = REWARDS_LEGENDARY_URL
             cat_string = REWARDS_LEGENDARY_SEARCH_STRING
-        elif (category == Club9RewardType.MASTER):
-            cat_url = REWARDS_MASTER_URL
-            cat_string = REWARDS_MYTHIC_URL
+        elif (category == Club9RewardType.MYTHIC):
+            cat_url = REWARDS_MYTHIC_URL
+            cat_string = REWARDS_MYTHIC_SEARCH_STRING
         try:
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> fetching html data for {category} rewards")
             response = self.session.get(url=cat_url)
@@ -94,19 +121,62 @@ class Club9Rewards(commands.Cog):
             rewards_items = rewards_data.get("Items")
             rewards_dict = {}
             for reward_item in rewards_items:
-                reward_key = reward_item.get("handle", None)
-                if reward_key is not None and reward_key in rewards_names:
-                    rewards_dict[reward_key] = reward_item
+                reward_handle = reward_item.get("handle", None)
+                reward_id = reward_item.get("id", None)
+                if (reward_id is not None and reward_handle is not None and reward_handle in rewards_names):
+                    rewards_dict[reward_id] = reward_item
             return rewards_dict
         except Exception as e:
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> failed to parse rewards {e}")
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> failed to parse rewards ({e})")
             return {}
 
 
     async def refresh(self) -> None:
         """
         """
-        pass
+        try:
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> refreshing rewards")
+            rewards_dict: dict = {}
+            is_cache_outdated: bool = False
+            for reward_type in Club9RewardType.__members__.values():
+                if (reward_type is not Club9RewardType.NONE):
+                    rewards_dict[reward_type.value] = await self.club9_bot.club9_cog_rewards.parse(category=reward_type)
+            if (rewards_dict == self.club9_bot.rewards_dict):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> refreshed rewards (no changes detected)")
+            else:
+                for category in get_reward_types():
+                    rewards_data_old = self.club9_bot.rewards_dict[category]
+                    rewards_data_new = rewards_dict[category]
+                    if (rewards_data_new == rewards_data_old):
+                        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected no changes to {category} rewards")
+                    else:
+                        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected changes to {category} rewards")
+                        rewards_ids_old = rewards_data_old.keys()
+                        rewards_ids_new = rewards_data_new.keys()
+                        # detect if any rewards were added
+                        for reward_id in rewards_ids_new:
+                            if (reward_id not in rewards_ids_old):
+                                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected reward {reward_id} added to {category}")
+                                # TODO reward added -> need to send new reward in appropriate channel
+                        # detect if any rewards were removed
+                        for reward_id in rewards_ids_old:
+                            if (reward_id not in rewards_ids_new):
+                                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected reward {reward_id} removed from {category}")
+                                # TODO reward removed -> nbeed to delete reward from appropriate channel
+                                pass
+                            else:
+                                # check if reward was modified
+                                reward_data_old = rewards_data_old.get(reward_id)
+                                reward_data_new = rewards_data_new.get(reward_id)
+                                if (reward_data_old == reward_data_new):
+                                    # no change to specific reward
+                                    self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected no changes to reward {reward_id} in {category}")
+                                else:
+                                    # change detected
+                                    # TODO change code -> need to modify message
+                                    pass
+        except Exception as e:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to refresh rewards ({e})")
 
 
 
