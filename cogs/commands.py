@@ -40,9 +40,9 @@ class Club9Commands(commands.Cog):
         if self.monitoring_flag:
             await ctx.send("Monitoring is already running!")
             return
-        if period < 30:
-            await ctx.send("The period must be at least 30 seconds.")
-            self.club9_bot.logger.log(level=logging.ERROR, msg="Club9Commands -> period must be greater than or equal to 30 seconds")
+        if period < 60:
+            await ctx.send("The period must be at least 60 seconds.")
+            self.club9_bot.logger.log(level=logging.ERROR, msg="Club9Commands -> period must be greater than or equal to 60 seconds")
             return
         self.monitoring_flag = True
         await ctx.send(f"starting monitoring with a period of {period} seconds.")
@@ -51,6 +51,7 @@ class Club9Commands(commands.Cog):
         while self.monitoring_flag:
             if self.club9_bot.club9_cog_activities:
                 await self.club9_bot.club9_cog_activities.refresh()
+                await self.club9_bot.club9_cog_rewards.refresh()
                 await asyncio.sleep(period)
         await ctx.send("stopped monitoring.")
         self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> monitoring stopped.")
