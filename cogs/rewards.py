@@ -188,7 +188,7 @@ class Club9Rewards(commands.Cog):
                                     self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected changes to reward {reward_id} in {category}")
                                     embed = generate_reward_embed(reward_data=reward_data_new, category=category)
                                     channel_id = get_reward_channel_id(category)
-                                    await self.club9_bot.club9_cog_notifications.send_notification(channel_id=channel_id, content="", embed=embed, type="Rewards", id=reward_id)
+                                    await self.club9_bot.club9_cog_notifications.edit_notification(content=None, embed=embed, type="Rewards", id=reward_id)
                                     is_cache_rewards_outdated = True
                                     # messages cache not outdated since no change to message/channel ids
             if (is_cache_rewards_outdated == True):

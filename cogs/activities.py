@@ -103,7 +103,7 @@ class Club9Activities(commands.Cog):
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected modified activity {activity_data_new.id}")
                                 # TODO add logic for modifying notifications (if desired, prereq: need to add method for storing/loading message data for shutdowns, what data to change, etc)
                                 embed = activity_data_new.generate_activities_embed()
-                                await self.club9_bot.club9_cog_notifications.edit_notification(content=None, embed=embed, type="Activities")
+                                await self.club9_bot.club9_cog_notifications.edit_notification(content=None, embed=embed, type="Activities", id=activity_data_new.id)
                                 is_cache_activities_outdated = True
                                 # messages cache unchanged since constant message/channel ids
                             else:
@@ -112,7 +112,7 @@ class Club9Activities(commands.Cog):
                                 # create/send notification
                                 content = activity_data_new.generate_activities_content()
                                 embed = activity_data_new.generate_activities_embed()
-                                await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed)
+                                await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed, type="Activities", id=activity_data_new.id)
                                 # indicate cache needs to be updated
                                 # self.club9_bot.num_activities_new_detected += 1
                                 is_cache_activities_outdated = True
