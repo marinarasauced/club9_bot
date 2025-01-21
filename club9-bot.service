@@ -1,12 +1,18 @@
 [Unit]
-Description=Run Club9 Bot Python3 executable on startup within virtual environment.
+Description=Run Club9 Bot Python3 executable on startup within virtual environment
 After=network.target
 
 [Service]
+Type=simple
 ExecStart=/home/marinarasauced/.virtualenvs/club9-bot/bin/python3.12 /home/marinarasauced/Projets/club9-bot/main.py
 WorkingDirectory=/home/marinarasauced/Projets/club9-bot
 Restart=always
+RestartSec=5
 User=marinarasauced
+Group=marinarasauced
+Environment=PYTHONUNBUFFERED=1
+TimeoutStopSec=10
+KillMode=mixed
 
 [Install]
 WantedBy=multi-user.target
