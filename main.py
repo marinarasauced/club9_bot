@@ -1,4 +1,5 @@
 
+import asyncio
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -56,6 +57,8 @@ class Club9Bot(commands.Bot):
         if self.club9_cog_rewards:
             await self.club9_cog_rewards.read_cache()
             # await self.club9_cog_rewards.refresh()
+        
+        self.logger.log(level=logging.INFO, msg="Club9Bot is online.")
 
 
 def main():
@@ -76,6 +79,8 @@ def main():
 
     bot = Club9Bot(command_prefix="!", intents=intents, logger=logger)
     bot.run(token=TOKEN)
+    bot.logger.log(level=logging.INFO, msg="Club9Bot is offline.")
+    asyncio.run(bot.close())
 
 
 if __name__ == "__main__":
