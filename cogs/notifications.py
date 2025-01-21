@@ -56,13 +56,15 @@ class Club9Notifications(commands.Cog):
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Notifications -> failed to write messages cache ({e})")
 
 
-    async def send_notification(self, channel_id: int, content: str, embed: discord.Embed = None, type: str = None, id: int = None) -> discord.Message:
+    async def send_notification(self, channel_id: int, content: str, embed: discord.Embed, type: str, id: int) -> discord.Message:
         """
         Sends a message to a channel consisting of a content string and a discord embed.
         
         @param channel_id: The id number of the channel in which the message is to be sent.
         @param content: The string content of the message (i.e., a role ping, some text).
         @param embed: The discord embed containing an image, the title, a description, and other text.
+        @param type: 
+        @param id:
         @return The sent discord message object, or None if the channel wasn't found.
         """
         if (type is None or id is None):
@@ -74,15 +76,41 @@ class Club9Notifications(commands.Cog):
         if channel:
             message = await channel.send(content=content, embed=embed)
             # self.club9_bot.num_activities_new_notifications += 1
-            self.club9_bot.messages_dict[message_type].append({id: message.id})
+            self.club9_bot.messages_dict[message_type][id] = {
+                "channel_id": channel_id,
+                "message_id": message.id
+            }
             return message
         return None
 
 
-    async def edit_notification(self, message: discord.Message):
+    async def edit_notification(self, content: str, embed: discord.Embed, type: str, id: int) -> None:
         """
+        Edits a message in a channel consisting of a content string and a discord embed.
+
+        @param content: The new string content.
+        @param embed: The new embed object.
+        @param type: 
+        @param id:
         """
-        pass
+        if (type is None or id is None):
+            return
+        message_type = type.capitalize()
+        if message_type not in ["Rewards", "Activities"]:
+            return None
+        data = self.club9_bot.messages_dict[type][id]
+        print(data)
+        channel_id = data.get("channel_id", None)
+        message_id = data.get("message_id", None)
+        channel = self.club9_bot.get_channel(channel_id)
+        if channel:
+            try:
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> editing message {message_id} in channel {channel_id}")
+                message = await channel.fetch_message(message_id)
+                await message.edit(content=content, embed=embed)
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> edited message {message_id} in channel {channel_id}")
+            except Exception as e:
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> unable to edit message {message_id} in channel {channel_id} ({e})")
 
 
 async def setup(bot: Club9Bot) -> None:

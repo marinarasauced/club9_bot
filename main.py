@@ -58,6 +58,21 @@ class Club9Bot(commands.Bot):
         if self.club9_cog_rewards:
             await self.club9_cog_rewards.read_cache()
             await self.club9_cog_rewards.refresh()
+        
+        await self.club9_cog_notifications.send_notification(
+            channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS,
+            content="testing editing 1",
+            embed=None,
+            type="Rewards",
+            id=12345
+        )
+
+        await self.club9_cog_notifications.edit_notification(
+            content="testing editing 2",
+            embed=None,
+            type="Rewards",
+            id=12345
+        )
 
 
 
