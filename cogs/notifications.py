@@ -97,9 +97,8 @@ class Club9Notifications(commands.Cog):
             return
         message_type = type.capitalize()
         if message_type not in ["Rewards", "Activities"]:
-            return None
+            return
         data = self.club9_bot.messages_dict[type][id]
-        print(data)
         channel_id = data.get("channel_id", None)
         message_id = data.get("message_id", None)
         channel = self.club9_bot.get_channel(channel_id)
@@ -107,10 +106,38 @@ class Club9Notifications(commands.Cog):
             try:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> editing message {message_id} in channel {channel_id}")
                 message = await channel.fetch_message(message_id)
-                await message.edit(content=content, embed=embed)
+                if (content is not None and embed is not None):
+                    await message.edit(content=content, embed=embed)
+                elif (content is None and embed is not None):
+                    await message.edit(embed=embed)
+                elif (content is not None and embed is None):
+                    await message.edit(content=content)
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> edited message {message_id} in channel {channel_id}")
             except Exception as e:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> unable to edit message {message_id} in channel {channel_id} ({e})")
+
+
+    async def delete_notification(self, type: str, id: int) -> None:
+        """
+        """
+        if (type is None or id is None):
+            return
+        message_type = type.capitalize()
+        if message_type not in ["Rewards", "Activities"]:
+            return
+        data = self.club9_bot.messages_dict[type][id]
+        channel_id = data.get("channel_id", None)
+        message_id = data.get("message_id", None)
+        channel = self.club9_bot.get_channel(channel_id)
+        if channel:
+            try:
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> deleting message {message_id} in channel {channel_id}")
+                message = await channel.fetch_message(message_id)
+                await message.delete()
+                del self.club9_bot.messages_dict[message_type][id]
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> deleted message {message_id} in channel {channel_id}")
+            except Exception as e:
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> unable to delete message {message_id} in channel {channel_id} ({e})")
 
 
 async def setup(bot: Club9Bot) -> None:

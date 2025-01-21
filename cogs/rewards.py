@@ -163,7 +163,6 @@ class Club9Rewards(commands.Cog):
                         for reward_id in rewards_ids_new:
                             if (reward_id not in rewards_ids_old):
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected reward {reward_id} added to {category}")
-                                # TODO reward added -> need to send new reward in appropriate channel
                                 reward_data_new = rewards_data_new[reward_id]
                                 embed = generate_reward_embed(reward_data=reward_data_new, category=category)
                                 channel_id = get_reward_channel_id(category)
@@ -174,8 +173,9 @@ class Club9Rewards(commands.Cog):
                         for reward_id in rewards_ids_old:
                             if (reward_id not in rewards_ids_new):
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected reward {reward_id} removed from {category}")
-                                # TODO reward removed -> nbeed to delete reward from appropriate channel
-                                pass
+                                await self.club9_bot.club9_cog_notifications.delete_notification(type="Rewards", id=reward_id)
+                                is_cache_rewards_outdated = True
+                                is_cache_messages_outdated = True
                             else:
                                 # check if reward was modified
                                 reward_data_old = rewards_data_old.get(reward_id)
@@ -185,8 +185,12 @@ class Club9Rewards(commands.Cog):
                                     self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected no changes to reward {reward_id} in {category}")
                                 else:
                                     # change detected
-                                    # TODO change code -> need to modify message
                                     self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected changes to reward {reward_id} in {category}")
+                                    embed = generate_reward_embed(reward_data=reward_data_new, category=category)
+                                    channel_id = get_reward_channel_id(category)
+                                    await self.club9_bot.club9_cog_notifications.send_notification(channel_id=channel_id, content="", embed=embed, type="Rewards", id=reward_id)
+                                    is_cache_rewards_outdated = True
+                                    # messages cache not outdated since no change to message/channel ids
             if (is_cache_rewards_outdated == True):
                 self.club9_bot.rewards_dict = rewards_dict
                 await self.club9_bot.club9_cog_rewards.write_cache()
@@ -194,30 +198,6 @@ class Club9Rewards(commands.Cog):
                 await self.club9_bot.club9_cog_notifications.write_cache()
         except Exception as e:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to refresh rewards ({e})")
-
-
-
-    # async def send_notification(self, channel_id: int, content: str, embed: discord.Embed = None) -> discord.Message:
-    #     """
-    #     Sends a message to a channel consisting of a content string and a discord embed.
-        
-    #     @param channel_id: The id number of the channel in which the message is to be sent.
-    #     @param content: The string content of the message (i.e., a role ping, some text).
-    #     @param embed: The discord embed containing an image, the title, a description, and other text.
-    #     @return The sent discord message object, or None if the channel wasn't found.
-    #     """
-    #     channel = self.club9_bot.get_channel(channel_id)
-    #     if channel:
-    #         message = await channel.send(content=content, embed=embed)
-    #         self.club9_bot.num_activities_new_notifications += 1
-    #         return message
-    #     return None
-
-
-    # async def edit_notification(self, message: discord.Message):
-    #     """
-    #     """
-    #     pass
 
 
 async def setup(bot: Club9Bot) -> None:
