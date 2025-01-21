@@ -8,7 +8,6 @@ from typing import Final
 
 from config.config import *
 from utils.api import Club9API
-from utils.reward import Club9RewardType
 
 
 class Club9Bot(commands.Bot):
@@ -27,7 +26,6 @@ class Club9Bot(commands.Bot):
         # TODO add mapping attribute dict for tracking messages in case of editing quests upon api change
         self.rewards_dict: dict = {}
         self.messages_dict: dict = {}
-
 
         self.num_activities_cache_read = 0
         self.num_activities_cache_write = 0
@@ -57,49 +55,7 @@ class Club9Bot(commands.Bot):
         self.club9_cog_rewards = self.get_cog("Club9Rewards")
         if self.club9_cog_rewards:
             await self.club9_cog_rewards.read_cache()
-            await self.club9_cog_rewards.refresh()
-        
-        await self.club9_cog_notifications.send_notification(
-            channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS,
-            content="testing editing 1",
-            embed=None,
-            type="Rewards",
-            id=12345
-        )
-
-        await self.club9_cog_notifications.edit_notification(
-            content="testing editing 2",
-            embed=None,
-            type="Rewards",
-            id=12345
-        )
-
-
-
-        # self.logger.log(level=logging.INFO, msg="loading api activities cog")
-        # await self.load_extension("cogs.api_activities")
-        
-        # cog_api_activities = self.get_cog("APIActivities")
-        # if cog_api_activities:
-        #     self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
-        #     await cog_api_activities.read_api_activities_cache()
-        #     await cog_api_activities.refresh()
-
-        #     self.loop.create_task(self.query())
-    
-
-
-
-    # async def query(self) -> None:
-    #     """
-    #     """
-    #     await self.wait_until_ready()
-    #     while not self.is_closed():
-    #         cog_api_activities = self.get_cog("APIActivities")
-    #         if cog_api_activities:
-    #             self.logger.log(level=logging.INFO, msg="calling api activities cog 'refresh' method")
-    #             await cog_api_activities.refresh()
-    #             await asyncio.sleep(300)
+            # await self.club9_cog_rewards.refresh()
 
 
 def main():

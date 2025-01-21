@@ -27,11 +27,11 @@ def PATH_DISCORD_LOGS() -> str:
 
 
 # .env
-PATH_DOTENV = "../.env"
+PATH_DOTENV = "../club9-bot-settings/.env"
 DISCORD_TOKEN_NAME = "PROJETS_CLUB9_BOT_DISCORD_TOKEN"
 
 # cookies
-PATH_COOKIES = "../cookies.txt"
+PATH_COOKIES = "../club9-bot-settings/cookies.txt"
 
 # caches
 PATH_ACTIVITIES_CACHE = "config/dict_activities.json"
