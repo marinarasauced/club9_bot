@@ -33,7 +33,7 @@ class Club9Activities(commands.Cog):
                 self.club9_bot.activities_dict = json.load(file)
             activities_list = self.club9_bot.activities_dict.get("activities", [])
             activities_data = utils.activity.generate_activities(activities_list=activities_list)
-            for activity_data in activities_data:
+            for activity_data in activities_data.values():
                 if (hasattr(activity_data, "id") == False or activity_data.club9_activity_type == utils.activity.Club9ActivityType.NONE):
                     continue
                 else:
@@ -83,11 +83,11 @@ class Club9Activities(commands.Cog):
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected no changes to activities")
             else:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected changes to activities")
-                activities_list = activities_dict.get("activities", [])
-                activities_data = utils.activity.generate_activities(activities_list=activities_list)
-                keys_new = activities_dict.keys()
+                activities_list: list = activities_dict.get("activities", [])
+                activities_mapping = utils.activity.generate_activities(activities_list=activities_list)
                 keys_old = self.club9_bot.activities_mapping.keys()
-                for activity_data_new in activities_data:
+                keys_new = activities_mapping.keys()
+                for activity_data_new in activities_mapping.values():
                     if (hasattr(activity_data_new, "id") == False or activity_data_new.club9_activity_type == utils.activity.Club9ActivityType.NONE):
                         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> skipping activity {activity_data_old.id} in refresh")
                         continue
@@ -113,15 +113,16 @@ class Club9Activities(commands.Cog):
                             # detect if activity is unchanged
                             else:
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected no changes to activity {activity_data_old.id}")
-                for activity_data_old in self.club9_bot.activities_mapping.values():
+                for key_old in keys_old:
                     # detect if activity was removed
-                    if (activity_data_old.id not in keys_new):
-                        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected activity {activity_data_new.id} removed")
+                    if (key_old not in keys_new):
+                        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected activity {key_old} removed")
                         self.club9_bot.num_activities_removed += 1
                         is_cache_activities_outdated = True
             # write new activites cache
             if (is_cache_activities_outdated == True):
                 self.club9_bot.activities_dict = activities_dict
+                self.club9_bot.activities_mapping = activities_mapping
                 await self.club9_bot.club9_cog_activities.write_cache()
             # write new messages cache
             if (is_cache_messages_outdated == True):

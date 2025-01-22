@@ -170,19 +170,20 @@ class Club9ActivityData():
         return embed
 
 
-def generate_activities(activities_list: list) -> list[Club9ActivityData]:
+def generate_activities(activities_list: list) -> dict[str, Club9ActivityData]:
     """
-    Generates a list of Club9ActivityData objects from a list of activity dictionaries.
+    Generates a dict of Club9ActivityData objects from a list of activity dictionaries.
 
     @param activities: A list of activity dictionaries from the activities query results after getting 'activities'.
     @return: A list of Club9ActivityData objects.
     """
     # TODO add detection for visibility (in case of hidden quests, no need to ping users)
-    activities_data = []
+    activities_data = {}
     for activity_dict in activities_list:
         activity_data = Club9ActivityData(data=activity_dict)
         if (hasattr(activity_data, "additionalFields_visibilitySettings_type") == True):
             if (activity_data.additionalFields_visibilitySettings_type != "all_users"):
                 activity_data.club9_activity_type = Club9ActivityType.NONE
-        activities_data.append(activity_data)
+        if (hasattr(activity_data, "id") == True and (activity_data.id != None and activity_data.id != "")):
+            activities_data[activity_data.id] = activity_data
     return activities_data
