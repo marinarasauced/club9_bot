@@ -75,9 +75,15 @@ class Club9Bot(commands.Bot):
         # log bot is online
         self.logger.log(level=logging.INFO, msg="Club9Bot is online.")
 
-        # start monitoring if enabled
+        # if enabled, start monitoring activities and rewards
         if (ENABLE_MONITORING_ON_STARTUP_BOOL == True):
-            await self.club9_cog_commands.monitoring(ctx=None, type="Start", period=ENABLE_MONITORING_ON_STARTUP_PERIOD)
+            channel = self.get_channel(DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS)
+            if (channel):
+                message = await channel.send("executing command from backend")
+                context = await self.get_context(message)
+                command = self.get_command("monitoring")
+                if command:
+                    await context.invoke(command, type="Start", period=ENABLE_MONITORING_ON_STARTUP_PERIOD)
 
 
 def main():
