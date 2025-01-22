@@ -72,10 +72,10 @@ class Club9Notifications(commands.Cog):
         message_type = type.capitalize()
         if message_type not in ["Rewards", "Activities"]:
             return None
-        channel = self.club9_bot.get_channel(channel_id)
+        channel: discord.Channel = self.club9_bot.get_channel(channel_id)
         if channel:
-            message = await channel.send(content=content, embed=embed)
-            # await self.club9_bot.club9_cog_logging.log_send_notification(message=message)
+            message = await channel.send(content=content, embeds=[embed])
+            await self.club9_bot.club9_cog_logging.log_notification_event(message=message, content=f"sent message:")
             self.club9_bot.messages_dict[message_type][id] = {
                 "channel_id": channel_id,
                 "message_id": message.id
@@ -106,14 +106,14 @@ class Club9Notifications(commands.Cog):
             try:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> editing message {message_id} in channel {channel_id}")
                 message = await channel.fetch_message(message_id)
-                # await self.club9_bot.club9_cog_logging.log_edit_notification(message=message, content="edited notification from ->")
+                await self.club9_bot.club9_cog_logging.log_notification_event(message=message, content=f"edited message from:")
                 if (content is not None and embed is not None):
                     await message.edit(content=content, embed=embed)
                 elif (content is None and embed is not None):
                     await message.edit(embed=embed)
                 elif (content is not None and embed is None):
                     await message.edit(content=content)
-                # await self.club9_bot.club9_cog_logging.log_edit_notification(message=message, content="to ->")
+                await self.club9_bot.club9_cog_logging.log_notification_event(message=message, content="to:")
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> edited message {message_id} in channel {channel_id}")
             except Exception as e:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> unable to edit message {message_id} in channel {channel_id} ({e})")
@@ -135,7 +135,7 @@ class Club9Notifications(commands.Cog):
             try:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> deleting message {message_id} in channel {channel_id}")
                 message = await channel.fetch_message(message_id)
-                # await self.club9_bot.club9_cog_logging.log_delete_notification(message=message)
+                await self.club9_bot.club9_cog_logging.log_notification_event(message=message, content="deleted message:")
                 await message.delete()
                 del self.club9_bot.messages_dict[message_type][id]
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> deleted message {message_id} in channel {channel_id}")

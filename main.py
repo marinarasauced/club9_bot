@@ -59,8 +59,8 @@ class Club9Bot(commands.Bot):
         self.club9_cog_commands = self.get_cog("Club9Commands")
 
         # load logging cog
-        # await self.load_extension("cogs.logging")
-        # self.club9_cog_logging = self.get_cog("Club9Logging")
+        await self.load_extension("cogs.logging")
+        self.club9_cog_logging = self.get_cog("Club9Logging")
 
         # load notifications cog
         await self.load_extension("cogs.notifications")
@@ -87,7 +87,7 @@ class Club9Bot(commands.Bot):
         if (ENABLE_MONITORING_ON_STARTUP_BOOL == True):
             channel = self.get_channel(DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS)
             if (channel):
-                message = await channel.send(f"executing '{self.command_prefix}monitoring start {ENABLE_MONITORING_ON_STARTUP_PERIOD} from backend")
+                message = await channel.send(content=f"executing '{self.command_prefix}monitoring start {ENABLE_MONITORING_ON_STARTUP_PERIOD} from backend")
                 context = await self.get_context(message)
                 command = self.get_command("monitoring")
                 if command:

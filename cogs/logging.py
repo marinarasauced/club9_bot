@@ -18,39 +18,24 @@ class Club9Logging(commands.Cog):
         self.club9_bot = bot
 
 
-    async def log_send_notification(self, message: discord.Message, content: str = "sent notification ->") -> None:
+    async def log_notification_event(self, message: discord.Message, content: str) -> None:
         """
-        """
-        channel = self.club9_bot.get_channel(DISCORD_CHANNEL_ID_CLUB9_BOT_LOGS)
-        if (channel and message.embeds):
-            for embed in message.embeds:
-                await channel.send(
-                    content=content,
-                    embed=embed
-                )
+        Logs a Club9Bot discord message event including notification sends, edits, and deletes.
 
-
-    async def log_edit_notification(self, message: discord.Message, content: str) -> None:
+        @param message: the discord message that the event is pertaining to.
+        @param content: the nature of the event.
         """
-        """
-        channel = self.club9_bot.get_channel(DISCORD_CHANNEL_ID_CLUB9_BOT_LOGS)
-        if (channel and message.embeds):
-            for embed in message.embeds:
-                await channel.send(
-                    content=content,
-                    embed=embed
-                )
-
-    async def log_delete_notification(self, message: discord.Message, content: str = "deleted notification ->") -> None:
-        """
-        """
-        channel = self.club9_bot.get_channel(DISCORD_CHANNEL_ID_CLUB9_BOT_LOGS)
-        if (channel and message.embeds):
-            for embed in message.embeds:
-                await channel.send(
-                    content=content,
-                    embed=embed
-                )
+        try:
+            channel = self.club9_bot.get_channel(DISCORD_CHANNEL_ID_CLUB9_BOT_LOGS)
+            if (channel and message.embeds):
+                for message_embed in message.embeds:
+                    embed = discord.Embed.copy(message_embed)
+                    await channel.send(
+                        content=content,
+                        embed=embed
+                    )
+        except Exception as e:
+            self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Logging -> failed to log notification event ({e})")
 
 
 async def setup(bot: Club9Bot) -> None:
