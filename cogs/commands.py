@@ -19,70 +19,106 @@ class Club9Commands(commands.Cog):
         Initializes the Club9 activities cog.
         """
         self.club9_bot = bot
-        self.monitoring_flag1 = False       # If running True, otherwise False.
-        self.monitoring_flag2 = False       # If stopping True, otherwise False.
+        self.monitoring_flag1 = False       # true when running, false otherwise
+        self.monitoring_flag2 = False       # true if stopping, false otherwise
         self.runtime_start = time.time()
 
 
-    @commands.command(name="monitoring_start")
-    async def monitoring_start(self, ctx, period: int = 300) -> None:
+    async def validate(self, channel_id: int) -> bool:
         """
-        Starts the Club9Bot's monitoring cycle.
-
-        This command method starts the monitoring cycle during which the bot will call its refresh methods on a timer.
-
-        @param ctx: The context of the command.
-        @param period: The period at which the monitoring cycle is conducted (i.e., period = 300 (seconds) means that the refresh methods are called once every five minutes)
+        Validates whether a command executed in the channel corresponding to the channel id attribute is permitted to run.
+        
+        @param channel_id: The id of the channel in which a command was executed.
+        @return: True if the command is permitted to be executed, False otherwise.
         """
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring_start {period}'")
-        if (ctx.channel.id != DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS):
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring_start {period}' (not executed in permitted channel)")
-            return
-        if self.monitoring_flag1:
-            await ctx.send("Cannot start monitoring since monitoring is already running!")
-            return
-        if self.monitoring_flag2:
-            await ctx.send("Cannot start monitoring since monitoring is waiting to stop!")
-            return
-        if period < 60:
-            await ctx.send("Cannot start monitoring since the monitoring period must be greater than 60 seconds.")
-            self.club9_bot.logger.log(level=logging.ERROR, msg="Club9Commands -> period must be greater than or equal to 60 seconds")
-            return
-        self.monitoring_flag1 = True
-        await ctx.send(f"starting monitoring with a period of {period} seconds.")
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> starting monitoring with period {period}")
-        await self.club9_bot.wait_until_ready()
-        while self.monitoring_flag1:
-            if self.club9_bot.club9_cog_activities:
-                await self.club9_bot.club9_cog_activities.refresh()
-                await self.club9_bot.club9_cog_rewards.refresh()
-                await asyncio.sleep(period)
-        await ctx.send("stopped monitoring.")
-        self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> monitoring stopped.")
-        self.monitoring_flag2 = False
+        if (channel_id == DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS):
+            return True         # permitted to execute
+        return False        # not permitted to execute
 
 
-    @commands.command(name="monitoring_stop")
-    async def monitoring_stop(self, ctx) -> None:
+    @commands.command(name="monitoring")
+    async def monitoring(self, ctx, type: str = "", period: int = None) -> None:
         """
-        Stops the Club9Bot's monitoring cycle.
+        Starts or stops monitoring of the Club9 activities and rewards on a timer.
 
-        This command stops the monitoring cycle by setting the flag to False.
-        @param ctx: The context of the command.
+        @param ctx:
+        @param type: 'Start' or 'Stop' (not case sensitive)
+        @param period: The period of the timer at which the monitoring method is called (period > 60)
         """
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring_stop'")
-        if (ctx.channel.id != DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS):
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring_stop' (not executed in permitted channel)")
+        # validate whether the command is permitted to execute
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring {type} {period}'")
+        if (await self.validate(channel_id=ctx.channel.id) == False):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (not permitted to execute command in channel {ctx.channel.id})")
             return
-        if not self.monitoring_flag1:
-            await ctx.send("Cannot stop monitoring since monitoring is not running!")
+
+        # determine whether command fields are valid
+        monitoring_type = type.capitalize()
+        if (monitoring_type not in ["Start", "Stop"]) or (period is None or period < 60):
+            await ctx.send(f"""
+the monitoring command must be formatted as follows:
+`{self.club9_bot.command_prefix}monitoring type period`,
+where `type` must be "start" or "stop" and `period` must be an integer greater than 60;
+i.e., `{self.club9_bot.command_prefix}monitoring start 60`
+            """)
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (invalid attribute 'type' or 'period')")
             return
-        if self.monitoring_flag2:
-            await ctx.send("Cannot stop monitoring since monitoring is already waiting to stop!")
-        self.monitoring_flag1 = False
-        self.monitoring_flag2 = True
-        await ctx.send("stopping monitoring at the end of the current period.")
-        self.club9_bot.logger.log(level=logging.INFO, msg="Club9Commands -> stopping monitoring at the end of the current period.")
+
+        # if command is to start monitoring
+        if (monitoring_type == "Start"):
+
+            # if monitoring_flag2 is true, monitoring is already stopping
+            if (self.monitoring_flag2 == True):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (monitoring is stopping)")
+                await ctx.send("monitoring is already started!")
+                return
+
+            # if monitoring_flag1 is true, monitoring was already started
+            if (self.monitoring_flag1 == True):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (monitoring was already started)")
+                await ctx.send("monitoring is already started!")
+                return
+            
+            # start monitoring
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{self.club9_bot.command_prefix}monitoring {type} {period}'")
+            await ctx.send(f"starting monitoring with a period of {period} seconds")
+            try:
+                self.monitoring_flag1 = True
+                await self.club9_bot.wait_until_ready()
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> started monitoring activities and rewards with period {period}")
+                while (self.monitoring_flag1 == True):
+                    if (self.club9_bot.club9_cog_activities):
+                        await self.club9_bot.club9_cog_activities.refresh()
+                    if (self.club9_bot.club9_cog_rewards):
+                        await self.club9_bot.club9_cog_rewards.refresh()
+                    await asyncio.sleep(period)
+            except Exception as e:
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> monitoring activities and rewards failed")
+                await ctx.send(f"monitoring failed")
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> stopped monitoring activities and rewards with period {period}")
+            await ctx.send(f"stopped monitoring with a period of {period} seconds")
+            self.monitoring_flag2 = False
+
+        # if command is to stop monitoring
+        if (monitoring_type == "Stop"):
+
+            # if monitoring_flag1 is false, monitoring was already stopped
+            if (self.monitoring_flag1 == False):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type}' (monitoring is already stopped)")
+                await ctx.send("monitoring is already stopped!")
+                return
+
+            # if monitoring_flag2 is true, monitoring is already stopping
+            if (self.monitoring_flag2 == True):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type}' (monitoring is already stopping)")
+                await ctx.send("monitoring is already stopping!")
+                return
+
+            # stop monitoring
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{self.club9_bot.command_prefix}monitoring {type}'")
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> stopping monitoring activities and rewards")
+            await ctx.send(f"stopping monitoring at the end of the current period")
+            self.monitoring_flag1 = False
+            self.monitoring_flag2 = True
 
 
     @commands.command(name="runtime")
