@@ -24,7 +24,7 @@ class Club9Rewards(commands.Cog):
     """
     def __init__(self, bot: Club9Bot):
         """
-        Initializes the Club9 activities cog.
+        Initializes the Club9 rewards cog.
         """
         self.club9_bot = bot
         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> loading Club9 site cookies")
