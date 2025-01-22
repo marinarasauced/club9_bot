@@ -59,8 +59,8 @@ class Club9Bot(commands.Bot):
         self.club9_cog_commands = self.get_cog("Club9Commands")
 
         # load logging cog
-        await self.load_extension("cogs.logging")
-        self.club9_cog_logging = self.get_cog("Club9Logging")
+        # await self.load_extension("cogs.logging")
+        # self.club9_cog_logging = self.get_cog("Club9Logging")
 
         # load notifications cog
         await self.load_extension("cogs.notifications")
