@@ -46,6 +46,10 @@ class Club9Bot(commands.Bot):
         self.num_rewards_removed = 0
         self.num_rewards_modified = 0
 
+        #
+        self.monitor_activities = ENABLE_MONITORING_ACTIVITIES_ON_STARTUP_BOOL
+        self.monitor_rewards = ENABLE_MONITORING_REWARDS_ON_STARTUP_BOOL
+
 
     async def on_ready(self) -> None:
         """

@@ -88,9 +88,9 @@ i.e., `{self.club9_bot.command_prefix}monitoring start 60`
                 await self.club9_bot.wait_until_ready()
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> started monitoring activities and rewards with period {period} seconds")
                 while (self.monitoring_flag1 == True):
-                    if (self.club9_bot.club9_cog_activities):
+                    if (self.club9_bot.club9_cog_activities and self.club9_bot.monitor_activities == True):
                         await self.club9_bot.club9_cog_activities.refresh()
-                    if (self.club9_bot.club9_cog_rewards):
+                    if (self.club9_bot.club9_cog_rewards and self.club9_bot.monitor_rewards == True):
                         await self.club9_bot.club9_cog_rewards.refresh()
                     self.club9_bot.num_monitoring_cycles += 1
                     await asyncio.sleep(period)
@@ -122,6 +122,100 @@ i.e., `{self.club9_bot.command_prefix}monitoring start 60`
             await ctx.send(f"stopping monitoring at the end of the current period")
             self.monitoring_flag1 = False
             self.monitoring_flag2 = True
+
+
+    @commands.command(name="enable")
+    async def enable(self, ctx, type: str) -> None:
+        """
+        Enables monitoring of a type.
+
+        @param ctx: The context of the command.
+        @param type: The type of monitoring to enable.
+        """
+        # validate whether the command is permitted to execute
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}enable {type}'")
+        if (await self.validate(channel_id=ctx.channel.id) == False):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}enable {type}' (not permitted to execute command in channel {ctx.channel.id})")
+            return
+        
+        # determine if monitoring of type is already enabled
+        monitoring_type = type.capitalize()
+        if (
+            (monitoring_type == "Activities" and self.club9_bot.monitor_activities == True) or 
+            (monitoring_type == "Rewards" and self.club9_bot.monitor_rewards == True)
+        ):
+            await ctx.send(f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}enable {type}' (monitoring {type} is already enabled)")
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}enable {type}' (already enabled)")
+
+        # determine whether command fields are valid
+        if (
+            (monitoring_type not in ["Activities", "Rewards"])
+        ):
+            await ctx.send(f"""
+the enable command must be formatted as follows:
+`{self.club9_bot.command_prefix}enable type`,
+where `type` must be "activities" or "rewards";
+i.e., `{self.club9_bot.command_prefix}enable rewards`
+            """)
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type}' (invalid attribute 'type')")
+            return
+
+        # update bot attribute
+        if (monitoring_type == "Activities"):
+            self.club9_bot.monitor_activities = True
+        elif (monitoring_type == "Rewards"):
+            self.club9_bot.monitor_rewards = True
+
+        # log
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> enabled monitoring of {type}")
+        await ctx.send(f"enabled monitoring of type {type}")
+
+
+    @commands.command(name="disable")
+    async def disable(self, ctx, type: str) -> None:
+        """
+        Disables monitoring of a type.
+
+        @param ctx: The context of the command.
+        @param type: The type of monitoring to disable.
+        """
+        # validate whether the command is permitted to execute
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}disable {type}'")
+        if (await self.validate(channel_id=ctx.channel.id) == False):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (not permitted to execute command in channel {ctx.channel.id})")
+            return
+
+        # determine if monitoring of type is already disabled\
+        monitoring_type = type.capitalize()
+        if (
+            (monitoring_type == "Activities" and self.club9_bot.monitor_activities == False) or 
+            (monitoring_type == "Rewards" and self.club9_bot.monitor_rewards == False)
+        ):
+            await ctx.send(f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (monitoring {type} is already disabled)")
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (already disabled)")
+
+        # determine whether command fields are valid
+        if (
+            (monitoring_type not in ["Activities", "Rewards"])
+        ):
+            await ctx.send(f"""
+the disable command must be formatted as follows:
+`{self.club9_bot.command_prefix}enable type`,
+where `type` must be "activities" or "rewards";
+i.e., `{self.club9_bot.command_prefix}disable rewards`
+            """)
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (invalid attribute 'type')")
+            return
+
+        # update bot attribute
+        if (monitoring_type == "Activities"):
+            self.club9_bot.monitor_activities = False
+        elif (monitoring_type == "Rewards"):
+            self.club9_bot.monitor_rewards = False
+
+        # log
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> disabled monitoring of {type}")
+        await ctx.send(f"disabled monitoring of type {type}")
 
 
     @commands.command(name="status")
