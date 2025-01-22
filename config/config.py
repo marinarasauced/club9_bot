@@ -22,7 +22,7 @@ PATH_MESSAGES_CACHE = "config/dict_messages.json"
 PATH_REWARDS_CACHE = "config/dict_rewards.json"
 
 # graphics
-CLUB9_BOT_ICON_URL = "https://1000logos.net/wp-content/uploads/2017/08/Logo-Cloud-9.jpg"
+CLUB9_BOT_ICON_URL = "https://drive.google.com/file/d/1n2--nHc4G45w52xISz_EPoedSCtcakn4/view?usp=drive_link"
 
 # toki api
 API_TOKI_ACTIVITIES_URL = "https://api.buildwithtoki.com/merchant/brand/activities"
@@ -64,3 +64,6 @@ NOTIFICATIONS_ACTIVITIES_ENABLE_URLS = True
 NOTIFICATIONS_ACTIVITIES_URL = "https://store.cloud9.gg/pages/club9"
 NOTIFICATIONS_REWARDS_ENABLE_URLS = True
 DISCORD_COMMAND_PREFIX = "!"
+
+ENABLE_MONITORING_ON_STARTUP_BOOL = True
+ENABLE_MONITORING_ON_STARTUP_PERIOD = 600

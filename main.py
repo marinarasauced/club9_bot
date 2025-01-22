@@ -75,23 +75,31 @@ class Club9Bot(commands.Bot):
         # log bot is online
         self.logger.log(level=logging.INFO, msg="Club9Bot is online.")
 
+        # start monitoring if enabled
+        if (ENABLE_MONITORING_ON_STARTUP_BOOL == True):
+            await self.club9_cog_commands.monitoring(ctx=None, type="Start", period=ENABLE_MONITORING_ON_STARTUP_PERIOD)
+
 
 def main():
     """
     """
+    # load env variables
     load_dotenv(dotenv_path=PATH_DOTENV)
     TOKEN: Final[str] = os.getenv(DISCORD_TOKEN_NAME)
 
+    # setup logger
     logger = logging.getLogger("discord")
     logger.setLevel(logging.DEBUG)
     handler = logging.FileHandler(filename=PATH_DISCORD_LOGS(), encoding="utf-8", mode="w")
     handler.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(name)s: %(message)s"))
     logger.addHandler(handler)
 
+    # setup intents
     intents: discord.Intents = discord.Intents.default()
     intents.message_content = True
     intents.messages = True
 
+    # handle startup and shutdown
     bot = Club9Bot(command_prefix=DISCORD_COMMAND_PREFIX, intents=intents, logger=logger)
     bot.run(token=TOKEN)
     bot.logger.log(level=logging.INFO, msg="Club9Bot is offline.")
