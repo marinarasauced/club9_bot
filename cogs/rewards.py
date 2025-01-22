@@ -162,7 +162,7 @@ class Club9Rewards(commands.Cog):
                         # detect if any rewards were added
                         for reward_id in rewards_ids_new:
                             if (reward_id not in rewards_ids_old):
-                                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected reward {reward_id} added to {category}")
+                                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected new reward {reward_id} added to {category}")
                                 reward_data_new = rewards_data_new[reward_id]
                                 embed = generate_reward_embed(reward_data=reward_data_new, category=category)
                                 channel_id = get_reward_channel_id(category)
