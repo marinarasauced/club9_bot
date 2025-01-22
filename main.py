@@ -79,7 +79,7 @@ class Club9Bot(commands.Bot):
         if (ENABLE_MONITORING_ON_STARTUP_BOOL == True):
             channel = self.get_channel(DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS)
             if (channel):
-                message = await channel.send("executing command from backend")
+                message = await channel.send("executing '!monitoring start {ENABLE_MONITORING_ON_STARTUP_PERIOD} from backend")
                 context = await self.get_context(message)
                 command = self.get_command("monitoring")
                 if command:
