@@ -49,6 +49,7 @@ class Club9Rewards(commands.Cog):
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> reading rewards cache")
             with open(PATH_REWARDS_CACHE, "r") as file:
                 self.club9_bot.rewards_dict = json.load(file)
+            self.club9_bot.num_rewards_cache_reads += 1
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> read rewards cache")
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to read rewards cache (file not found)")
@@ -69,7 +70,7 @@ class Club9Rewards(commands.Cog):
             with open(PATH_REWARDS_CACHE, "w") as file:
                 json.dump(self.club9_bot.rewards_dict, file, indent=4)
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> wrote rewards cache")
-            # self.club9_bot.num_activities_cache_write += 1
+            self.club9_bot.num_rewards_cache_writes += 1
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Rewards -> failed to write rewards cache (file not found)")
         except json.JSONDecodeError:
@@ -148,7 +149,7 @@ class Club9Rewards(commands.Cog):
                 if (reward_type is not Club9RewardType.NONE):
                     rewards_dict[reward_type.value] = await self.club9_bot.club9_cog_rewards.parse(category=reward_type)
             if (rewards_dict == self.club9_bot.rewards_dict):
-                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> refreshed rewards (no changes detected)")
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected no changes to rewards")
             else:
                 for category in get_reward_types():
                     rewards_data_old = self.club9_bot.rewards_dict[category]
@@ -167,6 +168,7 @@ class Club9Rewards(commands.Cog):
                                 embed = generate_reward_embed(reward_data=reward_data_new, category=category)
                                 channel_id = get_reward_channel_id(category)
                                 await self.club9_bot.club9_cog_notifications.send_notification(channel_id=channel_id, content="", embed=embed, type="Rewards", id=reward_id)
+                                self.club9_bot.num_rewards_added += 1
                                 is_cache_rewards_outdated = True
                                 is_cache_messages_outdated = True
                         # detect if any rewards were removed
@@ -174,6 +176,7 @@ class Club9Rewards(commands.Cog):
                             if (reward_id not in rewards_ids_new):
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Rewards -> detected reward {reward_id} removed from {category}")
                                 await self.club9_bot.club9_cog_notifications.delete_notification(type="Rewards", id=reward_id)
+                                self.club9_bot.num_rewards_removed += 1
                                 is_cache_rewards_outdated = True
                                 is_cache_messages_outdated = True
                             else:
@@ -189,6 +192,7 @@ class Club9Rewards(commands.Cog):
                                     embed = generate_reward_embed(reward_data=reward_data_new, category=category)
                                     channel_id = get_reward_channel_id(category)
                                     await self.club9_bot.club9_cog_notifications.edit_notification(content=None, embed=embed, type="Rewards", id=reward_id)
+                                    self.club9_bot.num_rewards_modified += 1
                                     is_cache_rewards_outdated = True
                                     # messages cache not outdated since no change to message/channel ids
             if (is_cache_rewards_outdated == True):

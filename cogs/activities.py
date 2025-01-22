@@ -39,7 +39,7 @@ class Club9Activities(commands.Cog):
                 else:
                     self.club9_bot.activities_mapping[activity_data.id] = activity_data
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> read activities cache")
-            # self.club9_bot.num_activities_cache_read += 1
+            self.club9_bot.num_activities_cache_reads += 1
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activities -> failed to read activities cache (file not found)")
         except json.JSONDecodeError:
@@ -59,7 +59,7 @@ class Club9Activities(commands.Cog):
             with open(PATH_ACTIVITIES_CACHE, "w") as file:
                 json.dump(self.club9_bot.activities_dict, file, indent=4)
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> wrote activities cache")
-            # self.club9_bot.num_activities_cache_write += 1
+            self.club9_bot.num_activities_cache_writes += 1
         except FileNotFoundError:
             self.club9_bot.logger.log(level=logging.ERROR, msg=f"Club9Activities -> failed to write activities cache (file not found)")
         except json.JSONDecodeError:
@@ -98,6 +98,7 @@ class Club9Activities(commands.Cog):
                             content = activity_data_new.generate_activities_content()
                             embed = activity_data_new.generate_activities_embed()
                             await self.club9_bot.club9_cog_notifications.send_notification(channel_id=DISCORD_CHANNEL_ID_CLUB9_NOTIFICATIONS, content=content, embed=embed, type="Activities", id=activity_data_new.id)
+                            self.club9_bot.num_activities_added += 1
                             is_cache_activities_outdated = True
                             is_cache_messages_outdated = True
                         else:
@@ -107,6 +108,7 @@ class Club9Activities(commands.Cog):
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected modified activity {activity_data_new.id}")
                                 embed = activity_data_new.generate_activities_embed()
                                 await self.club9_bot.club9_cog_notifications.edit_notification(content=None, embed=embed, type="Activities", id=activity_data_new.id)
+                                self.club9_bot.num_activities_modified += 1
                                 is_cache_activities_outdated = True
                             # detect if activity is unchanged
                             else:
@@ -115,6 +117,7 @@ class Club9Activities(commands.Cog):
                     # detect if activity was removed
                     if (activity_data_old.id not in keys_new):
                         self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected activity {activity_data_new.id} removed")
+                        self.club9_bot.num_activities_removed += 1
                         is_cache_activities_outdated = True
             # write new activites cache
             if (is_cache_activities_outdated == True):

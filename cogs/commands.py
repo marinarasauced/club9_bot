@@ -21,7 +21,6 @@ class Club9Commands(commands.Cog):
         self.club9_bot = bot
         self.monitoring_flag1 = False       # true when running, false otherwise
         self.monitoring_flag2 = False       # true if stopping, false otherwise
-        self.runtime_start = time.time()
 
 
     async def validate(self, channel_id: int) -> bool:
@@ -41,7 +40,7 @@ class Club9Commands(commands.Cog):
         """
         Starts or stops monitoring of the Club9 activities and rewards on a timer.
 
-        @param ctx:
+        @param ctx: The context of the command.
         @param type: 'Start' or 'Stop' (not case sensitive)
         @param period: The period of the timer at which the monitoring method is called (period > 60)
         """
@@ -53,7 +52,10 @@ class Club9Commands(commands.Cog):
 
         # determine whether command fields are valid
         monitoring_type = type.capitalize()
-        if (monitoring_type not in ["Start", "Stop"]) or (period is None or period < 60):
+        if (
+            (monitoring_type not in ["Start", "Stop"]) or 
+            (monitoring_type == "Start" and (period is None or period < 60))
+        ):
             await ctx.send(f"""
 the monitoring command must be formatted as follows:
 `{self.club9_bot.command_prefix}monitoring type period`,
@@ -84,17 +86,18 @@ i.e., `{self.club9_bot.command_prefix}monitoring start 60`
             try:
                 self.monitoring_flag1 = True
                 await self.club9_bot.wait_until_ready()
-                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> started monitoring activities and rewards with period {period}")
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> started monitoring activities and rewards with period {period} seconds")
                 while (self.monitoring_flag1 == True):
                     if (self.club9_bot.club9_cog_activities):
                         await self.club9_bot.club9_cog_activities.refresh()
                     if (self.club9_bot.club9_cog_rewards):
                         await self.club9_bot.club9_cog_rewards.refresh()
+                    self.club9_bot.num_monitoring_cycles += 1
                     await asyncio.sleep(period)
             except Exception as e:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> monitoring activities and rewards failed")
                 await ctx.send(f"monitoring failed")
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> stopped monitoring activities and rewards with period {period}")
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> stopped monitoring activities and rewards with period {period} seconds")
             await ctx.send(f"stopped monitoring with a period of {period} seconds")
             self.monitoring_flag2 = False
 
@@ -121,31 +124,50 @@ i.e., `{self.club9_bot.command_prefix}monitoring start 60`
             self.monitoring_flag2 = True
 
 
-    @commands.command(name="runtime")
-    async def runtime(self, ctx) -> None:
+    @commands.command(name="status")
+    async def status(self, ctx) -> None:
         """
-        Prints the bot's runtime and stats like number of new quests, number of message edits, etc.
+        Returns the bot's status including runtime and num attributes counting tasks performed.
 
         @param ctx: The context of the command.
         """
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}runtime'")
-        if (ctx.channel.id != DISCORD_CHANNEL_ID_CLUB9_BOT_COMMANDS):
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}runtime' (not executed in permitted channel)")
+        # validate whether the command is permitted to execute
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}status'")
+        if (await self.validate(channel_id=ctx.channel.id) == False):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}status' (not permitted to execute command in channel {ctx.channel.id})")
             return
-        runtime_curr = time.time() - self.runtime_start
-        days = int(runtime_curr // 86400)  # 1 day = 86400 seconds
-        hours = int((runtime_curr % 86400) // 3600)  # 1 hour = 3600 seconds
-        minutes = int((runtime_curr % 3600) // 60)  # 1 minute = 60 seconds
-        seconds = round(runtime_curr % 60) 
-        runtime_formatted = f"{days} day{'' if days == 1 else 's'} {hours:02}:{minutes:02}:{seconds:02}"
-        await ctx.send(f"""
-Runtime: {runtime_formatted}
-Num of activity cache reads: {self.club9_bot.num_activities_cache_read}
-Num of activity cache writes: {self.club9_bot.num_activities_cache_write}
-Num of new activities detected: {self.club9_bot.num_activities_new_detected}
-Num of new activity notifications: {self.club9_bot.num_activities_new_notifications}
-""")
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> returned runtime as {runtime_formatted}")
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{self.club9_bot.command_prefix}status'")
+    
+        # format runtime
+        runtime = time.time() - self.club9_bot.starttime
+        days = int(runtime // 86400)
+        hours = int((runtime % 86400) // 3600)
+        minutes = int((runtime % 3600) // 60)
+        seconds = round(runtime % 60)
+
+        # format response
+        response = f"""```py
+# general diagnostics
+runtime = "{days} day{'' if days == 1 else 's'} {hours:02}:{minutes:02}:{seconds:02}"
+num_monitoring_cycles = {self.club9_bot.num_monitoring_cycles}
+
+# activities diagnostics
+num_activities_cache_reads = {self.club9_bot.num_activities_cache_reads}
+num_activities_cache_writes = {self.club9_bot.num_activities_cache_writes}
+num_detected_activities_added = {self.club9_bot.num_activities_added}
+num_detected_activities_removed = {self.club9_bot.num_activities_removed}
+num_detected_activities_modified = {self.club9_bot.num_activities_modified}
+
+# rewards diagnostics
+num_rewards_cache_reads = {self.club9_bot.num_rewards_cache_reads}
+num_rewards_cache_writes = {self.club9_bot.num_rewards_cache_writes}
+num_detected_rewards_added = {self.club9_bot.num_rewards_added}
+num_detected_rewards_removed = {self.club9_bot.num_rewards_removed}
+num_detected_rewards_modified = {self.club9_bot.num_rewards_modified}
+```"""
+        
+        # send response
+        await ctx.send(response)
 
 
 async def setup(bot: Club9Bot) -> None:

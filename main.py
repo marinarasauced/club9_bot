@@ -5,6 +5,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import logging
 import os
+import time
 from typing import Final
 
 from config.config import *
@@ -24,40 +25,54 @@ class Club9Bot(commands.Bot):
 
         self.activities_dict: dict = {}
         self.activities_mapping: dict = {}  # map of activity ids to Club9Activity objects generated on startup for comparison to requests during refresh comparison
-        # TODO add mapping attribute dict for tracking messages in case of editing quests upon api change
         self.rewards_dict: dict = {}
         self.messages_dict: dict = {}
 
-        self.num_activities_cache_read = 0
-        self.num_activities_cache_write = 0
-        self.num_activities_new_detected = 0
-        self.num_activities_new_notifications = 0
+        # general diagnostics
+        self.starttime = time.time()
+        self.num_monitoring_cycles = 0
+
+        # activities diagnostics
+        self.num_activities_cache_reads = 0
+        self.num_activities_cache_writes = 0
+        self.num_activities_added = 0
+        self.num_activities_removed = 0
+        self.num_activities_modified = 0
+
+        # rewards diagnostics
+        self.num_rewards_cache_reads = 0
+        self.num_rewards_cache_writes = 0
+        self.num_rewards_added = 0
+        self.num_rewards_removed = 0
+        self.num_rewards_modified = 0
 
 
     async def on_ready(self) -> None:
         """
         """
+        # load commands cog
         await self.load_extension("cogs.commands")
         self.club9_cog_commands = self.get_cog("Club9Commands")
 
+        # load notifications cog
         await self.load_extension("cogs.notifications")
         self.club9_cog_notifications = self.get_cog("Club9Notifications")
         if self.club9_cog_notifications:
             await self.club9_cog_notifications.read_cache()
 
+        # load activities cog
         await self.load_extension("cogs.activities")
         self.club9_cog_activities = self.get_cog("Club9Activities")
         if self.club9_cog_activities:
             await self.club9_cog_activities.read_cache()
-            # await self.club9_cog_activities.refresh()
 
-
+        # load rewards cog
         await self.load_extension("cogs.rewards")
         self.club9_cog_rewards = self.get_cog("Club9Rewards")
         if self.club9_cog_rewards:
             await self.club9_cog_rewards.read_cache()
-            # await self.club9_cog_rewards.refresh()
-        
+
+        # log bot is online
         self.logger.log(level=logging.INFO, msg="Club9Bot is online.")
 
 
@@ -77,7 +92,7 @@ def main():
     intents.message_content = True
     intents.messages = True
 
-    bot = Club9Bot(command_prefix="!", intents=intents, logger=logger)
+    bot = Club9Bot(command_prefix=DISCORD_COMMAND_PREFIX, intents=intents, logger=logger)
     bot.run(token=TOKEN)
     bot.logger.log(level=logging.INFO, msg="Club9Bot is offline.")
     asyncio.run(bot.close())
