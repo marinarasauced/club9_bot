@@ -1,17 +1,7 @@
 
-# PROTECTED ENVIRONMENT VARIABLES
-.env
 
-# DISCORD.pPY BOT LOGS
-logs/
+# DISCORD.PY BOT LOGS
+# logs/
 
 # PYTHON CACHES
 __pycache__/
-
-# TEST FILES
-test.py
-test.json
-test2.py
-test2_cookies.json
-test2_cookies.txt
-test3.json
