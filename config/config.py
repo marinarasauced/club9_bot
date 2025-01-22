@@ -22,7 +22,7 @@ PATH_MESSAGES_CACHE = "config/dict_messages.json"
 PATH_REWARDS_CACHE = "config/dict_rewards.json"
 
 # graphics
-CLUB9_BOT_ICON_URL = "https://drive.google.com/file/d/1n2--nHc4G45w52xISz_EPoedSCtcakn4/view?usp=drive_link"
+CLUB9_BOT_ICON_URL = "https://www.dropbox.com/scl/fi/d876v0fp6u9zhrcgovr0f/club9-bot.png?rlkey=de69qjo4ii0m81h7whngbpq59&e=1&st=mzf2g8bo&dl=0"
 
 # toki api
 API_TOKI_ACTIVITIES_URL = "https://api.buildwithtoki.com/merchant/brand/activities"
