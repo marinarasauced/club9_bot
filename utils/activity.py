@@ -168,9 +168,7 @@ class Club9ActivityData():
         # TODO scrape other api for watch requirement data
 
         #
-        elif self.club9_activity_type == Club9ActivityType.NONE:
-            return None
-        else:
+        if self.club9_activity_type == Club9ActivityType.NONE:
             return None
         return embed
 

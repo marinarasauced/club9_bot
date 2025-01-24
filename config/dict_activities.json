@@ -1,6 +1,529 @@
 {
     "activities": [
         {
+            "id": "ab9a71f7-43d5-4c99-96db-30d7f59c9514",
+            "name": "[LoL] Subscribe to Cloud9 Kia on YouTube",
+            "description": "Earn 25xp",
+            "url": "https://www.youtube.com/@C9LoL?sub_confirmation=1",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[LoL] Subscribe to Cloud9 Kia on YouTube",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "71e59f96-d67b-4bcd-a10a-698b2f5e1f2d",
+                "activity_id": "ab9a71f7-43d5-4c99-96db-30d7f59c9514",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[LoL] Subscribe to Cloud9 Kia on YouTube",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "YOUTUBE_SUBSCRIBE",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "33bf52fd-b3a0-4f05-89c9-d53672e29677",
+            "name": "Cloud9 Kia Challenge",
+            "description": "",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9cd0a044-f947-4a1f-92b4-78f96fa04301.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "Cloud9 Kia Challenge",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9cd0a044-f947-4a1f-92b4-78f96fa04301.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": ""
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9cd0a044-f947-4a1f-92b4-78f96fa04301.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": "2025-01-24T20:00:30.712Z",
+                "preventReSubmissions": false,
+                "challenges_activities": [
+                    {
+                        "count": 1,
+                        "label": "Follow @Kia on X",
+                        "value": "a2369118-80cc-4717-953c-12beaba5d801"
+                    },
+                    {
+                        "count": 1,
+                        "label": "Visit the Kia America Website",
+                        "value": "5e0e0068-597e-4f3f-af28-1977a3431eec"
+                    },
+                    {
+                        "count": 1,
+                        "label": "Cloud9 Kia LTA Week 1 Match Predictions",
+                        "value": "c7f78799-bcb1-4b54-8664-5a297417ef0c"
+                    }
+                ]
+            },
+            "reward": {
+                "reward_rule_id": "edf37c52-6cbb-44db-acdd-5e71829fa1f1",
+                "activity_id": "33bf52fd-b3a0-4f05-89c9-d53672e29677",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "25",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Cloud9 Kia Challenge",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/9cd0a044-f947-4a1f-92b4-78f96fa04301.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": ""
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "CHALLENGE",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "a2369118-80cc-4717-953c-12beaba5d801",
+            "name": "Follow @Kia on X",
+            "description": "Earn 50xp",
+            "url": "https://x.com/Kia",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fc298729-6b82-4a53-93be-19aaec4a3633.png",
+            "iconImage": "",
+            "rewardMessage": "50 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "Follow @Kia on X",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fc298729-6b82-4a53-93be-19aaec4a3633.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 50xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fc298729-6b82-4a53-93be-19aaec4a3633.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": "2025-01-24T20:00:03.644Z",
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "e5d217d8-1f14-4b15-89df-8fefedb80b2a",
+                "activity_id": "a2369118-80cc-4717-953c-12beaba5d801",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "50",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Follow @Kia on X",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/fc298729-6b82-4a53-93be-19aaec4a3633.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 50xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_FOLLOW",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "5e0e0068-597e-4f3f-af28-1977a3431eec",
+            "name": "Visit the Kia America Website",
+            "description": "Earn 50xp",
+            "url": "https://www.kia.com/us/en",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/1378793d-6191-4d63-9b49-5229137420d0.png",
+            "iconImage": "",
+            "rewardMessage": "50 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "Visit the Kia America Website",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/1378793d-6191-4d63-9b49-5229137420d0.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 50xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/1378793d-6191-4d63-9b49-5229137420d0.png",
+                "closed_at": null,
+                "iconImage": "",
+                "started_at": "2025-01-24T20:00:48.344Z",
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "05aed3e1-c591-4dab-80be-5186a7e77613",
+                "activity_id": "5e0e0068-597e-4f3f-af28-1977a3431eec",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "50",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Visit the Kia America Website",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/1378793d-6191-4d63-9b49-5229137420d0.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 50xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "LINK_CLICKS",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
+            "id": "c7f78799-bcb1-4b54-8664-5a297417ef0c",
+            "name": "Cloud9 Kia LTA Week 1 Match Predictions",
+            "description": "Earn 25xp for a correct prediction",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a83f1de2-63f8-4cdc-a6f5-2760f8fdfed4.png",
+            "iconImage": "",
+            "rewardMessage": "25 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "25 XP",
+                "description": "",
+                "displayRule": {
+                    "name": "Cloud9 Kia LTA Week 1 Match Predictions",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a83f1de2-63f8-4cdc-a6f5-2760f8fdfed4.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 25xp for a correct prediction"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "form": {
+                    "type": "form",
+                    "style": "single-form",
+                    "fields": [],
+                    "results": {
+                        "type": "components",
+                        "components": []
+                    },
+                    "editable": false
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a83f1de2-63f8-4cdc-a6f5-2760f8fdfed4.png",
+                "closed_at": "2025-01-25T22:00:13.742Z",
+                "iconImage": "",
+                "started_at": "2025-01-24T20:00:29.268Z",
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "f403b3eb-9513-4ce4-ac5a-d5a9f251375b",
+                "activity_id": "c7f78799-bcb1-4b54-8664-5a297417ef0c",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": null,
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "25 XP",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Cloud9 Kia LTA Week 1 Match Predictions",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/a83f1de2-63f8-4cdc-a6f5-2760f8fdfed4.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 25xp for a correct prediction"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "QUIZ",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "63a4890e-2ed2-442f-ad1f-5d993642b11b",
+            "name": "Watch Cloud9 Kia vs LYON",
+            "description": "Earn 200xp",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3a4269ea-626b-4882-8b6c-64050edd0536.png",
+            "iconImage": "",
+            "rewardMessage": "200 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "200 XP",
+                "description": "",
+                "displayRule": {
+                    "name": "Watch Cloud9 Kia vs LYON",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3a4269ea-626b-4882-8b6c-64050edd0536.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 200xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3a4269ea-626b-4882-8b6c-64050edd0536.png",
+                "closed_at": "2025-01-26T05:00:39.296Z",
+                "iconImage": "",
+                "started_at": "2025-01-24T20:00:32.188Z",
+                "externalUrl": "https://store.cloud9.gg/pages/video?slug=lta-kickoff-cloud9-kia-vs-lyon",
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "ff011b80-c624-4e1e-810b-0209b4c1bced",
+                "activity_id": "63a4890e-2ed2-442f-ad1f-5d993642b11b",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": null,
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "200 XP",
+                    "description": "",
+                    "displayRule": {
+                        "name": "Watch Cloud9 Kia vs LYON",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3a4269ea-626b-4882-8b6c-64050edd0536.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 200xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "NON_INTEGRATION_CUSTOM",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
             "id": "f6711777-5389-420d-ba3f-4d15a4e17f14",
             "name": "[LOL] Watch the latest episode of the Cloud9 Kia Forecast",
             "description": "Earn 100xp",
@@ -2000,88 +2523,6 @@
             "completionsLimit": {
                 "type": "fixed",
                 "amount": 1
-            },
-            "products": null
-        },
-        {
-            "id": "ab9a71f7-43d5-4c99-96db-30d7f59c9514",
-            "name": "[LoL] Subscribe to C9LoL on YouTube",
-            "description": "Earn 25xp",
-            "url": "https://www.youtube.com/@C9LoL?sub_confirmation=1",
-            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
-            "iconImage": "",
-            "rewardMessage": "25 XP",
-            "additionalFields": {
-                "shopIds": [],
-                "rewardName": "",
-                "description": "",
-                "displayRule": {
-                    "name": "[LoL] Subscribe to C9LoL on YouTube",
-                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
-                    "custom": false,
-                    "iconImage": "",
-                    "description": "Earn 25xp"
-                },
-                "buttonSettings": {
-                    "enabled": false
-                },
-                "isOneTimeReward": true,
-                "visibilitySettings": {
-                    "type": "all_users"
-                },
-                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
-                "closed_at": null,
-                "iconImage": "",
-                "started_at": null,
-                "preventReSubmissions": false
-            },
-            "reward": {
-                "reward_rule_id": "71e59f96-d67b-4bcd-a10a-698b2f5e1f2d",
-                "activity_id": "ab9a71f7-43d5-4c99-96db-30d7f59c9514",
-                "reward_type": "asset",
-                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
-                "amount_to_reward": "25",
-                "amount_to_reward_percentage": null,
-                "product_variant_id": null,
-                "discount_absolute": null,
-                "discount_percent": null,
-                "segment_id": null,
-                "order_number": 0,
-                "additional_fields": {
-                    "shopIds": [],
-                    "rewardName": "",
-                    "description": "",
-                    "displayRule": {
-                        "name": "[LoL] Subscribe to C9LoL on YouTube",
-                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/b297b4e6-5316-4431-8e02-e2f4630f51cb.png",
-                        "custom": false,
-                        "iconImage": "",
-                        "description": "Earn 25xp"
-                    },
-                    "buttonSettings": {
-                        "enabled": false
-                    },
-                    "isOneTimeReward": true,
-                    "visibilitySettings": {
-                        "type": "all_users"
-                    }
-                },
-                "tier_id": null,
-                "product_variant_ids": null,
-                "token_name": "XP",
-                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
-                "image_url": null,
-                "shopify_product_variant_label": null
-            },
-            "completed": false,
-            "limitReached": false,
-            "pendingReview": false,
-            "automaticallyApprove": true,
-            "retroactiveSubmission": false,
-            "maxFilesLimit": null,
-            "typeIdentifier": "YOUTUBE_SUBSCRIBE",
-            "completionsLimit": {
-                "type": "unlimited"
             },
             "products": null
         },

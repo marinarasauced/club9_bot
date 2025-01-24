@@ -107,7 +107,7 @@ class Club9Activities(commands.Cog):
                             if (activity_data_old.club9_activity_data != activity_data_new.club9_activity_data):
                                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Activities -> detected modified activity {activity_data_new.id}")
                                 embed = activity_data_new.generate_activities_embed()
-                                await self.club9_bot.club9_cog_notifications.edit_notification(content=None, embed=embed, type="Activities", id=activity_data_new.id)
+                                await self.club9_bot.club9_cog_notifications.edit_notification(content="", embed=embed, type="Activities", id=activity_data_new.id)
                                 self.club9_bot.num_activities_modified += 1
                                 is_cache_activities_outdated = True
                             # detect if activity is unchanged

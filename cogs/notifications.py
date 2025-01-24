@@ -74,7 +74,7 @@ class Club9Notifications(commands.Cog):
             return None
         channel: discord.Channel = self.club9_bot.get_channel(channel_id)
         if channel:
-            message = await channel.send(content=content, embeds=[embed])
+            message = await channel.send(content=content, embed=embed)
             await self.club9_bot.club9_cog_logging.log_notification_event(message=message, content=f"sent message:")
             self.club9_bot.messages_dict[message_type][id] = {
                 "channel_id": channel_id,
