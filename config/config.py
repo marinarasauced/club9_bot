@@ -22,7 +22,7 @@ PATH_MESSAGES_CACHE = "config/dict_messages.json"
 PATH_REWARDS_CACHE = "config/dict_rewards.json"
 
 # graphics
-CLUB9_BOT_ICON_URL = "https://www.dropbox.com/scl/fi/d876v0fp6u9zhrcgovr0f/club9-bot.png?rlkey=de69qjo4ii0m81h7whngbpq59&e=1&st=mzf2g8bo&dl=0"
+CLUB9_BOT_ICON_URL = "https://cdn.discordapp.com/attachments/1330310037968781363/1330659343841890345/club9-bot.png?ex=6794b756&is=679365d6&hm=a391c519254080dfaa3a641a9436f4f6581386c7b6ee7737b03559bce97d7ae3&"
 
 # toki api
 API_TOKI_ACTIVITIES_URL = "https://api.buildwithtoki.com/merchant/brand/activities"
