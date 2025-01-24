@@ -108,11 +108,11 @@ class Club9Notifications(commands.Cog):
                 message = await channel.fetch_message(message_id)
                 await self.club9_bot.club9_cog_logging.log_notification_event(message=message, content=f"edited message from:")
                 if (content is not None and embed is not None):
-                    await message.edit(content=content, embed=embed)
+                    message = await message.edit(content=content, embed=embed)
                 elif (content is None and embed is not None):
-                    await message.edit(embed=embed)
+                    message = await message.edit(embed=embed)
                 elif (content is not None and embed is None):
-                    await message.edit(content=content)
+                    message = await message.edit(content=content)
                 await self.club9_bot.club9_cog_logging.log_notification_event(message=message, content="to:")
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Notifications -> edited message {message_id} in channel {channel_id}")
             except Exception as e:

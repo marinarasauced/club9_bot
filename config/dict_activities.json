@@ -1,6 +1,172 @@
 {
     "activities": [
         {
+            "id": "f6711777-5389-420d-ba3f-4d15a4e17f14",
+            "name": "[LOL] Watch the latest episode of the Cloud9 Kia Forecast",
+            "description": "Earn 100xp",
+            "url": "",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3346e771-e80a-4b60-a45a-cf921819dd0d.png",
+            "iconImage": "",
+            "rewardMessage": "100 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "100 XP",
+                "description": "",
+                "displayRule": {
+                    "name": "[LOL] Watch the latest episode of the Cloud9 Kia Forecast",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3346e771-e80a-4b60-a45a-cf921819dd0d.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 100xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3346e771-e80a-4b60-a45a-cf921819dd0d.png",
+                "closed_at": "2025-01-31T01:00:24.538Z",
+                "iconImage": "",
+                "started_at": null,
+                "externalUrl": "https://store.cloud9.gg/pages/video?slug=cloud9-kia-forecast-episode-1",
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "a00bc3dc-176c-4b1d-9035-1781de6b2bd5",
+                "activity_id": "f6711777-5389-420d-ba3f-4d15a4e17f14",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": null,
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "100 XP",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[LOL] Watch the latest episode of the Cloud9 Kia Forecast",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/3346e771-e80a-4b60-a45a-cf921819dd0d.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 100xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "NON_INTEGRATION_CUSTOM",
+            "completionsLimit": {
+                "type": "unlimited"
+            },
+            "products": null
+        },
+        {
+            "id": "a4f3f8bd-698f-4b9d-a834-6b21269df4b7",
+            "name": "[LOL] Like the Cloud9 Kia Forecast Post",
+            "description": "Earn 10xp",
+            "url": "https://x.com/C9LoL/status/1882534836453376471",
+            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/221ad24b-6772-4a2b-b374-aec210a5fee4.png",
+            "iconImage": "",
+            "rewardMessage": "10 XP",
+            "additionalFields": {
+                "shopIds": [],
+                "rewardName": "",
+                "description": "",
+                "displayRule": {
+                    "name": "[LOL] Like the Cloud9 Kia Forecast Post",
+                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/221ad24b-6772-4a2b-b374-aec210a5fee4.png",
+                    "custom": false,
+                    "iconImage": "",
+                    "description": "Earn 10xp"
+                },
+                "buttonSettings": {
+                    "enabled": false
+                },
+                "isOneTimeReward": true,
+                "visibilitySettings": {
+                    "type": "all_users"
+                },
+                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/221ad24b-6772-4a2b-b374-aec210a5fee4.png",
+                "closed_at": "2025-01-31T01:00:54.117Z",
+                "iconImage": "",
+                "started_at": null,
+                "preventReSubmissions": false
+            },
+            "reward": {
+                "reward_rule_id": "6c8bece6-49fc-4a57-b515-597ef4ce710f",
+                "activity_id": "a4f3f8bd-698f-4b9d-a834-6b21269df4b7",
+                "reward_type": "asset",
+                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "amount_to_reward": "10",
+                "amount_to_reward_percentage": null,
+                "product_variant_id": null,
+                "discount_absolute": null,
+                "discount_percent": null,
+                "segment_id": null,
+                "order_number": 0,
+                "additional_fields": {
+                    "shopIds": [],
+                    "rewardName": "",
+                    "description": "",
+                    "displayRule": {
+                        "name": "[LOL] Like the Cloud9 Kia Forecast Post",
+                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/221ad24b-6772-4a2b-b374-aec210a5fee4.png",
+                        "custom": false,
+                        "iconImage": "",
+                        "description": "Earn 10xp"
+                    },
+                    "buttonSettings": {
+                        "enabled": false
+                    },
+                    "isOneTimeReward": true,
+                    "visibilitySettings": {
+                        "type": "all_users"
+                    }
+                },
+                "tier_id": null,
+                "product_variant_ids": null,
+                "token_name": "XP",
+                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
+                "image_url": null,
+                "shopify_product_variant_label": null
+            },
+            "completed": false,
+            "limitReached": false,
+            "pendingReview": false,
+            "automaticallyApprove": true,
+            "retroactiveSubmission": false,
+            "maxFilesLimit": null,
+            "typeIdentifier": "TWITTER_LIKE_POST",
+            "completionsLimit": {
+                "type": "fixed",
+                "amount": 1
+            },
+            "products": null
+        },
+        {
             "id": "caa962f4-cf25-4271-871b-3e359c0c8cd1",
             "name": "[LOL] Watch 'He Said This Would Be Easy | Cloud9 Kia Vlog'",
             "description": "",
@@ -221,89 +387,6 @@
                         "custom": false,
                         "iconImage": "",
                         "description": ""
-                    },
-                    "buttonSettings": {
-                        "enabled": false
-                    },
-                    "isOneTimeReward": true,
-                    "visibilitySettings": {
-                        "type": "all_users"
-                    }
-                },
-                "tier_id": null,
-                "product_variant_ids": null,
-                "token_name": "XP",
-                "token_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
-                "image_url": null,
-                "shopify_product_variant_label": null
-            },
-            "completed": false,
-            "limitReached": false,
-            "pendingReview": false,
-            "automaticallyApprove": true,
-            "retroactiveSubmission": false,
-            "maxFilesLimit": null,
-            "typeIdentifier": "NON_INTEGRATION_CUSTOM",
-            "completionsLimit": {
-                "type": "unlimited"
-            },
-            "products": null
-        },
-        {
-            "id": "a4166af3-0bfe-4c2c-ae7f-75cbeb1c645c",
-            "name": "[VAL] Watch C9 vs MIBR - VCT Americas Kickoff ",
-            "description": "Earn 100xp",
-            "url": "",
-            "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d84b81db-4f62-443d-9dc1-28aa3c0fba9e.png",
-            "iconImage": "",
-            "rewardMessage": "100 XP",
-            "additionalFields": {
-                "shopIds": [],
-                "rewardName": "100 XP",
-                "description": "",
-                "displayRule": {
-                    "name": "[VAL] Watch C9 vs MIBR - VCT Americas Kickoff ",
-                    "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d84b81db-4f62-443d-9dc1-28aa3c0fba9e.png",
-                    "custom": false,
-                    "iconImage": "",
-                    "description": "Earn 100xp"
-                },
-                "buttonSettings": {
-                    "enabled": false
-                },
-                "isOneTimeReward": true,
-                "visibilitySettings": {
-                    "type": "all_users"
-                },
-                "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d84b81db-4f62-443d-9dc1-28aa3c0fba9e.png",
-                "closed_at": "2025-01-24T05:00:52.108Z",
-                "iconImage": "",
-                "started_at": null,
-                "externalUrl": "https://store.cloud9.gg/pages/video?slug=c9-vs-mibr-vct-americas-kickoff-",
-                "preventReSubmissions": false
-            },
-            "reward": {
-                "reward_rule_id": "bd373989-3dc2-4092-988d-fda4e9cdf2b0",
-                "activity_id": "a4166af3-0bfe-4c2c-ae7f-75cbeb1c645c",
-                "reward_type": "asset",
-                "asset_to_reward_id": "6e23ba5d-868e-496e-bc80-ba8f75e671e0",
-                "amount_to_reward": null,
-                "amount_to_reward_percentage": null,
-                "product_variant_id": null,
-                "discount_absolute": null,
-                "discount_percent": null,
-                "segment_id": null,
-                "order_number": 0,
-                "additional_fields": {
-                    "shopIds": [],
-                    "rewardName": "100 XP",
-                    "description": "",
-                    "displayRule": {
-                        "name": "[VAL] Watch C9 vs MIBR - VCT Americas Kickoff ",
-                        "image": "https://s3.buildwithtoki.com/files/v0/sandbox/d84b81db-4f62-443d-9dc1-28aa3c0fba9e.png",
-                        "custom": false,
-                        "iconImage": "",
-                        "description": "Earn 100xp"
                     },
                     "buttonSettings": {
                         "enabled": false
