@@ -119,50 +119,55 @@ class Club9ActivityData():
         embed.color = discord.Color.blue()                      # default color
         embed.title = self.name                                 # set name by default
         embed.set_image(url=self.image)                         # set image by default
+        
+        # add url to embed title linking to cloud9 club9 activities page
         if (NOTIFICATIONS_ACTIVITIES_ENABLE_URLS == True):
-            embed.url = NOTIFICATIONS_ACTIVITIES_URL            # URL only links to the url in config.py (default club9 site)
-        if self.club9_activity_type == Club9ActivityType.CHALLENGE:
-            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
-            # add reward amount field indicating the reward value
-            if self.reward_amount_to_reward is not None:
+            embed.url = NOTIFICATIONS_ACTIVITIES_URL
+
+        # set author, icon, description
+        embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
+
+        # add reward amount if available
+        if (self.rewardMessage != None and self.rewardMessage != ""):
+            try:
                 embed.add_field(
                     name="Reward",
-                    value=f"{self.reward_amount_to_reward} XP",
+                    value=f"{self.rewardMessage}",
                     inline=False,
                 )
-            else:
-                embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
-            # add quest field indicating which quests are necessary to complete challenge
-            embed.add_field(
-                name="Quests", 
-                value="\n".join(activity.get("label", "") for activity in self.additionalFields_challenges_activities),
-                inline=False,
-            )
-        elif self.club9_activity_type == Club9ActivityType.QUEST_EXTERNAL:
-            # TODO add more specific data information for video quests i.e., reward amount ?, start/stop time for video tracking if applicable ? placeholder below
-            embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
-            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
-        elif self.club9_activity_type == Club9ActivityType.QUEST_INTERNAL:
-            embed.set_author(name="Challenge" if self.club9_activity_type == Club9ActivityType.CHALLENGE else "Quest", icon_url=CLUB9_BOT_ICON_URL)
-            # add reward amount field indicating the reward value
-            if self.reward_amount_to_reward is not None:
-                embed.add_field(
-                    name="Reward",
-                    value=f"{self.reward_amount_to_reward} XP",
-                    inline=False,
-                )
-            else:
-                embed.description = self.description + "\n\u200B"       # set description by default (even if empty)
-            # add closed at field indicating when the quest is available until
-            if self.additionalFields_closed_at is not None:
+            except:
+                pass
+
+        # add expiration date if applicable
+        if (self.additionalFields_closed_at != None and self.additionalFields_closed_at != ""):
+            try:
                 stamp_dt = datetime.datetime.fromisoformat(self.additionalFields_closed_at.replace("Z", "+00:00"))
                 stamp_unix = int(stamp_dt.timestamp())
                 stamp_discord = f"<t:{stamp_unix}>"
                 embed.add_field(
-                    name="Available Until",
+                    name="Claimable Until",
                     value=stamp_discord,
                     inline=False,
                 )
+            except:
+                pass
+
+        # if challenge, add required quests
+        if (self.club9_activity_type == Club9ActivityType.CHALLENGE):
+            try:
+                embed.add_field(
+                    name="Quests", 
+                    value="\n".join(activity.get("label", "") for activity in self.additionalFields_challenges_activities),
+                    inline=False,
+                )
+            except:
+                pass
+
+
+        # if video quest, add watch time requirement and active range
+        # TODO scrape other api for watch requirement data
+
+        #
         elif self.club9_activity_type == Club9ActivityType.NONE:
             return None
         else:
