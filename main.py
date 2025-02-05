@@ -30,7 +30,8 @@ class Club9Bot(commands.Bot):
 
         # general diagnostics
         self.starttime = time.time()
-        self.num_monitoring_cycles = 0
+        self.num_activities_monitoring_cycles = 0
+        self.num_rewards_monitoring_cycles = 0
 
         # activities diagnostics
         self.num_activities_cache_reads = 0
@@ -91,7 +92,7 @@ class Club9Bot(commands.Bot):
                 context = await self.get_context(message)
                 command = self.get_command("monitoring")
                 if command:
-                    await context.invoke(command, type="Start", period=ENABLE_MONITORING_ON_STARTUP_PERIOD)
+                    await context.invoke(command, keyword1="start", keyword2=ENABLE_MONITORING_ON_STARTUP_PERIOD)
 
 
 def main():

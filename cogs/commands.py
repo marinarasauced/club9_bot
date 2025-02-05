@@ -36,52 +36,60 @@ class Club9Commands(commands.Cog):
 
 
     @commands.command(name="monitoring")
-    async def monitoring(self, ctx, type: str = "", period: int = None) -> None:
+    async def monitoring(self, ctx, keyword1: str, keyword2: str = None) -> None:
         """
-        Starts or stops monitoring of the Club9 activities and rewards on a timer.
+        Handles tasks pertaining to the bot's monitoring of the activities and rewards APIs.
 
-        @param ctx: The context of the command.
-        @param type: 'Start' or 'Stop' (not case sensitive)
-        @param period: The period of the timer at which the monitoring method is called (period > 60)
+        This method utilizes keyword arguments to execute specific sub tasks pertaining to monitoring:
+            - 'monitoring start' starts the bot's monitoring using the default period from the config file for all enabled rewards types,
+            - 'monitoring start period' starts the bot's monitoring using the given period value for all enabled types such as activities and rewards,
+            - 'monitoring stop' stops the bot's monitoring at the end of the current monitoring cycle,
+            - 'monitoring enable type' enables the bot's monitoring of a specfic type; i.e., activities or rewards,
+            - 'monitoring disable type' disables the bot's monitoring of a specific type; i.e., activities or rewards,
+
         """
+        keywords = MONITORING_KEYWORDS_1
+        command = f'{self.club9_bot.command_prefix}monitoring {keyword1.lower()}'
+        if (keyword2 != None and keyword2 != ""):
+            command += f' {keyword2}'
+
         # validate whether the command is permitted to execute
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}monitoring {type} {period}'")
+        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{command}'")
         if (await self.validate(channel_id=ctx.channel.id) == False):
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (not permitted to execute command in channel {ctx.channel.id})")
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (not permitted to execute command in channel {ctx.channel.id})")
             return
 
-        # determine whether command fields are valid
-        monitoring_type = type.capitalize()
-        if (
-            (monitoring_type not in ["Start", "Stop"]) or 
-            (monitoring_type == "Start" and (period is None or period < 60))
-        ):
-            await ctx.send(f"""
-the monitoring command must be formatted as follows:
-`{self.club9_bot.command_prefix}monitoring type period`,
-where `type` must be "start" or "stop" and `period` must be an integer greater than 60;
-i.e., `{self.club9_bot.command_prefix}monitoring start 60`
-            """)
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (invalid attribute 'type' or 'period')")
+        # validate whether command keyword1 is valid
+        if (keyword1.lower() not in keywords):
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword1 argument invalid)")
             return
 
-        # if command is to start monitoring
-        if (monitoring_type == "Start"):
+        # case : start monitoring
+        if (keyword1.lower() == "start"):
 
-            # if monitoring_flag2 is true, monitoring is already stopping
+            # if monitoring_flag2 is true, monitoring is stopping
             if (self.monitoring_flag2 == True):
-                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (monitoring is stopping)")
-                await ctx.send("monitoring is already started!")
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (monitoring is stopping)")
+                await ctx.send("rejected command : monitoring is currently stopping")
                 return
 
             # if monitoring_flag1 is true, monitoring was already started
             if (self.monitoring_flag1 == True):
-                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type} {period}' (monitoring was already started)")
-                await ctx.send("monitoring is already started!")
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (monitoring was already started)")
+                await ctx.send("rejected command : monitoring was already started!")
                 return
-            
-            # start monitoring
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{self.club9_bot.command_prefix}monitoring {type} {period}'")
+
+            # if period is command argument and period is not int or period is less than 60 seconds, period is invalid
+            if (keyword2 != None and isinstance(keyword2, str) and int(keyword2) < 60):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword2 argument invalid)")
+                await ctx.send("rejected command : invalid command arguments")
+                return
+
+            # accept command
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{command}'")
+            period = ENABLE_MONITORING_ON_STARTUP_PERIOD
+            if (keyword2 != None and isinstance(keyword2, str) and int(keyword2) >= 60):
+                period = int(keyword2)
             await ctx.send(f"starting monitoring with a period of {period} seconds")
             try:
                 self.monitoring_flag1 = True
@@ -90,9 +98,10 @@ i.e., `{self.club9_bot.command_prefix}monitoring start 60`
                 while (self.monitoring_flag1 == True):
                     if (self.club9_bot.club9_cog_activities and self.club9_bot.monitor_activities == True):
                         await self.club9_bot.club9_cog_activities.refresh()
+                        self.club9_bot.num_activities_monitoring_cycles += 1
                     if (self.club9_bot.club9_cog_rewards and self.club9_bot.monitor_rewards == True):
                         await self.club9_bot.club9_cog_rewards.refresh()
-                    self.club9_bot.num_monitoring_cycles += 1
+                        self.club9_bot.num_rewards_monitoring_cycles += 1
                     await asyncio.sleep(period)
             except Exception as e:
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> monitoring activities and rewards failed")
@@ -101,121 +110,114 @@ i.e., `{self.club9_bot.command_prefix}monitoring start 60`
             await ctx.send(f"stopped monitoring with a period of {period} seconds")
             self.monitoring_flag2 = False
 
-        # if command is to stop monitoring
-        if (monitoring_type == "Stop"):
+        # case : stop monitoring
+        if (keyword1.lower() == "stop"):
 
             # if monitoring_flag1 is false, monitoring was already stopped
             if (self.monitoring_flag1 == False):
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type}' (monitoring is already stopped)")
-                await ctx.send("monitoring is already stopped!")
+                await ctx.send("rejected command : monitoring was already stopped")
                 return
 
             # if monitoring_flag2 is true, monitoring is already stopping
             if (self.monitoring_flag2 == True):
                 self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type}' (monitoring is already stopping)")
-                await ctx.send("monitoring is already stopping!")
+                await ctx.send("rejected command : monitoring is currently stopping")
                 return
 
-            # stop monitoring
+            # accept command
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{self.club9_bot.command_prefix}monitoring {type}'")
             self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> stopping monitoring activities and rewards")
             await ctx.send(f"stopping monitoring at the end of the current period")
             self.monitoring_flag1 = False
             self.monitoring_flag2 = True
 
+        # case : enable monitoring type
+        if (keyword1.lower() == "enable"):
 
-    @commands.command(name="enable")
-    async def enable(self, ctx, type: str) -> None:
-        """
-        Enables monitoring of a type.
+            # if monitoring type is none, cannot enable
+            if (keyword2 == None):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword2 argument missing)")
+                await ctx.send("rejected command : invalid command arguments!")
+                return
 
-        @param ctx: The context of the command.
-        @param type: The type of monitoring to enable.
-        """
-        # validate whether the command is permitted to execute
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}enable {type}'")
-        if (await self.validate(channel_id=ctx.channel.id) == False):
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}enable {type}' (not permitted to execute command in channel {ctx.channel.id})")
-            return
-        
-        # determine if monitoring of type is already enabled
-        monitoring_type = type.capitalize()
-        if (
-            (monitoring_type == "Activities" and self.club9_bot.monitor_activities == True) or 
-            (monitoring_type == "Rewards" and self.club9_bot.monitor_rewards == True)
-        ):
-            await ctx.send(f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}enable {type}' (monitoring {type} is already enabled)")
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}enable {type}' (already enabled)")
+            # if monitoring type is not in monitorable types, invalid type
+            if (keyword2 != None and isinstance(keyword2, str) and keyword2.lower() not in MONITORING_KEYWORDS_2_ENABLE):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword2 argument invalid)")
+                await ctx.send("rejected command : invalid command arguments!")
+                return
+            
+            # if monitoring type is already enabled, cannot enable
+            if (keyword2.lower() == "activities" and self.club9_bot.monitor_activities == True or keyword2.lower() == "rewards" and self.club9_bot.monitor_rewards == True):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (already enabled)")
+                await ctx.send(f"rejected command : monitoring {keyword2.lower()} is already enabled")
+                return
 
-        # determine whether command fields are valid
-        if (
-            (monitoring_type not in ["Activities", "Rewards"])
-        ):
-            await ctx.send(f"""
-the enable command must be formatted as follows:
-`{self.club9_bot.command_prefix}enable type`,
-where `type` must be "activities" or "rewards";
-i.e., `{self.club9_bot.command_prefix}enable rewards`
-            """)
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}monitoring {type}' (invalid attribute 'type')")
-            return
+            # accept command
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{command}'")
+            if (keyword2.lower() == "activities"):
+                self.club9_bot.monitor_activities = True
+            elif (keyword2.lower() == "rewards"):
+                self.club9_bot.monitor_rewards = True
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> enabled monitoring of {keyword2.lower()}")
+            await ctx.send(f"enabled monitoring of type {keyword2.lower()}")
 
-        # update bot attribute
-        if (monitoring_type == "Activities"):
-            self.club9_bot.monitor_activities = True
-        elif (monitoring_type == "Rewards"):
-            self.club9_bot.monitor_rewards = True
+        # case : disable monitoring type
+        if (keyword1.lower() == "disable"):
 
-        # log
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> enabled monitoring of {type}")
-        await ctx.send(f"enabled monitoring of type {type}")
+            # if monitoring type is none, cannot enable
+            if (keyword2 == None):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword2 argument missing)")
+                await ctx.send("rejected command : invalid command arguments!")
+                return
 
+            # if monitoring type is not in monitorable types, invalid type
+            if (keyword2 != None and isinstance(keyword2, str) and keyword2.lower() not in MONITORING_KEYWORDS_2_DISABLE):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword2 argument invalid)")
+                await ctx.send("rejected command : invalid command arguments!")
+                return
+            
+            # if monitoring type is already enabled, cannot enable
+            if (keyword2.lower() == "activities" and self.club9_bot.monitor_activities == False or keyword2.lower() == "rewards" and self.club9_bot.monitor_rewards == False):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (already enabled)")
+                await ctx.send(f"rejected command : monitoring {keyword2.lower()} is already disabled")
+                return
 
-    @commands.command(name="disable")
-    async def disable(self, ctx, type: str) -> None:
-        """
-        Disables monitoring of a type.
+            # accept command
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{command}'")
+            if (keyword2.lower() == "activities"):
+                self.club9_bot.monitor_activities = False
+            elif (keyword2.lower() == "rewards"):
+                self.club9_bot.monitor_rewards = False
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> disabled monitoring of {keyword2.lower()}")
+            await ctx.send(f"disabled monitoring of type {keyword2.lower()}")
 
-        @param ctx: The context of the command.
-        @param type: The type of monitoring to disable.
-        """
-        # validate whether the command is permitted to execute
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> user called '{self.club9_bot.command_prefix}disable {type}'")
-        if (await self.validate(channel_id=ctx.channel.id) == False):
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (not permitted to execute command in channel {ctx.channel.id})")
-            return
+        # case : refresh specific monitoring type
+        if (keyword1.lower() == "refresh"):
 
-        # determine if monitoring of type is already disabled\
-        monitoring_type = type.capitalize()
-        if (
-            (monitoring_type == "Activities" and self.club9_bot.monitor_activities == False) or 
-            (monitoring_type == "Rewards" and self.club9_bot.monitor_rewards == False)
-        ):
-            await ctx.send(f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (monitoring {type} is already disabled)")
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (already disabled)")
+            # if monitoring type is none, cannot enable
+            if (keyword2 == None):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword2 argument missing)")
+                await ctx.send("rejected command : invalid command arguments!")
+                return
 
-        # determine whether command fields are valid
-        if (
-            (monitoring_type not in ["Activities", "Rewards"])
-        ):
-            await ctx.send(f"""
-the disable command must be formatted as follows:
-`{self.club9_bot.command_prefix}enable type`,
-where `type` must be "activities" or "rewards";
-i.e., `{self.club9_bot.command_prefix}disable rewards`
-            """)
-            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{self.club9_bot.command_prefix}disable {type}' (invalid attribute 'type')")
-            return
+            # if monitoring type is not in monitorable types, invalid type
+            if (keyword2 != None and isinstance(keyword2, str) and keyword2.lower() not in MONITORING_KEYWORDS_2_REFRESH):
+                self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> rejected user command '{command}' (keyword2 argument invalid)")
+                await ctx.send("rejected command : invalid command arguments!")
+                return
 
-        # update bot attribute
-        if (monitoring_type == "Activities"):
-            self.club9_bot.monitor_activities = False
-        elif (monitoring_type == "Rewards"):
-            self.club9_bot.monitor_rewards = False
-
-        # log
-        self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> disabled monitoring of {type}")
-        await ctx.send(f"disabled monitoring of type {type}")
+            # accept command
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> accepted user command '{command}'")
+            await ctx.send(f"refreshing {keyword2.lower()}")
+            if (self.club9_bot.club9_cog_activities):
+                await self.club9_bot.club9_cog_activities.refresh()
+                self.club9_bot.num_activities_monitoring_cycles += 1
+            if (self.club9_bot.club9_cog_rewards):
+                await self.club9_bot.club9_cog_rewards.refresh()
+                self.club9_bot.num_rewards_monitoring_cycles += 1
+            self.club9_bot.logger.log(level=logging.INFO, msg=f"Club9Commands -> refreshed {keyword2.lower()}")
+            await ctx.send(f"refreshed {keyword2.lower()}")
 
 
     @commands.command(name="status")
@@ -243,7 +245,8 @@ i.e., `{self.club9_bot.command_prefix}disable rewards`
         response = f"""```py
 # general diagnostics
 runtime = "{days} day{'' if days == 1 else 's'} {hours:02}:{minutes:02}:{seconds:02}"
-num_monitoring_cycles = {self.club9_bot.num_monitoring_cycles}
+num_activities_monitoring_cycles = {self.club9_bot.num_activities_monitoring_cycles}
+num_activities_monitoring_cycles = {self.club9_bot.num_rewards_monitoring_cycles}
 
 # activities diagnostics
 num_activities_cache_reads = {self.club9_bot.num_activities_cache_reads}
